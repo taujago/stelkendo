@@ -194,92 +194,92 @@
           
           <table width="100%">
             <tr>
-              <td width="10%" height="35px">No. BPKB</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. BPKB"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">No. Reg. BPKB</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Reg. BPKB"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">No. BPKB</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. BPKB"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">No. Reg. BPKB</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Reg. BPKB"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Dikeluarkan di</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Dikeluarkan di"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Tanggal</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Dikeluarkan di</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Dikeluarkan di"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Tanggal</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">No. Rangka</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rangka"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">No. Mesin</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Mesin"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">No. Rangka</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rangka"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">No. Mesin</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Mesin"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Merk</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Merk"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Jenis</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Jenis"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Merk</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Merk"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Jenis</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Jenis"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Tipe</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tipe"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Tipe 2</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tipe 2"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Tipe</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tipe"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Tipe 2</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tipe 2"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Model</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Model"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Silinder</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Silinder"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Model</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Model"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Silinder</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Silinder"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Tahun Buat</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tahun Buat"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Tahun Rakit</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tahun Rakit"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Tahun Buat</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tahun Buat"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Tahun Rakit</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tahun Rakit"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Jml. Roda</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Jml. Roda"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Jml. Sumbu</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Jml. Sumbu"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Jml. Roda</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Jml. Roda"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Jml. Sumbu</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Jml. Sumbu"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Bahan Bakar</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Bahan Bakar"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Warna</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Warna"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Bahan Bakar</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Bahan Bakar"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Warna</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Warna"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Peruntukan</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Peruntukan"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">No. TPT</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. TPT"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Peruntukan</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Peruntukan"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">No. TPT</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. TPT"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Warna TNKB</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Warna TNKB"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">No. SUT</td>
-              <td width="30%" height="35px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. SUT"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Warna TNKB</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Warna TNKB"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">No. SUT</td>
+              <td width="30%" height="50px"><input type="text" id="barcode_berkas" name="barcode_berkas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. SUT"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
           </table>
 
@@ -290,60 +290,60 @@
         <div id="me2" class="tab-pane fade">
           <table width="100%">
             <tr>
-              <td width="10%" height="35px">No. Identitas</td>
-              <td width="30%" height="35px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Identitas"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Provinsi</td>
-              <td width="30%" height="35px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Provinsi"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">No. Identitas</td>
+              <td width="30%" height="50px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Identitas"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Provinsi</td>
+              <td width="30%" height="50px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Provinsi"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Nama Pemilik</td>
-              <td width="30%" height="35px"><input type="text" id="nama_pemilik" name="nama_pemilik" class="form-control col-md-7 col-xs-12 input-style" placeholder="Nama Pemilik"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Kabupaten</td>
-              <td width="30%" height="35px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Kabupaten"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Nama Pemilik</td>
+              <td width="30%" height="50px"><input type="text" id="nama_pemilik" name="nama_pemilik" class="form-control col-md-7 col-xs-12 input-style" placeholder="Nama Pemilik"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Kabupaten</td>
+              <td width="30%" height="50px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Kabupaten"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Alamat Pemilik</td>
-              <td width="30%" height="35px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Alamat Pemilik"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Kecamatan</td>
-              <td width="30%" height="35px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Kecamatan"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Alamat Pemilik</td>
+              <td width="30%" height="50px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Alamat Pemilik"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Kecamatan</td>
+              <td width="30%" height="50px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Kecamatan"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Kode Pos</td>
-              <td width="30%" height="35px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Kode Pos"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Kelurahan</td>
-              <td width="30%" height="35px"><input type="text" id="kelurahan" name="kelurahan" class="form-control col-md-7 col-xs-12 input-style" placeholder="Kelurahan"></td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Kode Pos</td>
+              <td width="30%" height="50px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Kode Pos"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Kelurahan</td>
+              <td width="30%" height="50px"><input type="text" id="kelurahan" name="kelurahan" class="form-control col-md-7 col-xs-12 input-style" placeholder="Kelurahan"></td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">No. Ponsel</td>
-              <td width="30%" height="35px"><input type="text" id="no_ponsel" name="no_ponsel" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Ponsel"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">&nbsp;</td>
-              <td width="30%" height="35px">&nbsp;</td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">No. Ponsel</td>
+              <td width="30%" height="50px"><input type="text" id="no_ponsel" name="no_ponsel" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Ponsel"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">&nbsp;</td>
+              <td width="30%" height="50px">&nbsp;</td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Pekerjaan</td>
-              <td width="30%" height="35px"><input type="text" id="pekerjaan" name="pekerjaan" class="form-control col-md-7 col-xs-12 input-style" placeholder="Pekerjaan"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">&nbsp;</td>
-              <td width="30%" height="35px">&nbsp;</td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Pekerjaan</td>
+              <td width="30%" height="50px"><input type="text" id="pekerjaan" name="pekerjaan" class="form-control col-md-7 col-xs-12 input-style" placeholder="Pekerjaan"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">&nbsp;</td>
+              <td width="30%" height="50px">&nbsp;</td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="10%" height="35px">Wilayah Polres</td>
-              <td width="30%" height="35px"><input type="text" id="wil_polres" name="wil_polres" class="form-control col-md-7 col-xs-12 input-style" placeholder="Wilayah Polres"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">&nbsp;</td>
-              <td width="30%" height="35px">&nbsp;</td>
-              <td width="18%" height="35px">&nbsp;</td>
+              <td width="10%" height="50px">Wilayah Polres</td>
+              <td width="30%" height="50px"><input type="text" id="wil_polres" name="wil_polres" class="form-control col-md-7 col-xs-12 input-style" placeholder="Wilayah Polres"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">&nbsp;</td>
+              <td width="30%" height="50px">&nbsp;</td>
+              <td width="18%" height="50px">&nbsp;</td>
             </tr>
           </table>
 
@@ -352,76 +352,76 @@
         <div id="me3" class="tab-pane fade">
           <table>
             <tr>
-              <td width="13%" height="35px">Jenis Daftar</td>
-              <td width="30%" height="35px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Jenis Daftar"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">&nbsp;</td>
-              <td width="30%" height="35px">&nbsp;</td>
-              <td width="15%" height="35px">&nbsp;</td>
+              <td width="13%" height="50px">Jenis Daftar</td>
+              <td width="30%" height="50px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Jenis Daftar"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">&nbsp;</td>
+              <td width="30%" height="50px">&nbsp;</td>
+              <td width="15%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="13%" height="35px">No. Faktur</td>
-              <td width="30%" height="35px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Faktur"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Tanggal</td>
-              <td width="30%" height="35px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
-              <td width="15%" height="35px">&nbsp;</td>
+              <td width="13%" height="50px">No. Faktur</td>
+              <td width="30%" height="50px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Faktur"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Tanggal</td>
+              <td width="30%" height="50px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
+              <td width="15%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="13%" height="35px">No. Faktur</td>
-              <td width="30%" height="35px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Faktur"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Tanggal</td>
-              <td width="30%" height="35px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
-              <td width="15%" height="35px">&nbsp;</td>
+              <td width="13%" height="50px">No. Faktur</td>
+              <td width="30%" height="50px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Faktur"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Tanggal</td>
+              <td width="30%" height="50px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
+              <td width="15%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="13%" height="35px">No. Pabean</td>
-              <td width="30%" height="35px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Faktur"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Tanggal</td>
-              <td width="30%" height="35px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
-              <td width="15%" height="35px">&nbsp;</td>
+              <td width="13%" height="50px">No. Pabean</td>
+              <td width="30%" height="50px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Faktur"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Tanggal</td>
+              <td width="30%" height="50px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
+              <td width="15%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="13%" height="35px">Pelabuhan</td>
-              <td width="30%" height="35px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Pelabuhan"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">&nbsp;</td>
-              <td width="30%" height="35px">&nbsp;</td>
-              <td width="15%" height="35px">&nbsp;</td>
+              <td width="13%" height="50px">Pelabuhan</td>
+              <td width="30%" height="50px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Pelabuhan"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">&nbsp;</td>
+              <td width="30%" height="50px">&nbsp;</td>
+              <td width="15%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="13%" height="35px">No. PIB</td>
-              <td width="30%" height="35px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. PIB"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Tanggal</td>
-              <td width="30%" height="35px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
-              <td width="15%" height="35px">&nbsp;</td>
+              <td width="13%" height="50px">No. PIB</td>
+              <td width="30%" height="50px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. PIB"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Tanggal</td>
+              <td width="30%" height="50px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"></td>
+              <td width="15%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="13%" height="35px">Cara Impor</td>
-              <td width="30%" height="35px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Cara Impor"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">Pemohon</td>
-              <td width="30%" height="35px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Pemohon"></td>
-              <td width="15%" height="35px">&nbsp;</td>
+              <td width="13%" height="50px">Cara Impor</td>
+              <td width="30%" height="50px"><input type="text" id="no_identitas" name="no_identitas" class="form-control col-md-7 col-xs-12 input-style" placeholder="Cara Impor"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">Pemohon</td>
+              <td width="30%" height="50px"><input type="text" id="provinsi" name="provinsi" class="form-control col-md-7 col-xs-12 input-style" placeholder="Pemohon"></td>
+              <td width="15%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="13%" height="35px">Nama Importir/APM</td>
-              <td width="30%" height="35px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Nama Importir/APM"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">&nbsp;</td>
-              <td width="30%" height="35px">&nbsp;</td>
-              <td width="15%" height="35px">&nbsp;</td>
+              <td width="13%" height="50px">Nama Importir/APM</td>
+              <td width="30%" height="50px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Nama Importir/APM"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">&nbsp;</td>
+              <td width="30%" height="50px">&nbsp;</td>
+              <td width="15%" height="50px">&nbsp;</td>
             </tr>
             <tr>
-              <td width="13%" height="35px">Ket. Lain - Lain</td>
-              <td width="30%" height="35px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Ket. Lain - Lain"></td>
-              <td width="2%" height="35px">&nbsp;</td>
-              <td width="10%" height="35px">&nbsp;</td>
-              <td width="30%" height="35px">&nbsp;</td>
-              <td width="15%" height="35px">&nbsp;</td>
+              <td width="13%" height="50px">Ket. Lain - Lain</td>
+              <td width="30%" height="50px"><input type="text" id="kode_pos" name="kode_pos" class="form-control col-md-7 col-xs-12 input-style" placeholder="Ket. Lain - Lain"></td>
+              <td width="2%" height="50px">&nbsp;</td>
+              <td width="10%" height="50px">&nbsp;</td>
+              <td width="30%" height="50px">&nbsp;</td>
+              <td width="15%" height="50px">&nbsp;</td>
             </tr>
           </table>
 
@@ -434,19 +434,19 @@
 
       <table width="100%">
         <tr>
-          <td width="15%" height="35px">No. Resi Pembayaran</td>
-          <td width="25%" height="35px"><input type="text" id="no_resi_pembayaran" name="no_resi_pembayaran" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Resi Pembayaran"></td>
-          <td width="60%" height="35px">&nbsp;</td>
+          <td width="15%" height="50px">No. Resi Pembayaran</td>
+          <td width="25%" height="50px"><input type="text" id="no_resi_pembayaran" name="no_resi_pembayaran" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Resi Pembayaran"></td>
+          <td width="60%" height="50px">&nbsp;</td>
         </tr>
         <tr>
-          <td width="15%" height="35px">No. Rekom</td>
-          <td width="25%" height="35px"><input type="text" id="no_resi_pembayaran" name="no_resi_pembayaran" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rekom"></td>
-          <td width="60%" height="35px">&nbsp;</td>
+          <td width="15%" height="50px">No. Rekom</td>
+          <td width="25%" height="50px"><input type="text" id="no_resi_pembayaran" name="no_resi_pembayaran" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rekom"></td>
+          <td width="60%" height="50px">&nbsp;</td>
         </tr>
         <tr>
-          <td width="15%" height="35px">Ambil No. Polisi</td>
-          <td width="25%" height="35px"><input type="text" id="no_resi_pembayaran" name="no_resi_pembayaran" class="form-control col-md-7 col-xs-12 input-style" placeholder="Ambil No. Polisi"></td>
-          <td width="60%" height="35px">
+          <td width="15%" height="50px">Ambil No. Polisi</td>
+          <td width="25%" height="50px"><input type="text" id="no_resi_pembayaran" name="no_resi_pembayaran" class="form-control col-md-7 col-xs-12 input-style" placeholder="Ambil No. Polisi"></td>
+          <td width="60%" height="50px">
               <button type="button" class="btn btn-default"><i class="fa fa-file"> </i> Simpan</button> <button type="button" class="btn btn-default"><i class="fa fa-plus"> </i> Baru</button>
           </td>
         </tr>

@@ -18,8 +18,8 @@
         <tr>
           <td width="15%" height=35px" valign="top"><label class="control-label">Jenis Pemohon</label></td>
           <td width="40%" height=35px" valign="top">
-            <label class="radio-inline"><input type="radio" name="jenis_pemohon">Pribadi</label>
-            <label class="radio-inline"><input type="radio" name="jenis_pemohon">Biro Jasa</label>
+            <label class="radio-inline"><input type="radio" name="jenis_pemohon" value="PRIBADI">Pribadi</label>
+            <label class="radio-inline"><input type="radio" name="jenis_pemohon" value="BIROJASA">Biro Jasa</label>
           </td>
           <td class="45%"><button type="button" class="btn btn-default col-md-3">Tampil Data</button></td>
         </tr>
@@ -28,7 +28,12 @@
             <label class="control-label">Pemohon</label>
           </td>
           <td width="40%" height=35px" valign="top">
-            <input type="text" id="pemohon" name="pemohon" class="form-control col-md-7 col-xs-12 input-style" placeholder="Pemohon">
+           <!--  <input type="text" id="pemohon" name="pemohon" class="form-control col-md-7 col-xs-12 input-style" placeholder="Pemohon"> -->
+
+           <?php 
+              echo form_dropdown("PEMOHON_ID",array(),'','class="form-control col-md-7 col-xs-12 input-style" id="PEMOHON_ID"');
+           ?>
+
           </td>
           <td width="45%" height=35px" valign="top"> <button type="button" class="btn btn-default">File</button> <button type="button" class="btn btn-default">Tambah</button></td>
         </tr>
@@ -69,7 +74,7 @@
         <div class="" id="jqxgrid"  style="">
          <!-- table -->
          <?php
-         $this->load->view("a_pendaftaranbbn1/index_js");
+         $this->load->view("index_js");
          ?>
         </div>
       </div>

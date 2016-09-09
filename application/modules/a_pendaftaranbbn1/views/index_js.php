@@ -1,5 +1,22 @@
 <script type="text/javascript">
     $(document).ready(function () {
+
+
+      //$('input[name="genderS"]:checked').val();
+  $('input[name="jenis_pemohon"]').click(function(){
+      //alert('test');
+      $.ajax({
+        url : '<?php echo site_url("general/get_pemohon_dropdown") ?>/'+$(this).val(), 
+        success : function(htmldata) {
+          $("#PEMOHON_ID").html(htmldata);
+        }
+
+      });
+  });
+
+
+
+
       alert("loaded");
             var data =
             {

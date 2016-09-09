@@ -20,6 +20,16 @@ class BaruController extends CI_Controller
 
     // }
 
+var $url = 'http://180.250.16.227/gondolbasor/index.php/rocknroll';
+
+// var $url = 'http://localhost/gondolbasor/index.php/rocknroll';
+
+
+var $user = "3PILAR";
+var $pass = "rahasia.123321";
+var $salt = "1234556678";
+
+
     public function setContent($str)
     {
         $this->content['content'] = $str;
@@ -42,18 +52,19 @@ class BaruController extends CI_Controller
 
     }
 
-    public function executeService($url, $method, $json_data)
+    public function executeService($method, $json_data)
     {
 
         // echo $json_data; exit;
-        $req_url = $url . "/" . $method;
-        // echo $req_url;  exit;
+        $req_url = $this->url . "/" . $method;
+        //echo $req_url;  
         $ch = curl_init();
 
         //set the url, number of POST vars, POST data
+        $post_data = array("data"=>$json_data);
         curl_setopt($ch, CURLOPT_URL, $req_url);
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
         //execute post
@@ -65,44 +76,33 @@ class BaruController extends CI_Controller
 
         $info = curl_getinfo($ch);
 
-        $error = ($info['http_code'] == "200") ? false : true;
-        // show_array($array); exit;
+        $success = ($info['http_code'] == "200") ? true : false;
+      
         curl_close($ch);
-        return array("data" => $array, "error" => $error);
+        return array("data" => $array, "success" => $success);
+
+        
     }
 
-    public function executeService2($url, $method, $json_data)
+     public function executeService2($method, $json_data)
     {
 
         // echo $json_data; exit;
-
-        // echo $json_data; exit;
-        $req_url = $url . "/" . $method;
+        $req_url = $this->url . "/" . $method;
+        //echo $req_url;  
         $ch = curl_init();
 
-        //print_r($json_data); exit;
         //set the url, number of POST vars, POST data
-
+        $post_data = array("data"=>$json_data);
         curl_setopt($ch, CURLOPT_URL, $req_url);
-        //curl_setopt($ch,CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLINFO_HEADER_OUT, true); // enable tracking
-        curl_setopt($ch, CURLOPT_VERBOSE, true);
+
         //execute post
         $result = curl_exec($ch);
-
-// $headerSent = curl_getinfo($ch, CURLINFO_HEADER_OUT ); // request headers
-
-// echo $headerSent; exit;
-
-        // $obj  = json_decode($result);
-        // $array = (array) $obj;
-        //
-        curl_close($ch);
-        // return $array;
-        return $result;
+        echo $result;
+ 
     }
 
     public function validasi($daft_id)

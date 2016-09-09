@@ -35,7 +35,8 @@
            ?>
 
           </td>
-          <td width="45%" height=35px" valign="top"> <button type="button" class="btn btn-default">File</button> <button type="button" class="btn btn-default">Tambah</button></td>
+          <td width="45%" height=35px" valign="top"> <button type="button" class="btn btn-default">File</button>
+           <button type="button" class="btn btn-default" id="idBtnTambahPemohonBBN1">Tambah</button></td>
         </tr>
       </table>
 

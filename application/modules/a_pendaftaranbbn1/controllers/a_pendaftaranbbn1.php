@@ -12,6 +12,45 @@ class a_pendaftaranbbn1 extends BaruController
         // $this->load->helper("form");
     }
 
+public function pemohonbaru()
+    {
+        $tempReturn['listPerusahaan']=$this->getListPerusahaan();
+         $this->load->view('pemohon_view',$tempReturn); 
+    }    
+
+function getListPerusahaan() {
+     $data =  array(
+                "LoginInfo" => array ( 
+                        "LoginName" => $this->user,
+                        "Salt" =>  $this->salt,
+                        "AuthHash" =>  md5( $this->user . "_".$this->salt. md5($this->pass) )
+                 
+                )
+                );
+
+   $data_json = json_encode($data);
+
+   // echo $data_json; exit;
+   $pemohon = $this->executeService("bpkb_list_perusahaan_web",$data_json);
+   // show_array($pemohon['data']); 
+   // exit;
+
+ // show_array($pemohon); exit;
+
+  // // echo $pemohon; // exit;
+
+    $arr_pemohon = array();
+ foreach($pemohon['data']['message']->bpkb_list_perusahaan_web  as $row):             
+    $arr_pemohon[$row->COMPANY_ID] = $row->COMPANY_NAMA;      
+        endforeach;
+  // show_array($arr_pemohon);
+       // echo  $arr_pemohon;
+       // exit;
+       return  $arr_pemohon;
+
+}
+
+
     public function index()
     {
 

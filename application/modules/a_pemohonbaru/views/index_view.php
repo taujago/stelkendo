@@ -1,6 +1,5 @@
 
 
-<div class="container-fluid" style="border:10px black;">
 <div class="row">
 <div class="col-md-6"><br>
 <div class="table-responsive">
@@ -76,8 +75,8 @@ placeholder="Massukan Data"></td>
 <select  class="text" name="" style=
 "width:40%;height:34px;valign:top;">
 <?php
-foreach ($listPerusahaan  as $value) {
-  echo "<option value=''>$value</option>";
+foreach ($listPerusahaan as $value) {
+    echo "<option value=''>$value</option>";
 }
 ?>
 </select></td>
@@ -112,14 +111,16 @@ name="" style="width:40%;height:34px;valign:top;"></select></td>
 </div>
 <!-- end row -->
 
+ <hr/>
+  <!-- <div class="row center-block"  style=" max-width:95%;border: 3px solid black; margin-top:5px; margin-left:10px; margin-right:10px;"> -->
+    <!-- <div id='jqxWidget'style=" "> -->
+      <div class="container" style="width:99%;">
 
-  <div class="row">
-  <!--   <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;"> -->
-      <div id="tablePemohonPendaftaranBaru" style="margin-right:40px;">
-<!--       </div> -->
-  </div>
-</div>
-</div>
+
+      <div id="tablePemohonPendaftaranBaru" >
+      </div>
+ 		 <!-- </div> -->
+	</div>
 
 <?php
 $this->load->view('index_js');

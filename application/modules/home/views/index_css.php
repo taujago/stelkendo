@@ -83,4 +83,15 @@
             padding:10px;
             color:#efefef;
           }
+
+          /* Layout issue https://github.com/almasaeed2010/AdminLTE/issues/597*/
+.wrapper {
+  /*min-height: 100%;
+  position: relative;
+  overflow: hidden;*/
+  width: 100%;
+  min-height: 100%;
+  height: auto !important;
+  position: absolute;
+}
         </style>

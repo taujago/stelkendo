@@ -100,7 +100,11 @@ $('input[name="idJenisPemohonBBN1"]').click(function(){
     async: true,
     success : function(htmldata) {
       $("#PEMOHON_ID").html(htmldata);
-    }
+      hidePleaseWait();
+    },
+     beforeSend: function( xhr ) {
+showPleaseWait()
+  }
 
   });
 });

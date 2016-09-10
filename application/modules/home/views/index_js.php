@@ -1,5 +1,5 @@
  <!-- jQuery 2.1.4 -->
-        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>
         <!-- Bootstrap 3.3.5 -->
         <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
         <!-- mask -->
@@ -20,9 +20,20 @@
 <script src="<?php echo base_url(); ?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
        <script type="text/javascript" src="assets/vendor/jqwidgets/jqwidgets/jqxcore.js"></script>
         <script type="text/javascript" src="assets/vendor/jqwidgets/jqwidgets/jqxdata.js"></script>
-        <script type="text/javascript" src="assets/vendor/jqwidgets/jqwidgets/jqx-all.js"></script>
 
-
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxmenu.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.pager.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.grouping.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.sort.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.edit.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.selection.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxlistbox.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.columnsresize.js"></script>
+ <script src="<?php echo base_url(); ?>assets/js/modal-loading.js"></script>
 
 <!-- start javascript -->
 <script>

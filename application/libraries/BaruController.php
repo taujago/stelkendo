@@ -20,15 +20,13 @@ class BaruController extends CI_Controller
 
     // }
 
-var $url = 'http://180.250.16.227/gondolbasor/index.php/rocknroll';
+    public $url = 'http://180.250.16.227/gondolbasor/index.php/rocknroll';
 
 // var $url = 'http://localhost/gondolbasor/index.php/rocknroll';
 
-
-var $user = "3PILAR";
-var $pass = "rahasia.123321";
-var $salt = "1234556678";
-
+    public $user = "3PILAR";
+    public $pass = "rahasia.123321";
+    public $salt = "1234556678";
 
     public function setContent($str)
     {
@@ -48,7 +46,7 @@ var $salt = "1234556678";
     public function cetak()
     {
         $arr = array();
-        $this->load->view('admin/admin_theme', $this->content);
+        $this->load->view('admin_theme', $this->content);
 
     }
 
@@ -57,11 +55,11 @@ var $salt = "1234556678";
 
         // echo $json_data; exit;
         $req_url = $this->url . "/" . $method;
-        //echo $req_url;  
+        //echo $req_url;
         $ch = curl_init();
 
         //set the url, number of POST vars, POST data
-        $post_data = array("data"=>$json_data);
+        $post_data = array("data" => $json_data);
         curl_setopt($ch, CURLOPT_URL, $req_url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
@@ -71,29 +69,28 @@ var $salt = "1234556678";
         $result = curl_exec($ch);
         // echo $result;
 
-        $obj = json_decode($result);
+        $obj   = json_decode($result);
         $array = (array) $obj;
 
         $info = curl_getinfo($ch);
 
         $success = ($info['http_code'] == "200") ? true : false;
-      
+
         curl_close($ch);
         return array("data" => $array, "success" => $success);
 
-        
     }
 
-     public function executeService2($method, $json_data)
+    public function executeService2($method, $json_data)
     {
 
         // echo $json_data; exit;
         $req_url = $this->url . "/" . $method;
-        //echo $req_url;  
+        //echo $req_url;
         $ch = curl_init();
 
         //set the url, number of POST vars, POST data
-        $post_data = array("data"=>$json_data);
+        $post_data = array("data" => $json_data);
         curl_setopt($ch, CURLOPT_URL, $req_url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
@@ -102,7 +99,7 @@ var $salt = "1234556678";
         //execute post
         $result = curl_exec($ch);
         echo $result;
- 
+
     }
 
     public function validasi($daft_id)
@@ -126,10 +123,10 @@ var $salt = "1234556678";
 
         $data_service = array("LoginInfo" => array(
             "LoginName" => $aut_data->service_user,
-            "Salt" => $aut_data->service_salt,
-            "AuthHash" => md5($aut_data->service_salt . md5($aut_data->service_user . $aut_data->service_pass)),
+            "Salt"      => $aut_data->service_salt,
+            "AuthHash"  => md5($aut_data->service_salt . md5($aut_data->service_user . $aut_data->service_pass)),
         ),
-            "NoRangkaList" => array(0 => $no_rangka),
+            "NoRangkaList"                    => array(0 => $no_rangka),
         );
         //echo $data_service;
         $json_data = json_encode($data_service);
@@ -177,9 +174,9 @@ var $salt = "1234556678";
 
     public function getAuthData()
     {
-        $userdata = $this->session->userdata("userdata");
+        $userdata   = $this->session->userdata("userdata");
         $leasing_id = $userdata['leasing_id'];
-        $id_polda = $this->session->userdata("id_polda");
+        $id_polda   = $this->session->userdata("id_polda");
 
         $this->db->where("id_polda", $id_polda);
         $this->db->where("leasing_id", $leasing_id);
@@ -190,38 +187,38 @@ var $salt = "1234556678";
     public function arrPermohonan()
     {
         $ret = array("x" => "- SEMUA JENIS - ",
-            "B" => "BARU",
-            "L" => "LAMA");
+            "B"              => "BARU",
+            "L"              => "LAMA");
         return $ret;
     }
 
     public function nomorSurat($id, $data)
     {
 
-        $nol = array(1 => '0000', '000', '00', '0', '');
+        $nol      = array(1 => '0000', '000', '00', '0', '');
         $userdata = $this->session->userdata("userdata");
         // get max
         $sql = "select max(no_urut_surat) no_urut from t_pendaftaran";
-        $rs = $this->db->query($sql);
+        $rs  = $this->db->query($sql);
         if ($rs->num_rows() == 0) {
             $nomor = 1;
 
         } else {
-            $xx = $rs->row();
+            $xx    = $rs->row();
             $nomor = $xx->no_urut;
             $nomor++;
         }
         $angka = $nol[strlen($nomor)] . $nomor;
 
         $nama = $userdata['leasing_nama_singkatan']; // eplace(" ", "", $userdata['leasing_nama']), 0,5)  ;
-        $tmp = explode("-", $data['daft_date']);
+        $tmp  = explode("-", $data['daft_date']);
 
         $hasil[0] = $angka;
-        $hasil[] = $nama;
-        $hasil[] = $tmp[1];
-        $hasil[] = $tmp[0];
+        $hasil[]  = $nama;
+        $hasil[]  = $tmp[1];
+        $hasil[]  = $tmp[0];
 
-        $arr['no_surat'] = implode("/", $hasil);
+        $arr['no_surat']      = implode("/", $hasil);
         $arr['no_urut_surat'] = $nomor;
 
         $this->db->where("daft_id", $id);
@@ -235,21 +232,21 @@ var $salt = "1234556678";
 
             $this->excel->getActiveSheet()->getStyle($kolom . $baris)->applyFromArray(
                 array(
-                    "borders" => array("top" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "bottom" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "left" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "right" => array('style' => PHPExcel_Style_Border::BORDER_THIN)),
+                    "borders"   => array("top" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "bottom"                   => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "left"                     => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "right"                    => array('style' => PHPExcel_Style_Border::BORDER_THIN)),
 
-                    'font' => array(
-                        'name' => 'Calibri',
-                        'bold' => true,
+                    'font'      => array(
+                        'name'   => 'Calibri',
+                        'bold'   => true,
                         'italic' => false,
-                        'size' => 12,
+                        'size'   => 12,
                     ),
                     'alignment' => array(
                         'horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_CENTER,
-                        'vertical' => PHPExcel_Style_Alignment::VERTICAL_CENTER,
-                        'wrap' => true,
+                        'vertical'   => PHPExcel_Style_Alignment::VERTICAL_CENTER,
+                        'wrap'       => true,
                     )));
         endforeach;
     }
@@ -261,21 +258,21 @@ var $salt = "1234556678";
 
             $this->excel->getActiveSheet()->getStyle($kolom . $arr['baris'])->applyFromArray(
                 array(
-                    "borders" => array("top" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "bottom" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "left" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "right" => array('style' => PHPExcel_Style_Border::BORDER_THIN)),
+                    "borders"   => array("top" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "bottom"                   => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "left"                     => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "right"                    => array('style' => PHPExcel_Style_Border::BORDER_THIN)),
 
-                    'font' => array(
-                        'name' => 'Calibri',
-                        'bold' => $arr['bold'],
+                    'font'      => array(
+                        'name'   => 'Calibri',
+                        'bold'   => $arr['bold'],
                         'italic' => false,
-                        'size' => 12,
+                        'size'   => 12,
                     ),
                     'alignment' => array(
                         'horizontal' => isset($arr['align']) ? PHPExcel_Style_Alignment::HORIZONTAL_CENTER : PHPExcel_Style_Alignment::HORIZONTAL_LEFT,
-                        'vertical' => PHPExcel_Style_Alignment::VERTICAL_CENTER,
-                        'wrap' => true,
+                        'vertical'   => PHPExcel_Style_Alignment::VERTICAL_CENTER,
+                        'wrap'       => true,
                     )));
         endforeach;
     }
@@ -287,21 +284,21 @@ var $salt = "1234556678";
 
             $this->excel->getActiveSheet()->getStyle($kolom . $baris)->applyFromArray(
                 array(
-                    "borders" => array("top" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "bottom" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "left" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "right" => array('style' => PHPExcel_Style_Border::BORDER_THIN)),
+                    "borders"   => array("top" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "bottom"                   => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "left"                     => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "right"                    => array('style' => PHPExcel_Style_Border::BORDER_THIN)),
 
-                    'font' => array(
-                        'name' => 'Calibri',
-                        'bold' => false,
+                    'font'      => array(
+                        'name'   => 'Calibri',
+                        'bold'   => false,
                         'italic' => false,
-                        'size' => 12,
+                        'size'   => 12,
                     ),
                     'alignment' => array(
                         'horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_LEFT,
-                        'vertical' => PHPExcel_Style_Alignment::VERTICAL_CENTER,
-                        'wrap' => true,
+                        'vertical'   => PHPExcel_Style_Alignment::VERTICAL_CENTER,
+                        'wrap'       => true,
                     )));
         endforeach;
     }
@@ -314,16 +311,16 @@ var $salt = "1234556678";
             $this->excel->getActiveSheet()->getStyle($kolom . $baris)->applyFromArray(
                 array(
 
-                    'font' => array(
-                        'name' => 'Calibri',
-                        'bold' => false,
+                    'font'      => array(
+                        'name'   => 'Calibri',
+                        'bold'   => false,
                         'italic' => false,
-                        'size' => 12,
+                        'size'   => 12,
                     ),
                     'alignment' => array(
                         'horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_CENTER,
-                        'vertical' => PHPExcel_Style_Alignment::VERTICAL_CENTER,
-                        'wrap' => true,
+                        'vertical'   => PHPExcel_Style_Alignment::VERTICAL_CENTER,
+                        'wrap'       => true,
                     )));
         endforeach;
     }
@@ -335,21 +332,21 @@ var $salt = "1234556678";
 
             $this->excel->getActiveSheet()->getStyle($kolom . $baris)->applyFromArray(
                 array(
-                    "borders" => array("top" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "bottom" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "left" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-                        "right" => array('style' => PHPExcel_Style_Border::BORDER_THIN)),
+                    "borders"   => array("top" => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "bottom"                   => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "left"                     => array('style' => PHPExcel_Style_Border::BORDER_THIN),
+                        "right"                    => array('style' => PHPExcel_Style_Border::BORDER_THIN)),
 
-                    'font' => array(
-                        'name' => 'Calibri',
-                        'bold' => false,
+                    'font'      => array(
+                        'name'   => 'Calibri',
+                        'bold'   => false,
                         'italic' => false,
-                        'size' => 12,
+                        'size'   => 12,
                     ),
                     'alignment' => array(
                         'horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_CENTER,
-                        'vertical' => PHPExcel_Style_Alignment::VERTICAL_CENTER,
-                        'wrap' => true,
+                        'vertical'   => PHPExcel_Style_Alignment::VERTICAL_CENTER,
+                        'wrap'       => true,
                     )));
         endforeach;
     }
@@ -360,14 +357,14 @@ var $salt = "1234556678";
         // $data .= $txt;
         // $data .= $_GET['data'];
         //show_array($arr_data);
-        $tmp_data['no_bpkb'] = "NOBPKB:" . $arr_data['no_bpkb'];
-        $tmp_data['no_rangka'] = "NORANGKA:" . $arr_data['no_rangka'];
-        $tmp_data['no_mesin'] = "NOMESIN:" . $arr_data['no_mesin'];
-        $tmp_data['no_polisi'] = "NOPOLISI" . $arr_data['no_polisi'];
-        $tmp_data['no_surat'] = "SURATPERMOHONAN:" . $arr_data['no_surat'];
-        $tmp_data['tgl_bpkb'] = "TGLBPKB:" . $arr_data['tgl_bpkb'];
-        $tmp_data['no_blokir'] = "NOBLOKIR:" . $arr_data['no_blokir'];
-        $tmp_data['tgl_blokir'] = "TGLBLOKIR:" . $arr_data['tgl_blokir'];
+        $tmp_data['no_bpkb']      = "NOBPKB:" . $arr_data['no_bpkb'];
+        $tmp_data['no_rangka']    = "NORANGKA:" . $arr_data['no_rangka'];
+        $tmp_data['no_mesin']     = "NOMESIN:" . $arr_data['no_mesin'];
+        $tmp_data['no_polisi']    = "NOPOLISI" . $arr_data['no_polisi'];
+        $tmp_data['no_surat']     = "SURATPERMOHONAN:" . $arr_data['no_surat'];
+        $tmp_data['tgl_bpkb']     = "TGLBPKB:" . $arr_data['tgl_bpkb'];
+        $tmp_data['no_blokir']    = "NOBLOKIR:" . $arr_data['no_blokir'];
+        $tmp_data['tgl_blokir']   = "TGLBLOKIR:" . $arr_data['tgl_blokir'];
         $tmp_data['nama_pemilik'] = "PEMILIK:" . $arr_data['pemilik_nama'];
 
         $data = implode("#", $tmp_data);
@@ -380,9 +377,9 @@ var $salt = "1234556678";
         // exit;
         // header("Content-Type: image/png");
         $params['savename'] = FCPATH . "/assets/images/qrcode/$file_name";
-        $params['level'] = 'H';
-        $params['size'] = 10;
-        $params['data'] = $data;
+        $params['level']    = 'H';
+        $params['size']     = 10;
+        $params['data']     = $data;
         $this->ciqrcode->generate($params);
     }
 

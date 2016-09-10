@@ -16,7 +16,7 @@
 <td width="25%" height="40px" valign="top"><label class=
 "control-label">Nama</label></td>
 <td colspan="3" width="100%" height="40px" valign="top">
-<input type="text" id="" name="" class=
+<input type="text" id="idNamaPBB1Pemohon" name="" class=
 "form-control col-md-7 col-xs-12 input-style" placeholder=
 "Massukan Data"></td>
 </tr>
@@ -24,14 +24,14 @@
 <td width="25%" height="40px" valign="top"><label class=
 "control-label">Alamat</label></td>
 <td colspan="3" width="40%" height="40px" valign="top">
-<textarea type="text-area" id="" name="" class=
+<textarea type="text-area" id="idAlamatPBB1Pemohon" name="" class=
 "form-control col-md-7 col-xs-12 input-style" placeholder=
 "Massukan Data"></textarea></td>
 </tr>
 <tr>
 <td width="10%" height="40px" valign="top"><label class=
 "control-label">No Telp</label></td>
-<td width="10%" height="40px" valign="top"><input type="text" id=""
+<td width="10%" height="40px" valign="top"><input type="text" id="idNoTelpPBB1Pemohon"
 name="" class="form-control col-md-7 col-xs-12 input-style"
 placeholder="Massukan Data"></td>
 <td width="10%" height="40px" valign="top">&nbsp;</td>
@@ -39,7 +39,7 @@ placeholder="Massukan Data"></td>
 <tr>
 <td width="15%" height="40px" valign="top"><label class=
 "control-label">No Hp</label></td>
-<td width="80%" height="40px" valign="top"><input type="text" id=""
+<td width="80%" height="40px" valign="top"><input type="text" id="idNoHpPBB1Pemohon"
 name="" class="form-control col-md-7 col-xs-12 input-style"
 placeholder="Massukan Data"></td>
 <td width="10%" height="40px" valign="top">&nbsp;</td>
@@ -48,14 +48,14 @@ placeholder="Massukan Data"></td>
 <tr>
 <td width="25%" height="40px" valign="top"><label class=
 "control-label">Nama Bank</label></td>
-<td width="40%" height="40px" valign="top"><input type="text" id=""
+<td width="40%" height="40px" valign="top"><input type="text" id="idNoNamaBankPBB1Pemohon"
 name="" class="form-control col-md-7 col-xs-12 input-style"
 placeholder="Massukan Data"></td>
 </tr>
 <tr>
 <td width="25%" height="40px" valign="top"><label class=
 "control-label">No. rekening</label></td>
-<td width="40%" height="40px" valign="top"><input type="text" id=""
+<td width="40%" height="40px" valign="top"><input type="text" id="idNoRekPBB1Pemohon"
 name="" class=" form-control col-md-7 col-xs-12 input-style"
 placeholder="Massukan Data"></td>
 </tr>
@@ -114,9 +114,9 @@ name="" style="width:40%;height:34px;valign:top;"></select></td>
 
 
   <div class="row">
-    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
-      <div id="tablePemohonPendaftaranBaru">
-      </div>
+  <!--   <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;"> -->
+      <div id="tablePemohonPendaftaranBaru" style="margin-right:40px;">
+<!--       </div> -->
   </div>
 </div>
 </div>

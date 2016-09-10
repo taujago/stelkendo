@@ -2,61 +2,63 @@
     exit('No direct script access allowed');
 }
 
-class a_pemohonbaru extends BaruController
+class APemohonbaru extends BaruController
 {
 
-    public function a_pemohonbaru()
+    public function aPemohonbaru()
     {
         parent::__construct();
 
         // $this->load->helper("form");
     }
 
-public function index()
+    public function index()
     {
-        $tempReturn['listPerusahaan']=$this->getListPerusahaan();
-         $this->load->view('index_view',$tempReturn); 
+        $tempReturn['listPerusahaan'] = $this->getListPerusahaan();
+        $this->load->view('index_view', $tempReturn);
     }
 
-function  getTablePemohon(){
+    public function getTablePemohon()
+    {
 
-    $data =  array(
-                "LoginInfo" => array ( 
-                        "LoginName" => $this->user,
-                        "Salt" =>  $this->salt,
-                        "AuthHash" =>  md5( $this->user . "_".$this->salt. md5($this->pass) )
-                )
-                );
+        $data = array(
+            "LoginInfo" => array(
+                "LoginName" => $this->user,
+                "Salt"      => $this->salt,
+                "AuthHash"  => md5($this->user . "_" . $this->salt . md5($this->pass)),
+            ),
+        );
 
-     $data_json = json_encode($data);
-   // echo $data_json; exit;
-     $pemohon = $this->executeService("bpkb_list_pemohon_web",$data_json);
-     //show_array($pemohon); exit;
-    echo json_encode($pemohon['data']);
-     
-}
+        $data_json = json_encode($data);
+        // echo $data_json; exit;
+        $pemohon = $this->executeService("bpkb_list_pemohon_web", $data_json);
+        //show_array($pemohon); exit;
+        echo json_encode($pemohon['data']);
 
-function getListPerusahaan() {
-     $data =  array(
-                "LoginInfo" => array ( 
-                        "LoginName" => $this->user,
-                        "Salt" =>  $this->salt,
-                        "AuthHash" =>  md5( $this->user . "_".$this->salt. md5($this->pass) )
-                )
-                );
+    }
 
-     $data_json = json_encode($data);
+    public function getListPerusahaan()
+    {
+        $data = array(
+            "LoginInfo" => array(
+                "LoginName" => $this->user,
+                "Salt"      => $this->salt,
+                "AuthHash"  => md5($this->user . "_" . $this->salt . md5($this->pass)),
+            ),
+        );
 
-   // echo $data_json; exit;
-     $pemohon = $this->executeService("bpkb_list_perusahaan_web",$data_json);
+        $data_json = json_encode($data);
 
-    $arr_pemohon = array();
-     foreach($pemohon['data']['message']->bpkb_list_perusahaan_web  as $row):
+        // echo $data_json; exit;
+        $pemohon = $this->executeService("bpkb_list_perusahaan_web", $data_json);
+
+        $arr_pemohon = array();
+        foreach ($pemohon['data']['message']->bpkb_list_perusahaan_web as $row):
             $arr_pemohon[$row->COMPANY_ID] = $row->COMPANY_NAMA;
         endforeach;
 
-       return  $arr_pemohon;
+        return $arr_pemohon;
 
-}
+    }
 
 }

@@ -11,28 +11,46 @@
             <label class="control-label">Tanggal</label>
           </td>
           <td width="40%" height=40px" valign="top">
-            <input type="text" id="tanggal" name="tgl_entri" class="tanggal form-control col-md-7 col-xs-12 input-style" placeholder="Tanggal"  data-date-format="dd-mm-yyyy">
+<!--           <div class="input-group">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" id="idTanggalBBN1">
+                </div> -->
+           <!--        <div class='input-group date' id='idTanggalBBN1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div> -->
+                 <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="datepicker">
+                </div>
+                <!-- /.input group -->
+              </div>
           </td>
           <td width="45%" height=40px" valign="top">&nbsp;</td>
         </tr>
         <tr>
           <td width="15%" height=35px" valign="top"><label class="control-label">Jenis Pemohon</label></td>
           <td width="40%" height=35px" valign="top">
-            <label class="radio-inline"><input type="radio" name="jenis_pemohon" value="PRIBADI">Pribadi</label>
-            <label class="radio-inline"><input type="radio" name="jenis_pemohon" value="BIROJASA">Biro Jasa</label>
+            <label class="radio-inline"><input type="radio" name="idJenisPemohonBBN1" value="PRIBADI">Pribadi</label>
+            <label class="radio-inline"><input type="radio" name="idJenisPemohonBBN1" value="BIROJASA">Biro Jasa</label>
           </td>
-          <td class="45%"><button type="button" class="btn btn-default col-md-3">Tampil Data</button></td>
+          <td class="45%"><button type="button" class="btn btn-default col-md-3" id="idBtnTampilDataPBB1">Tampil Data</button></td>
         </tr>
         <tr>
           <td width="15%" height=35px" valign="top">
             <label class="control-label">Pemohon</label>
           </td>
           <td width="40%" height=35px" valign="top">
-           <!--  <input type="text" id="pemohon" name="pemohon" class="form-control col-md-7 col-xs-12 input-style" placeholder="Pemohon"> -->
+           <?php
 
-           <?php 
-              echo form_dropdown("PEMOHON_ID",array(),'','class="form-control col-md-7 col-xs-12 input-style" id="PEMOHON_ID"');
-           ?>
+echo form_dropdown("PEMOHON_ID", array(), '', 'class="form-control col-md-7 col-xs-12 input-style" id="PEMOHON_ID"');
+?>
 
           </td>
           <td width="45%" height=35px" valign="top"> <button type="button" class="btn btn-default">File</button>
@@ -71,24 +89,26 @@
   </div>
 
       <hr/>
+          <!-- start Table draggable -->
       <div class="row " style="border: 3px solid black; margin-top:5px; margin-right:20px;">
-        <div class="" id="jqxgrid"  style="">
+        <div class="" id="idTabelPendaftarabBBN1"  style="">
          <!-- table -->
          <?php
-         $this->load->view("index_js");
-         ?>
+$this->load->view("index_js");
+?>
         </div>
       </div>
 
-
     </div>
+      <!--  /Table draggable -->
 
 
 
-    <!-- End of Pendaftaran -->
+  <!-- End of Pendaftaran -->
 
 
-    <!-- start Table draggable -->
 
 
-    <!--  /Table draggable -->
+
+
+

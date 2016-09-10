@@ -1,8 +1,18 @@
 <script type="text/javascript">
     $(document).ready(function () {
 alert('pemohonbaru');
+$("#tablePemohonPendaftaranBaru").bind('rowselect', function (event) {
+    var selectedRowIndex = event.args.rowindex;
+        var rowindexes = $('#tablePemohonPendaftaranBaru').jqxGrid('getselectedrowindexes');
+       var selectedRowData = $('#tablePemohonPendaftaranBaru').jqxGrid('getrowdata', rowindexes[selectedRowIndex]);
+  // console.log(rowindexes);
+    var rowID = $('#tablePemohonPendaftaranBaru').jqxGrid('getrowid', rowindexes);
+     // get row Data by ID.
+     var data = $('#tablePemohonPendaftaranBaru').jqxGrid('getrowdatabyid', rowID-1);
+     console.log(data);
+   // console.log(event.args.getrowdata(selectedRowIndex));
+});
       //  init table
-       var dataPemohonTable;
     var data =
       {
         datatype: "json",
@@ -32,9 +42,10 @@ alert('pemohonbaru');
                 width: '100%',
                 source: dataAdapter,
                 pageable: true,
-                autoheight: true,
+      
+  columnsresize: true,
                 columns: [
-                   { text: 'PEMOHON ID', datafield: 'PEMOHON_ID' },
+                  	 { text: 'PEMOHON ID', datafield: 'PEMOHON_ID' },
                       { text: 'PEMOHON REG', datafield: 'PEMOHON_REG' },
                       { text: 'PEMOHON NAMA', datafield: 'PEMOHON_NAMA'},
                       { text: 'COMPANY ID', datafield: 'COMPANY_ID'},
@@ -49,6 +60,7 @@ alert('pemohonbaru');
                       { text: 'PEMOHON JENIS', datafield: 'PEMOHON_JENIS'},
                 ]
             });
-
+	
+$("#tablePemohonPendaftaranBaru").jqxGrid('autoresizecolumns');
 }); //end documnet loaded
 </script>

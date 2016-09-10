@@ -56,8 +56,13 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
           <li class="header">Navigasi</li>
           <li class="active"><a href="#"><span>Dashboard</span></a></li>
           <li class=" treeview">
-            <a href="#"><span><?php echo $menu[0]; ?></span> <i class="fa fa fa-edit pull-right"></i></a>
-            <ul class="treeview-menu"  id ="id_child_menu">
+            <a href="#">
+                     <i class="fa fa-edit"></i> <span></span>
+                     <span class="pull-right-container"><?php echo $menu[0]; ?>
+                       <i class="fa fa-angle-left pull-right"></i>
+                     </span>
+                   </a>
+                   <ul class="treeview-menu"  id ="id_child_menu">
               <!-- script tampil side bar , nama href sesuai dengan nama menu di aplikasi desktop(huruf kecil semua dengan penambahan
               penambahan index menu sesuai abjad misal menu 1 dengan submenu Pendaftaran bbn 1 = a_pendaftaranbbn1) -->
               <!-- dekalrasi $menu dan subMenu dalam bentuk array  -->

@@ -1,7 +1,5 @@
   <!-- Pendaftaran -->
 <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
-
-
       <div class="col-md-12" style="max-height:50%;">
         <!-- <hr/> -->
       <table width="100%" style="margin-top:10px;">
@@ -10,23 +8,11 @@
             <label class="control-label">Tanggal</label>
           </td>
           <td width="40%" height=40px" valign="top">
-<!--           <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" id="idTanggalBBN1">
-                </div> -->
-           <!--        <div class='input-group date' id='idTanggalBBN1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div> -->
                  <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" id="datepicker">
+                  <input type="text" class="form-control pull-right" id="idTanggalBBN1">
                 </div>
                 <!-- /.input group -->
 
@@ -89,7 +75,10 @@ echo form_dropdown("PEMOHON_ID", array(), '', 'class="form-control col-md-7 col-
 
       <hr/>
           <!-- start Table draggable -->
-      <div class="row " style="border: 3px solid black; margin-top:5px; margin-right:20px;">
+      <!-- <div class="row " style="border: 3px solid black; margin-top:5px; margin-right:20px;"> -->
+<div class="row ">
+  
+</div>
         <div class="" id="idTabelPendaftarabBBN1"  style="">
          <!-- table -->
          <?php

@@ -64,6 +64,7 @@ $(function () {
       event.preventDefault();
       var target = getEventTarget(event);
       alert(target.href);
+
       registerComposeButtonEvent(target);
       registerCloseEvent();
 
@@ -76,18 +77,17 @@ $(function () {
 function registerComposeButtonEvent(target) {
   var tabId= target.innerHTML;
 tabId=tabId.replace(/ /g,"_"); // ganti spasi menjadi underscore
-//alert(tabId);
+
 // tambah dynamic tab dan konten tab .append(html kode);
-$('.nav-tabs').append('<li class="rounded" ><a href="#' + tabId + '"><button class="close closeTab" type="button" >×</button>'+target.innerHTML+'</a></li>');
-$('.tab-content').append('<div class="tab-pane " id="' + tabId + '"></div>');
+$('.nav-pills').append('<li class="" ><a href="#' + tabId + '"><button class="close closeTab btn-danger btn-round" type="button">x</button></button>'+target.innerHTML+'</a></li>');
+$('.tab-content').append('<div class="tab-pane" style="background-color: rgb(255, 255, 255);" id="' + tabId + '"></div>');
 //send
 var status=craeteNewTabAndLoadUrl("", target.href, "#" + tabId);
-  //alert("status="+status);
-//if(status=="ok"){
+
   $(this).tab('show');
   showTab(tabId);
   registerCloseEvent();
-//}else{}
+
 
 }
 

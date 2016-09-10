@@ -1,9 +1,8 @@
   <!-- Pendaftaran -->
-   <!--border: 3px solid #73AD21;-->
-      <div class="col-md-12" style="max-height:50%;">
-      <!-- <div class="row"><h5>Pendaftaran BBN1</h5></div> -->
+<div class="container-fluid" style="background-color: rgb(255, 255, 255);">
 
-      <div class="container">
+
+      <div class="col-md-12" style="max-height:50%;">
         <!-- <hr/> -->
       <table width="100%" style="margin-top:10px;">
         <tr>
@@ -30,7 +29,7 @@
                   <input type="text" class="form-control pull-right" id="datepicker">
                 </div>
                 <!-- /.input group -->
-              </div>
+
           </td>
           <td width="45%" height=40px" valign="top">&nbsp;</td>
         </tr>
@@ -86,7 +85,7 @@ echo form_dropdown("PEMOHON_ID", array(), '', 'class="form-control col-md-7 col-
           </td>
         </tr>
       </table>
-  </div>
+
 
       <hr/>
           <!-- start Table draggable -->
@@ -101,14 +100,8 @@ $this->load->view("index_js");
 
     </div>
       <!--  /Table draggable -->
-
-
+        </div>
+        <!--end col  -->
+        </div>
 
   <!-- End of Pendaftaran -->
-
-
-
-
-
-
-

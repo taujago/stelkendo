@@ -1,4 +1,4 @@
-<?php 
+<?php
 class general extends BaruController {
 
 
@@ -13,11 +13,11 @@ public function general()
 
 function get_pemohon($pemohonJenis=null) {
 	 $data =  array(
-                "LoginInfo" => array ( 
+                "LoginInfo" => array (
                         "LoginName" => $this->user,
                         "Salt" =>  $this->salt,
                         "AuthHash" =>  md5( $this->user . "_".$this->salt. md5($this->pass) )
-                 
+
                 ),
                 "Param"=>array("pemohonJenis"=>$pemohonJenis)
                 );
@@ -27,15 +27,15 @@ function get_pemohon($pemohonJenis=null) {
    // echo $data_json; exit;
    $pemohon = $this->executeService("refresh_pemohon",$data_json);
 
-   // show_array($pemohon['data']['M_PEMOHON']); 
+   // show_array($pemohon['data']['M_PEMOHON']);
    //exit;
 
 
   // // echo $pemohon; // exit;
 
     $arr_pemohon = array();
-        foreach($pemohon['data']['M_PEMOHON'] as $row):         	 
-            $arr_pemohon[$row->PEMOHON_ID] = $row->PEMOHON_NAMA;      
+        foreach($pemohon['data']['M_PEMOHON'] as $row):
+            $arr_pemohon[$row->PEMOHON_ID] = $row->PEMOHON_NAMA;
 		endforeach;
     //show_array($arr_pemohon);
 		return $arr_pemohon;

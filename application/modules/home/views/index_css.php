@@ -35,11 +35,11 @@
 
         <style media="screen">
 
-          .nav-tabs > li.rounded.active > a,
+          /*.nav-tabs > li.rounded.active > a,
           .nav-tabs > li.rounded.active > a:hover,
           .nav-tabs > li.rounded.active > a:focus
           {
-            background-color:#b6b6b7; //
+            background-color:#3c8dbc;
             font-weight:bolder;
             border-top-left-radius:10px;
             border-top-right-radius:10px;
@@ -48,12 +48,33 @@
           }
           .nav-tabs > li.rounded > a
           {
-            background-color:#3c8dbc;  //biru
+            background-color:#b6b6b7;  //biru
             border-top-left-radius:10px;
             border-top-right-radius:10px;
             color:white;
             border-color:black;
           }
+          */
+          /*.nav-tabs > li.active > a,
+          .nav-tabs > li.active > a:focus
+          {
+            background-color:#b6b6b7;
+            font-weight:bolder;
+           border-color: blue;
+            border-top-left-radius:10px;
+            border-top-right-radius:10px;
+            color:black;
+            border-color:black;
+          }
+          .nav-tabs > li > a
+          {
+            background-color:#b6b6b7;  //biru
+            border-top-left-radius:10px;
+            border-top-right-radius:10px;
+            color:white;
+             border-color: blue;
+            border-color:black;
+          }*/
 
           hr {
             -moz-border-bottom-colors: none;
@@ -68,21 +89,21 @@
           }
           /*body { font-size: 16px; }*/
           /*@import url('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');*/
-
+/*
           html,body{height:100%;}
 
           .container {
             height:100%;
-          }
+          }*/
 
-          .fill{
+          /*.fill{
             width:100%;
             height:100%;
             min-height:100%;
             background-color:#990000;
             padding:10px;
             color:#efefef;
-          }
+          }*/
 
           /* Layout issue https://github.com/almasaeed2010/AdminLTE/issues/597*/
 .wrapper {
@@ -93,5 +114,52 @@
   min-height: 100%;
   height: auto !important;
   position: absolute;
+}
+
+.nav-pills>li>a {
+    border-radius: 0;
+    font-style: oblique;
+    font-family: monospace;
+    font-size: 15px;
+    border-top: 3px solid #1a2226;
+    border-bottom: 4px solid #3c8dbc;   /* biru admin lte */
+    /*color: #444;*/
+  }
+  .nav nav-pills{
+    border-top: 3px solid #1a2226;
+    border-bottom: 4px solid #1a2226;   /* biru admin lte */
+  }
+
+  .btn-round {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.btn-round.btn-lg {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-round.btn-sm {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-round.btn-xs {
+    width: 15px;
+    height: 15px;
+}
+
+/*.nav-tabs-custom>.nav-tabs {
+    margin: 0;
+    border-bottom-color: black !important;
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+  }*/
+
+  .nav-pills>li+li {
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
         </style>

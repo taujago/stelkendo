@@ -2,7 +2,7 @@
     exit('No direct script access allowed');
 }
 
-class a_pemohonbaru extends BaruController
+class a_1_pemohonbaru extends BaruController
 {
 
     public function aPemohonbaru()

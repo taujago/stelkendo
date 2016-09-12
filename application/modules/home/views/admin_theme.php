@@ -68,9 +68,11 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
               <!-- dekalrasi $menu dan subMenu dalam bentuk array  -->
               <?php
 
-              $tempLink1 = 'a_';
+
               for ($i = 0; $i < count($subMenu1); $i++) {
                 $tempLink  = '';
+                $j=$i+1;
+                $tempLink1 = 'a_'.$j.'_';
                 $tempLink2 = $subMenu1[$i];
                 $tempLink2 = str_ireplace(' ', '', $tempLink2);
                 $tempLink2 = strtolower($tempLink2);

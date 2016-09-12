@@ -2,7 +2,7 @@
     exit('No direct script access allowed');
 }
 
-class a_pendaftaranbbn1 extends BaruController
+class a_1_pendaftaranbbn1 extends BaruController
 {
 
     public function a_pendaftaranbbn1()
@@ -15,16 +15,16 @@ class a_pendaftaranbbn1 extends BaruController
 public function pemohonbaru()
     {
         $tempReturn['listPerusahaan']=$this->getListPerusahaan();
-         $this->load->view('pemohon_view',$tempReturn); 
-    }    
+         $this->load->view('pemohon_view',$tempReturn);
+    }
 
 function getListPerusahaan() {
      $data =  array(
-                "LoginInfo" => array ( 
+                "LoginInfo" => array (
                         "LoginName" => $this->user,
                         "Salt" =>  $this->salt,
                         "AuthHash" =>  md5( $this->user . "_".$this->salt. md5($this->pass) )
-                 
+
                 )
                 );
 
@@ -32,7 +32,7 @@ function getListPerusahaan() {
 
    // echo $data_json; exit;
    $pemohon = $this->executeService("bpkb_list_perusahaan_web",$data_json);
-   // show_array($pemohon['data']); 
+   // show_array($pemohon['data']);
    // exit;
 
  // show_array($pemohon); exit;
@@ -40,8 +40,8 @@ function getListPerusahaan() {
   // // echo $pemohon; // exit;
 
     $arr_pemohon = array();
- foreach($pemohon['data']['message']->bpkb_list_perusahaan_web  as $row):             
-    $arr_pemohon[$row->COMPANY_ID] = $row->COMPANY_NAMA;      
+ foreach($pemohon['data']['message']->bpkb_list_perusahaan_web  as $row):
+    $arr_pemohon[$row->COMPANY_ID] = $row->COMPANY_NAMA;
         endforeach;
   // show_array($arr_pemohon);
        // echo  $arr_pemohon;
@@ -65,13 +65,13 @@ function getListPerusahaan() {
         // $this->cetak();
 
         $data =  array(
-                "LoginInfo" => array ( 
+                "LoginInfo" => array (
                         "LoginName" => $this->user,
                         "Salt" =>  $this->salt,
                         "AuthHash" =>  md5( $this->user . "_".$this->salt. md5($this->pass) )
-               
+
                 ),
-                 "Param"=>array("pemohonJenis"=>"BIROJASA")  
+                 "Param"=>array("pemohonJenis"=>"BIROJASA")
 
                 );
 
@@ -83,10 +83,10 @@ function getListPerusahaan() {
 
 
 
-        // $pemohon = $this->executeService("refresh_pemohon",$data_json); 
+        // $pemohon = $this->executeService("refresh_pemohon",$data_json);
         // $arr_pemohon = array();
-        // foreach($pemohon['data']['M_PEMOHON'] as $row): 
-        //     $arr_pemohon[$row->PEMOHON_ID] = $row->PEMOHON_NAMA;      // 
+        // foreach($pemohon['data']['M_PEMOHON'] as $row):
+        //     $arr_pemohon[$row->PEMOHON_ID] = $row->PEMOHON_NAMA;      //
 
         // endforeach;
 

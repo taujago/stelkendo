@@ -42,7 +42,13 @@ $(document).ready(function () {
 
     $("#idTabelPendaftarabBBN1").jqxGrid({ source: getAdapterPBB1() });
     $('#idTabelPendaftarabBBN1').jqxGrid('updatebounddata');
+    $("#idTabelPendaftarabBBN1").jqxGrid({ showfilterrow: true });
   });
+$('#idBtnPBB1Export').click(function(event) {
+  /* Act on the event */
+  alert('export');
+  $("#idTabelPendaftarabBBN1").jqxGrid('exportdata', 'csv', 'jqxGrid');
+});
 
   var dataAdapter ;// inisialisai tabel
   $("#idTabelPendaftarabBBN1").jqxGrid(
@@ -50,12 +56,13 @@ $(document).ready(function () {
       width: "99%",
       height: "99%",
       source: dataAdapter,
-      pageable: true,
-      autoheight: false,
-      sortable: true,
-      // altrows: true,
+
+      // 
+      // sortable: true,
+      // filterable: true,
+      // pageable: true,
       // enabletooltips: true,
-      // editable: true,
+      // columnsresize: true,
       selectionmode: 'multiplecellsadvanced',
       groupable: true,
       columns: [
@@ -71,7 +78,7 @@ $(document).ready(function () {
     /* end table proses*/
 
     $('#idBtnTambahPemohonBBN1').click(function(){
-      var url='index.php/a_pemohonbaru';
+      var url='index.php/a_1_1_pemohonbaru';
       var target={'href':url,'innerHTML':'Pemohon Baru'};
       console.log(target.href);
       registerComposeButtonEvent(target);

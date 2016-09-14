@@ -33,6 +33,11 @@
 <script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.selection.js"></script>
 <script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxlistbox.js"></script>
 <script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.filter.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxdata.export.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.export.js"></script>
+
+
 <script src="<?php echo base_url(); ?>assets/js/modal-loading.js"></script>
 
 <!-- start javascript -->

@@ -140,14 +140,7 @@ Data
 
 
 <div class="container" style="background-color: rgb(255, 255, 255);">   <!-- begin container-fluid -->
-  <div class="col-sm-8">
-              <div class="input-group date">
-                <div class="input-group-addon">
-                  <i class="fa fa-calendar"></i>
-                </div>
-                <input type="text" class="form-control pull-right" id="idTanggalBBN1_modal_kb_pbb_add">
-              </div>
-            </div>
+
   <div class="row">
     <a data-toggle="modal" href="#myModal" >
     <button type="button" class="btn btn-primary" style="margin-left:-0px;"><span class="glyphicon glyphicon-plus"></span>Buat Baru
@@ -185,7 +178,6 @@ Data
 <?php
 $this->load->view("modal_kb_pbb_add_view");
 $this->load->view("modal_kb_pbb_edit_view");
-
 $this->load->view("modal_pemohon_baru_index");
 $this->load->view("index_js");
 

@@ -95,12 +95,13 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
     <link rel="stylesheet" href=""<?php echo base_url('assets/css/ionicons201.min.css'); ?>"">
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-      <section class="content-header">
+      <!-- <section class="content-header">
         <h1>
-          <?php echo $title; ?>
+          <?php
+           echo $title; ?>
           <small><?php echo $subtitle; ?></small>
         </h1>
-      </section>
+      </section> -->
 
       <!-- Main content -->
       <div class="content body">

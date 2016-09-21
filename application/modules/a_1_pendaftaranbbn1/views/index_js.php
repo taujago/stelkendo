@@ -4,12 +4,12 @@
 $(document).ready(function () {
 
            // create jqxtabs.
-           $('#jqxtabs').jqxTabs({width: '90%' ,theme: 'bootstrap'});
-           $('#jqxtabs').bind('selected', function (event) {
-               var item = event.args.item;
-               var title = $('#jqxtabs').jqxTabs('getTitleAt', item);
-              // alert(title);
-           });
+          //  $('#jqxtabs').jqxTabs({width: '90%' ,theme: 'bootstrap'});
+          //  $('#jqxtabs').bind('selected', function (event) {
+          //      var item = event.args.item;
+          //      var title = $('#jqxtabs').jqxTabs('getTitleAt', item);
+          //     // alert(title);
+          //  });
 
 
   //Datemask dd/mm/yyyy
@@ -173,132 +173,6 @@ $('.main-header .sidebar-toggle').click(function(event) {
     });
 });
 
-
-
-  }); //end documnet loaded
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- js pemohon baru -->
-  <style type="text/css">
-
-
-  </style>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-   //    $("#idTablePendaftarabBBN1Pemohon").bind('rowselect', function (event) {
-   //      var selectedRowIndex = event.args.rowindex;
-   //      var rowindexes = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getselectedrowindexes');
-   //      var selectedRowData = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getrowdata', rowindexes[selectedRowIndex]);
-   //  // console.log(rowindexes);
-   //  var rowID = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getrowid', rowindexes);
-   //     // get row Data by ID.
-   //     var data = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getrowdatabyid', rowID-1);
-   //     console.log(data);
-   //   // console.log(event.args.getrowdata(selectedRowIndex));
-   // });
-        //  init table
-        var data =
-        {
-          datatype: "json",
-          datafields: [
-          { name: 'PEMOHON_ID'},
-          { name: 'PEMOHON_REG'},
-          { name: 'PEMOHON_NAMA'},
-          { name: 'COMPANY_ID'},
-          { name: 'COMPANY_NAMA'},
-          { name: 'BANK_NAMA'},
-          { name: 'PEMOHON_REK'},
-          { name: 'PEMOHON_TELP'},
-          { name: 'PEMOHON_HP'},
-          { name: 'PEMOHON_ALAMAT'},
-          { name: 'TGL_DAFTAR'},
-          { name: 'STATUS'},
-          { name: 'PEMOHON_JENIS'},
-
-          ],
-          url:'<?php echo site_url("a_1_1_pemohonbaru/getTablePemohon"); ?>'
-        };
-        var dataAdapter = new $.jqx.dataAdapter(data, {
-          downloadComplete(edata, textStatus, jqXHR){
-            hidePleaseWait();
-          },
-          beforeSend(jqXHR, settings){
-            showPleaseWait();
-          }
-
-
-        } );
-
-        $("#idTablePendaftarabBBN1Pemohon").jqxGrid(
-        {
-
-
-    width: '100%',
-               height: '100%',
-               source: dataAdapter,
-               showfilterrow: true,
-               filterable: true,
-               selectionmode: '',
-               pageable: true,
-               enabletooltips: true,
-               columnsresize: true,
-               selectionmode:'singlerow',
-
-    ready: function () {
-      // $('#idTablePendaftarabBBN1Pemohon').jqxGrid('autoresizecolumns');
-     $('#idTablePendaftarabBBN1Pemohon').on('rowselect', function (event) {
-
-            var data = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getrowdata',event.args.rowindex);
-  //  alert(data.COMPANY_NAMA);
-  //  console.log(data.COMPANY_NAMA);
-      });
-    },
-
-    columns: [
-    { text: 'PEMOHON ID', datafield: 'PEMOHON_ID', width: '100px'  },
-    { text: 'PEMOHON REG', datafield: 'PEMOHON_REG',width: '130px' },
-    { text: 'PEMOHON NAMA', datafield: 'PEMOHON_NAMA',width: '200px'},
-    { text: 'COMPANY ID', datafield: 'COMPANY_ID',width: '100px'},
-    { text: 'COMPANY NAMA', datafield: 'COMPANY_NAMA',width: '200px'},
-    { text: 'BANK NAMA', datafield: 'BANK_NAMA',width: '200px'},
-    { text: 'PEMOHON REK', datafield: 'PEMOHON_REK',width: '200px'},
-    { text: 'PEMOHON TELP', datafield: 'PEMOHON_TELP',width: '200px'},
-    { text: 'PEMOHON HP', datafield: 'PEMOHON_HP',width: '200px'},
-    { text: 'PEMOHON ALAMAT', datafield: 'PEMOHON_ALAMAT',width: '300px'},
-    { text: 'TGL DAFTAR', datafield: 'TGL_DAFTAR',width: '100px'},
-    { text: 'STATUS', datafield: 'STATUS',width: '90px'},
-    { text: 'PEMOHON JENIS', datafield: 'PEMOHON_JENIS',width: '200px'},
-    ]
-  });
 
 
   }); //end documnet loaded

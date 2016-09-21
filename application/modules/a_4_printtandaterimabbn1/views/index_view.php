@@ -1,330 +1,161 @@
-
-<div class="container-fluid" style="background-color: rgb(255, 255, 255);">   <!-- begin container-fluid -->
-
-  <!-- Start of the Title -->
+  <!-- registrasi container-fluid-->
+<div class="container-fluid" style="background-color: rgb(255, 255, 255);">
 
 <div class="row">
-  <h3>BBN1 - Kartu Induk</h3>
+  <h3>BBN1 - Tanda Terima </h3>
   <hr />
 </div>
 
-  <!-- End of the Title -->
-
-  <!-- Start of The First Form -->
-
+<!-- Start of Form -->
+<form class="form-horizontal">
+<!-- start of first row -->
 <div class="row">
-  <form class="form-horizontal">
-    <div class="col-md-3">
+    <div class="col-md-5">
       <div class="form-group">
-        <label class="control-label col-sm-3" for="tanggal">Tanggal</label>
-        <div class="col-sm-9">
+        <label class="control-label col-sm-5" for="tanggal">Tanggal Pendaftaran</label>
+        <div class="col-sm-7">
           <div class="input-group date">
             <div class="input-group-addon">
               <i class="fa fa-calendar"></i>
             </div>
-            <input type="text" id="tanggal" name="tanggal" class="tanggal ui-datepicker form-control" placeholder="Tanggal"  data-date-format="dd-mm-yyyy">
+            <input type="text" id="tgl_pendaftaran" name="tgl_pendaftaran" class="tanggal ui-datepicker form-control" placeholder="Tanggal"  data-date-format="dd-mm-yyyy">
           </div>
         </div>
       </div>
     </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="pemohon">Pemohon</label>
+        <div class="col-sm-8">
+          <?php echo form_dropdown("pemohon", array(), '', 'class="form-control col-md-7 col-xs-12 input-style" id="pemohon"'); ?>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- end of first row -->
+<!-- start of second row -->
+<div class="row">
     <div class="col-md-5">
       <div class="form-group">
-        <label class="control-label col-sm-4" for="tanggal">Operator Entry</label>
+        <label class="control-label col-sm-5" for="tanggal">Jenis Pemohon</label>
+        <label class="control-label col-sm-3">
+          <input type="radio" name="jenis" value="pribadi"> &nbsp;&nbsp;Pribadi
+        </label>
+        <label class="control-label col-sm-3">
+          <input type="radio" name="jenis" value="birojasa"> &nbsp;&nbsp;Biro Jasa
+        </label>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="pemohon">No. BPKB</label>
         <div class="col-sm-8">
-          <?php echo form_dropdown("operator", array(), '', 'class="form-control col-md-7 col-xs-12 input-style" id="operator"'); ?>
+          <input type="text" id="no_bpkbawal" name="no_bpkbawal" class="form-control" placeholder="Awal">
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="form-group">
-        <button type="button" class="btn btn-primary form-control" style="min-width:80px;">
-          <i class="fa fa-database"> </i> Get Data From Server
-        </button>
+        <label class="control-label col-sm-1" for="pemohon">S/D</label>
+        <div class="col-sm-10">
+          <input type="text" id="no_bpkbakhir" name="no_bpkbakhir" class="form-control" placeholder="Akhir">
+        </div>
       </div>
     </div>
-  </form>
 </div>
-
-<!-- End of The First Form -->
-
-<!-- Start of the Second Form -->
-
-<div class="row">
-  <hr />
-  <form class="form-horizontal">
-    <div class="col-md-2">
-    <div class="col-sm-12 form-group">
-      <label class="control-label">
-        <input type="radio" name="jenis" value="tunggal"> &nbsp;&nbsp;Tunggal
-      </label>
+<!-- end of second row -->
+<!-- Start of the third row -->
+  <div class="row">
+    <div class="col-md-5">
+      <div class="form-group">
+        <label class="control-label col-sm-5" for="tanggal">&nbsp;</label>
+        <div class="col-sm-7">
+          <button class="btn btn-primary form-control" id="submit" style="height: 60px"> <i class="fa fa-database"> </i> Get Data From Server</button>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-12 form-group">
-      <label class="control-label">
-        <input type="radio" name="jenis" value="rentang"> &nbsp;&nbsp;Rentang
-      </label>
-    </div>
-    </div>
+  </div>
+<!-- End Of the third row -->
+</form>
+
+<!-- End of Form -->
+<!-- Start of Table  -->
+  <div class="row">
     <div class="col-md-6">
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="tanggal">No. BPKB Awal</label>
-        <div class="col-sm-9">
-          <input type="text" name="nobpkbawal" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. BPKB Awal . .">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3>Tabel #1</h3>
         </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="tanggal">No. BPKB Awal</label>
-        <div class="col-sm-9">
-          <input type="text" name="nobpkbawal" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. BPKB Awal . .">
+        <div class="box-body">
+        <div class="responsive-table">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th width="10px">No</th>
+                <th>##</th>
+                <th>No. BPKB</th>
+                <th>Nama Pemilik</th>
+                <th>Tanggal</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><i class="fa fa-file"> </i> 0</td>
+                <td>M.021830293902</td>
+                <td>Desy Kumendong</td>
+                <td>19-01-2013</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="form-group">
-        <button type="button" class="btn btn-primary form-control" style="height: 80px;">
-          <i class="fa fa-database"> </i> Get Data From Server
-        </button>
+
+
+    <div class="col-md-6">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3>Tabel #2</h3>
+        </div>
+        <div class="box-body">
+        <div class="responsive-table">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th width="10px">No</th>
+                <th>##</th>
+                <th>No. BPKB</th>
+                <th>Nama Pemilik</th>
+                <th>Tanggal</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td><i class="fa fa-file"> </i> 0</td>
+                <td>M.021830293902</td>
+                <td>Desy Kumendong</td>
+                <td>19-01-2013</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <button class="btn btn-primary form-control" id="submit" style="height: 40px"> <i class="fa fa-print"> </i> Cetak Tanda Terima</button>
       </div>
     </div>
-  </form>
-</div>
-
-
-<!-- End of the Second Form -->
-
-<!-- Start of Table -->
+  </div>
+<!-- End of Table -->
 
 <div class="row">
-
-<!-- Start 1st Table -->
-  <div class="col-md-3">
-    <div class="box box-solid bg-blue-gradient">
-      <div class="box-header">
-      <i class="fa fa-th"> </i>
-        <h3 class="box-title">Biru</h3>
-      </div>
-      <div class="box-body">
-        <div class="table-responsive">
-          <table width="100%" border="0" id="biru" class="table table-bordered dataTable" role="grid">
-            <thead>
-              <tr>
-                <th width="10%">No</th>
-                <th width="60%">No. BPKB</th>
-                <th width="30%">Ok</th>
-             </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="box-footer text-black">
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-primary"><i class="fa-print"> </i> Cetak</button>
-          </div>
-          <div class="col-md-8">
-            <button class="btn btn-primary pull-right"><i class="fa-print"> </i> Cetak Pilih</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="col-md-6">&nbsp;</div>
+  <div class="col-md-6">
+    
   </div>
-<!-- End 1st Table -->
-
-<!-- Start 2st Table -->
-  <div class="col-md-3">
-    <div class="box box-solid bg-green-gradient">
-      <div class="box-header">
-      <i class="fa fa-th"> </i>
-        <h3 class="box-title">Hijau</h3>
-      </div>
-      <div class="box-body">
-        <div class="table-responsive">
-          <table width="100%" border="0" id="kuning" class="table table-bordered dataTable" role="grid">
-            <thead>
-              <tr>
-                <th width="10%">No</th>
-                <th width="60%">No. BPKB</th>
-                <th width="30%">Ok</th>
-             </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="box-footer text-black">
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-primary"><i class="fa-print"> </i> Cetak</button>
-          </div>
-          <div class="col-md-8">
-            <button class="btn btn-primary pull-right"><i class="fa-print"> </i> Cetak Pilih</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- End 2st Table -->
-
-<!-- Start 3st Table -->
-  <div class="col-md-3">
-    <div class="box box-solid bg-yellow-gradient">
-      <div class="box-header">
-      <i class="fa fa-th"> </i>
-        <h3 class="box-title">Kuning</h3>
-      </div>
-      <div class="box-body">
-        <div class="table-responsive">
-          <table width="100%" border="0" id="kuning" class="table table-bordered dataTable" role="grid">
-            <thead>
-              <tr>
-                <th width="10%">No</th>
-                <th width="60%">No. BPKB</th>
-                <th width="30%">Ok</th>
-             </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="box-footer text-black">
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-primary"><i class="fa-print"> </i> Cetak</button>
-          </div>
-          <div class="col-md-8">
-            <button class="btn btn-primary pull-right"><i class="fa-print"> </i> Cetak Pilih</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- End 3st Table -->
-
-<!-- Start 4st Table -->
-  <div class="col-md-3">
-    <div class="box box-solid bg-red-gradient">
-      <div class="box-header">
-      <i class="fa fa-th"> </i>
-        <h3 class="box-title">Merah</h3>
-      </div>
-      <div class="box-body">
-        <div class="table-responsive">
-          <table width="100%" border="0" id="merah" class="table table-bordered dataTable" role="grid">
-            <thead>
-              <tr>
-                <th width="10%">No</th>
-                <th width="60%">No. BPKB</th>
-                <th width="30%">Ok</th>
-             </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="box-footer text-black">
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-primary"><i class="fa-print"> </i> Cetak</button>
-          </div>
-          <div class="col-md-8">
-            <button class="btn btn-primary pull-right"><i class="fa-print"> </i> Cetak Pilih</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- End 4st Table -->
-
 </div>
-
-<!-- End of Table -->
-<!-- End Of Page -->
 
  <?php
       $this->load->view("index_js");
       ?>
-</div><!-- End container-fluid -->
+
+</div>   <!--end Print tanda tanda terima container-fluid -->
+
+

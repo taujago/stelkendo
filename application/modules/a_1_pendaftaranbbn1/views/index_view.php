@@ -27,9 +27,7 @@
 
        <!-- <a href="" class="btn btn-default"><b>&lt;/&gt;</b> See source</a> -->
 
-<<<<<<< HEAD
-<div class="container" style="background-color: rgb(255, 255, 255);">   <!-- begin container-fluid -->
-=======
+
        <div class="col-md-12 col-lg-10 col-lg-offset-1">
          <div id="builder-basic"></div>
          <div class="btn-group">
@@ -42,7 +40,7 @@
 
 <!--  -->
        </div>
->>>>>>> 8eee68c5b07dd305643b2e95b1c5d60a064eb910
+
 
      </div>
    </div>

@@ -21,4 +21,6 @@ class a_8_laporanbbn1 extends BaruController
   }
 
 
+
+
   }

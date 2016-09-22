@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="<?php echo base_url('assets/plugins/daterangepicker/daterangepicker-bs3.css'); ?>">
+<script src="<?php echo base_url('assets/js/dinamic_tab.js'); ?>"></script>
+<script src="<?php echo base_url('assets/plugins/daterangepicker/daterangepicker.js'); ?>"></script>
 
 <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
 	<div class="row">
@@ -7,19 +10,11 @@
 	</div>
 	<div class="row">
 		<form class="form-horizontal">
-			<div class="col-md-3">
+			<div class="col-md-6">
       			<div class="form-group">
-       				<label class="control-label col-sm-5" for="tanggal">Tgl. Awal</label>
+       				<label class="control-label col-sm-3" for="tanggal">Tgl. Entri</label>
         			<div class="col-sm-7">
-          				<input type="text" id="tgl_awal" name="tgl_awal" class="form-control tanggal" placeholder="Tgl. Awal">
-        			</div>
-      			</div>
-    		</div>
-    		<div class="col-md-3">
-      			<div class="form-group">
-       				<label class="control-label col-sm-5" for="tanggal">Tgl. Akhir</label>
-        			<div class="col-sm-7">
-          				<input type="text" id="tgl_akhir" name="tgl_akhir" class="form-control tanggal" placeholder="Tgl. Akhir">
+          				<input type="text" id="tgl_entri" name="tgl_entri" class="form-control tanggal" placeholder="Jarak Tanggal">
         			</div>
       			</div>
     		</div>
@@ -100,128 +95,51 @@
       </div>
     </div>
 	</div>
-
 <div class="row">
-	<div class="col-md-12">
-      <div class="box">
+<div class="col-md-12">
+    <div class="box">
         <div class="box-header with-border">
-          <p>Detail Data Entri</p>
-        </div>
-        <div class="box-body">
-        <div class="responsive-table">
-          <table class="table table-bordered">
-            <tbody>
-              <tr>
-                <th>No. BPKB</th>
-                <th>TNKB</th>
-                <th>No. Rangka</th>
-                <th>Jenis Nama</th>
-                <th>Wilayah Nama</th>
-                <th>Waktu Entri</th>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-              <tr>
-                <td>M 07336424</td>
-                <td>PB 3362 GA</td>
-                <td>MH1KF1116GK507031</td>
-                <td>SEPEDA MOTOR</td>
-                <td>MANOKWARI</td>
-                <td>31/08/2016 21.59.01</td>
-              </tr>
-            </tbody>
-          </table>
+          Detail Data Entri Terakhir
+          <div class="box-tools pull-right">
+            <button class="btn btn-primary col-md-2 form-control"><i class="fa fa-refresh"></i></button>
           </div>
         </div>
-      </div>
+        <div class="box-body">
+        <div class="laporan" id=""  style="position: relative;">
+    <!-- table -->
     </div>
-</div>
+          <hr />
+
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+          <br>&nbsp;
+
+
+        </div>
+      </div>
+  </div>
+	</div>
+
+	
+
+
 	 <?php
       $this->load->view("index_js");
       ?>

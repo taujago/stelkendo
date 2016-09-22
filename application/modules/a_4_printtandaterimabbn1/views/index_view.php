@@ -87,25 +87,8 @@
           <h3>Tabel #1</h3>
         </div>
         <div class="box-body">
-        <div class="responsive-table">
-          <table class="table table-bordered">
-            <tbody>
-              <tr>
-                <th width="10px">No</th>
-                <th>##</th>
-                <th>No. BPKB</th>
-                <th>Nama Pemilik</th>
-                <th>Tanggal</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td><i class="fa fa-file"> </i> 0</td>
-                <td>M.021830293902</td>
-                <td>Desy Kumendong</td>
-                <td>19-01-2013</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="Tabel1" id="Tabel1"  style="position: relative;">
+    <!-- table -->
           </div>
         </div>
       </div>
@@ -118,25 +101,8 @@
           <h3>Tabel #2</h3>
         </div>
         <div class="box-body">
-        <div class="responsive-table">
-          <table class="table table-bordered">
-            <tbody>
-              <tr>
-                <th width="10px">No</th>
-                <th>##</th>
-                <th>No. BPKB</th>
-                <th>Nama Pemilik</th>
-                <th>Tanggal</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td><i class="fa fa-file"> </i> 0</td>
-                <td>M.021830293902</td>
-                <td>Desy Kumendong</td>
-                <td>19-01-2013</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="Tabel2"   style="position: relative;">
+    <!-- table -->
           </div>
         </div>
         <button class="btn btn-primary form-control" id="submit" style="height: 40px"> <i class="fa fa-print"> </i> Cetak Tanda Terima</button>

@@ -103,39 +103,9 @@
         <h3 class="box-title">Biru</h3>
       </div>
       <div class="box-body">
-        <div class="table-responsive">
-          <table width="100%" border="0" id="biru" class="table table-bordered dataTable" role="grid">
-            <thead>
-              <tr>
-                <th width="10%">No</th>
-                <th width="60%">No. BPKB</th>
-                <th width="30%">Ok</th>
-             </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="monitor" id=""  style="position: relative;">
+    <!-- table -->
+    </div>
       </div>
       <div class="box-footer text-black">
         <div class="row">
@@ -159,39 +129,9 @@
         <h3 class="box-title">Hijau</h3>
       </div>
       <div class="box-body">
-        <div class="table-responsive">
-          <table width="100%" border="0" id="kuning" class="table table-bordered dataTable" role="grid">
-            <thead>
-              <tr>
-                <th width="10%">No</th>
-                <th width="60%">No. BPKB</th>
-                <th width="30%">Ok</th>
-             </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="monitor2" id=""  style="position: relative;">
+    <!-- table -->
+    </div>
       </div>
       <div class="box-footer text-black">
         <div class="row">
@@ -215,39 +155,9 @@
         <h3 class="box-title">Kuning</h3>
       </div>
       <div class="box-body">
-        <div class="table-responsive">
-          <table width="100%" border="0" id="kuning" class="table table-bordered dataTable" role="grid">
-            <thead>
-              <tr>
-                <th width="10%">No</th>
-                <th width="60%">No. BPKB</th>
-                <th width="30%">Ok</th>
-             </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="monitor3" id=""  style="position: relative;">
+    <!-- table -->
+    </div>
       </div>
       <div class="box-footer text-black">
         <div class="row">
@@ -271,39 +181,9 @@
         <h3 class="box-title">Merah</h3>
       </div>
       <div class="box-body">
-        <div class="table-responsive">
-          <table width="100%" border="0" id="merah" class="table table-bordered dataTable" role="grid">
-            <thead>
-              <tr>
-                <th width="10%">No</th>
-                <th width="60%">No. BPKB</th>
-                <th width="30%">Ok</th>
-             </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>39827837298</td>
-                <td><i class="fa fa-folder"> </i> 0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="monitor4" id=""  style="position: relative;">
+    <!-- table -->
+    </div>
       </div>
       <div class="box-footer text-black">
         <div class="row">

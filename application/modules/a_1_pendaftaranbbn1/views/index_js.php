@@ -4,12 +4,12 @@
 $(document).ready(function () {
 
            // create jqxtabs.
-           $('#jqxtabs').jqxTabs({width: '90%' ,theme: 'bootstrap'});
-           $('#jqxtabs').bind('selected', function (event) {
-               var item = event.args.item;
-               var title = $('#jqxtabs').jqxTabs('getTitleAt', item);
-              // alert(title);
-           });
+          //  $('#jqxtabs').jqxTabs({width: '90%' ,theme: 'bootstrap'});
+          //  $('#jqxtabs').bind('selected', function (event) {
+          //      var item = event.args.item;
+          //      var title = $('#jqxtabs').jqxTabs('getTitleAt', item);
+          //     // alert(title);
+          //  });
 
 
   //Datemask dd/mm/yyyy
@@ -182,124 +182,97 @@ $('.main-header .sidebar-toggle').click(function(event) {
 
 
 
+  <script>
+//http://querybuilder.js.org/assets/demo-basic.js
+  $(document).ready(function() {
+    var rules_basic = {
+  condition: 'AND',
+  rules: [{
+    id: 'price',
+    operator: 'less',
+    value: 10.25
+  }, {
+    condition: 'OR',
+    rules: [{
+      id: 'category',
+      operator: 'equal',
+      value: 2
+    }, {
+      id: 'category',
+      operator: 'equal',
+      value: 1
+    }]
+  }]
+};
 
+$('#builder-basic').queryBuilder({
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- js pemohon baru -->
-  <style type="text/css">
-
-
-  </style>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-   //    $("#idTablePendaftarabBBN1Pemohon").bind('rowselect', function (event) {
-   //      var selectedRowIndex = event.args.rowindex;
-   //      var rowindexes = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getselectedrowindexes');
-   //      var selectedRowData = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getrowdata', rowindexes[selectedRowIndex]);
-   //  // console.log(rowindexes);
-   //  var rowID = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getrowid', rowindexes);
-   //     // get row Data by ID.
-   //     var data = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getrowdatabyid', rowID-1);
-   //     console.log(data);
-   //   // console.log(event.args.getrowdata(selectedRowIndex));
-   // });
-        //  init table
-        var data =
-        {
-          datatype: "json",
-          datafields: [
-          { name: 'PEMOHON_ID'},
-          { name: 'PEMOHON_REG'},
-          { name: 'PEMOHON_NAMA'},
-          { name: 'COMPANY_ID'},
-          { name: 'COMPANY_NAMA'},
-          { name: 'BANK_NAMA'},
-          { name: 'PEMOHON_REK'},
-          { name: 'PEMOHON_TELP'},
-          { name: 'PEMOHON_HP'},
-          { name: 'PEMOHON_ALAMAT'},
-          { name: 'TGL_DAFTAR'},
-          { name: 'STATUS'},
-          { name: 'PEMOHON_JENIS'},
-
-          ],
-          url:'<?php echo site_url("a_1_1_pemohonbaru/getTablePemohon"); ?>'
-        };
-        var dataAdapter = new $.jqx.dataAdapter(data, {
-          downloadComplete(edata, textStatus, jqXHR){
-            hidePleaseWait();
-          },
-          beforeSend(jqXHR, settings){
-            showPleaseWait();
-          }
-
-
-        } );
-
-        $("#idTablePendaftarabBBN1Pemohon").jqxGrid(
-        {
-
-
-    width: '100%',
-               height: '100%',
-               source: dataAdapter,
-               showfilterrow: true,
-               filterable: true,
-               selectionmode: '',
-               pageable: true,
-               enabletooltips: true,
-               columnsresize: true,
-               selectionmode:'singlerow',
-
-    ready: function () {
-      // $('#idTablePendaftarabBBN1Pemohon').jqxGrid('autoresizecolumns');
-     $('#idTablePendaftarabBBN1Pemohon').on('rowselect', function (event) {
-
-            var data = $('#idTablePendaftarabBBN1Pemohon').jqxGrid('getrowdata',event.args.rowindex);
-  //  alert(data.COMPANY_NAMA);
-  //  console.log(data.COMPANY_NAMA);
-      });
+  plugins: ['bt-tooltip-errors'],
+  lang_code:'in',
+  filters: [{
+    id: 'name',
+    label: 'Name',
+    type: 'string'
+  }, {
+    id: 'category',
+    label: 'Category',
+    type: 'integer',
+    input: 'select',
+    values: {
+      1: 'Books',
+      2: 'Movies',
+      3: 'Music',
+      4: 'Tools',
+      5: 'Goodies',
+      6: 'Clothes'
     },
+    operators: ['equal', 'not_equal', 'in', 'not_in', 'is_null', 'is_not_null']
+  }, {
+    id: 'in_stock',
+    label: 'In stock',
+    type: 'integer',
+    input: 'radio',
+    values: {
+      1: 'Yes',
+      0: 'No'
+    },
+    operators: ['equal']
+  }, {
+    id: 'price',
+    label: 'Price',
+    type: 'double',
+    validation: {
+      min: 0,
+      step: 0.01
+    }
+  }, {
+    id: 'id',
+    label: 'Identifier',
+    type: 'string',
+    placeholder: '____-____-____',
+    operators: ['equal', 'not_equal'],
+    validation: {
+      format: /^.{4}-.{4}-.{4}$/
+    }
+  }],
 
-    columns: [
-    { text: 'PEMOHON ID', datafield: 'PEMOHON_ID', width: '100px'  },
-    { text: 'PEMOHON REG', datafield: 'PEMOHON_REG',width: '130px' },
-    { text: 'PEMOHON NAMA', datafield: 'PEMOHON_NAMA',width: '200px'},
-    { text: 'COMPANY ID', datafield: 'COMPANY_ID',width: '100px'},
-    { text: 'COMPANY NAMA', datafield: 'COMPANY_NAMA',width: '200px'},
-    { text: 'BANK NAMA', datafield: 'BANK_NAMA',width: '200px'},
-    { text: 'PEMOHON REK', datafield: 'PEMOHON_REK',width: '200px'},
-    { text: 'PEMOHON TELP', datafield: 'PEMOHON_TELP',width: '200px'},
-    { text: 'PEMOHON HP', datafield: 'PEMOHON_HP',width: '200px'},
-    { text: 'PEMOHON ALAMAT', datafield: 'PEMOHON_ALAMAT',width: '300px'},
-    { text: 'TGL DAFTAR', datafield: 'TGL_DAFTAR',width: '100px'},
-    { text: 'STATUS', datafield: 'STATUS',width: '90px'},
-    { text: 'PEMOHON JENIS', datafield: 'PEMOHON_JENIS',width: '200px'},
-    ]
+  rules: rules_basic
+});
+
+$('#btn-reset').on('click', function() {
+  $('#builder-basic').queryBuilder('reset');
+});
+
+$('#btn-set').on('click', function() {
+  $('#builder-basic').queryBuilder('setRules', rules_basic);
+});
+
+$('#btn-get').on('click', function() {
+  var result = $('#builder-basic').queryBuilder('getRules');
+
+  if (!$.isEmptyObject(result)) {
+    alert(JSON.stringify(result, null, 2));
+  }
+});
   });
-
-
-  }); //end documnet loaded
-  </script>
+</script>

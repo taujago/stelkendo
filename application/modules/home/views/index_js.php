@@ -40,6 +40,19 @@
 
 <script src="<?php echo base_url(); ?>assets/js/modal-loading.js"></script>
 
+<!-- querybuilder -->
+<script src="http://querybuilder.js.org/dist/moment/min/moment.min.js"></script>
+<script src="http://querybuilder.js.org/dist/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="http://querybuilder.js.org/dist/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+<script src="http://querybuilder.js.org/dist/selectize/dist/js/standalone/selectize.min.js"></script>
+<script src="http://querybuilder.js.org/dist/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="http://querybuilder.js.org/dist/jQuery-QueryBuilder/dist/js/query-builder.standalone.min.js"></script>
+<script src="http://querybuilder.js.org/dist/sql-parser/browser/sql-parser.js"></script>
+<script src="http://querybuilder.js.org/dist/sql-parser/browser/sql-parser.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/custom-query-builder.in.js"></script>
+<!--  -->
+
+
 <!-- start javascript -->
 <script>
 /**

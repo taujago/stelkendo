@@ -30,6 +30,14 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datepicker/datepicker3.css">
    <link rel="stylesheet" href="assets/vendor/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
 
+<!--  querybuilder-->
+<!-- <link href="http://querybuilder.js.org/dist/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+<link href="http://querybuilder.js.org/dist/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css" rel="stylesheet">
+<link href="http://querybuilder.js.org/dist/selectize/dist/css/selectize.bootstrap3.css" rel="stylesheet">
+<link href="http://querybuilder.js.org/dist/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+<link href="http://querybuilder.js.org/dist/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet"> -->
+<link href="https://cdn.jsdelivr.net/jquery.query-builder/2.3.3/css/query-builder.default.min.css" rel="stylesheet">
+<!--  -->
 
         <!-- biru #f6f6f6 -->
 
@@ -176,4 +184,6 @@
     @media only screen and (min-width : 992px) {
 
     }
+
+
         </style>

@@ -1,12 +1,51 @@
 
   <div class="container-fluid">
+      <div class="row">
+        <div class="btn-group btn-group-justified">
+        <a class="btn btn-primary"  data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-filter"></span>Filter Table</a>
+        <a class="btn btn-primary" href="#"><span class="glyphicon glyphicon-print"></span>Cetak</a>
+        <a class="btn btn-primary" href="#"><span class="glyphicon glyphicon-export"></span>Export CSV</a>
+        <ul class="btn btn-primary" data-toggle="modal" href="#myModal"><span class="glyphicon glyphicon-plus"></span> Buat Baru</ul>
+</div>
+      </div>
   <div class="row">
-    <a data-toggle="modal" href="#myModal" >
-    <button type="button" class="btn btn-primary" style=""><span class="glyphicon glyphicon-plus"></span>Buat Baru
-  </button></a>
+
+ <!-- collapse filter -->
+<div class="panel-group">
+   <div class="panel panel-primary">
+
+     <div id="collapse1" class="panel-collapse collapse">
+       <div class="panel-body">
+<!--  -->
+<section class="bs-docs-section clearfix">
+     <!-- <h1 id="basic" class="page-header">
+       Basic
+     </h1>
+
+     <p>This demo shows the basic features of the QueryBuilder. Click one of the blue buttons to trigger the validation and
+       display the output.</p> -->
+
+       <!-- <a href="" class="btn btn-default"><b>&lt;/&gt;</b> See source</a> -->
+
+       <div class="col-md-12 col-lg-10 col-lg-offset-1">
+         <div id="builder-basic"></div>
+         <div class="btn-group">
+           <button class="btn btn-warning reset" data-target="basic">Reset</button>
+           <button class="btn btn-success set-json" data-target="basic">Set rules</button>
+           <button class="btn btn-primary parse-json" data-target="basic">Get rules</button>
+         </div>
+       </div>
+     </section>
+
+<!--  -->
+       </div>
+
+     </div>
+   </div>
+ </div> <!-- end collapse filter -->
 
 </div>
-  <hr>
+
 <div class="row">
 
   <div class="" id="idTabelPendaftarabBBN1"  style="position: relative;">

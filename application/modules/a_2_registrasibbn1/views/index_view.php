@@ -62,20 +62,20 @@
   <hr>
   <!-- navigasi tab -->
 
-  <div class="row">
-    <ul class="nav nav-tabs">
-      <li class="active">
-        <a href="#kb_leg_tab_1" data-toggle="tab" aria-expanded="true">I. Identitas Kendaraan</a>
+  <div class="row" id='idSubTabsRegistrasiBBN1'>
+    <ul>
+      <li>
+      I. Identitas Kendaraan
       </li>
-      <li class="">
-        <a href="#kb_leg_tab_2" data-toggle="tab" aria-expanded="false">II. Identitas Pemilik</a>
+      <li>
+      II. Identitas Pemilik
       </li>
-      <li class="">
-        <a href="#kb_leg_tab_3" data-toggle="tab" aria-expanded="false">III.Identitas Pabean/Asal Usul</a>
+      <li >
+    III.Identitas Pabean/Asal Usul
       </li>
     </ul>
-    <div class="tab-content">
-      <div class="tab-pane active" id="kb_leg_tab_1">
+    <!--start isi subtabs  -->
+      <div>   <!-- kontent 1 -->
         <p></p><div class="row">
           <div class="col-md-6">
             <row>
@@ -273,8 +273,8 @@
             </row>
           </div>
         </div><br>
-      </div>
-      <div class="tab-pane" id="kb_leg_tab_2">
+      </div>   <!--  end kontent 1 -->
+      <div>   <!-- kontent 2 -->
         <p></p>
         <div class="row">
           <div class="col-md-6">
@@ -412,8 +412,8 @@
 
             </div>
           </div>
-        </div>
-        <div class="tab-pane" id="kb_leg_tab_3">
+        </div>   <!-- end kontent 2 -->
+        <div>   <!-- start kontent 3 -->
           <p></p>
           <div class="row">
             <div class="col-md-6">
@@ -501,10 +501,12 @@
               </form>
             </div>
           </div>
-        </div>
-        <div class="tab-pane" id="kb_leg_tab_4">
-        </div>
-      </div>
-    </div>
+        </div>   <!-- end kontent 3 -->
+      </div>     <!-- end  isi subtabs  -->
+
 
   </div>   <!--end registrasi container-fluid -->
+
+  <?php
+$this->load->view('index_js.php');
+   ?>

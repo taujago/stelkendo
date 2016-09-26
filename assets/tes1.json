@@ -1,6 +1,6 @@
 [{
  "id": "1",
- "no_bpkb": "AAA",
+ "no_bpkb": "BPKB_1",
  "no_rangka": "BBB",
  "no_faktur": "CCC",
  "barkode": "16g",
@@ -8,7 +8,7 @@
   "diplomat": "14g"
  }, {
    "id": "2",
-   "no_bpkb": "AAA",
+   "no_bpkb": "BPKB_2",
    "no_rangka": "BBB",
    "no_faktur": "CCC",
    "barkode": "16g",
@@ -16,7 +16,7 @@
     "diplomat": "14g"
 }, {
   "id": "3",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_3",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",
@@ -24,7 +24,7 @@
    "diplomat": "14g"
 }, {
   "id": "4",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_4",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",
@@ -32,7 +32,7 @@
    "diplomat": "14g"
 }, {
   "id": "5",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_5",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",
@@ -40,7 +40,7 @@
    "diplomat": "14g"
 }, {
   "id": "6",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_6",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",
@@ -48,7 +48,7 @@
    "diplomat": "14g"
 }, {
   "id": "7",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_7",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",
@@ -56,7 +56,7 @@
    "diplomat": "14g"
 }, {
   "id": "8",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_8",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",
@@ -64,7 +64,7 @@
    "diplomat": "14g"
 }, {
   "id": "9",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_9",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",
@@ -72,7 +72,7 @@
    "diplomat": "14g"
 }, {
   "id": "10",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_10",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",
@@ -80,7 +80,7 @@
    "diplomat": "14g"
 }, {
   "id": "11",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_11",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",
@@ -88,7 +88,7 @@
    "diplomat": "14g"
 }, {
   "id": "12",
-  "no_bpkb": "AAA",
+  "no_bpkb": "BPKB_12",
   "no_rangka": "BBB",
   "no_faktur": "CCC",
   "barkode": "16g",

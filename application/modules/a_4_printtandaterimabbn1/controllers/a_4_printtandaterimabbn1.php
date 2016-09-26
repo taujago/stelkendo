@@ -15,7 +15,12 @@ class a_4_printtandaterimabbn1 extends BaruController
   public function index()
   {
     // $tempReturn['listPerusahaan'] = $this->getListPerusahaan();
-    $this->load->view('index_view');
+
+    $font_arr = array('arial' => 'arial',
+                          'verdana' => 'verdana' );
+
+    $data_array['font_arr'] = $font_arr;
+    $this->load->view('index_view', $data_array);
 
     //$this->load->view('index_view');
   }

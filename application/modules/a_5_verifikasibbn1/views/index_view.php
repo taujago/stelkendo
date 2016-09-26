@@ -73,9 +73,7 @@
 
 <!-- start tabs I -->
 <!-- <div style="overflow: auto; border: none;"  style="width: 100%; height: 100%">
-
-
-<!-- </div> -->
+ </div> -->
 <!-- end tabs 1 -->
 
 <!-- start tabs II -->

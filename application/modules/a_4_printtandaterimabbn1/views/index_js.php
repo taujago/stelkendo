@@ -12,7 +12,9 @@ $(document).ready(function () {
         });
 
 
-
+ $('#idPendaftaranBBNPerusahaan').click(function(){
+      console.log(target.href);
+    });
 
 
 

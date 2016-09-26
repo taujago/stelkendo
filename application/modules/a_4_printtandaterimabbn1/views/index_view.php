@@ -105,7 +105,7 @@
     <!-- table -->
           </div>
         </div>
-        <button class="btn btn-primary form-control" id="submit" style="height: 40px"> <i class="fa fa-print"> </i> Cetak Tanda Terima</button>
+        <button class="btn btn-primary form-control" id="submit" style="height: 40px" data-toggle="modal" href="#myModal"> <i class="fa fa-print"> </i> Cetak Tanda Terima</button>
       </div>
     </div>
   </div>
@@ -119,6 +119,7 @@
 </div>
 
  <?php
+      $this->load->view("modal_pilih_font");
       $this->load->view("index_js");
       ?>
 

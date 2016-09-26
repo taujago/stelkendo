@@ -61,8 +61,8 @@
   </div>
   <hr>
   <!-- navigasi tab -->
-
-  <div class="row" id='idSubTabsRegistrasiBBN1'>
+  <div class="row ">
+  <div id='idSubTabsRegistrasiBBN1'>
     <ul>
       <li>
       I. Identitas Kendaraan
@@ -76,7 +76,8 @@
     </ul>
     <!--start isi subtabs  -->
       <div>   <!-- kontent 1 -->
-        <p></p><div class="row">
+        <p></p>
+        <div class="row center-block" >
           <div class="col-md-6">
             <row>
               <form class="form-horizontal">
@@ -276,7 +277,7 @@
       </div>   <!--  end kontent 1 -->
       <div>   <!-- kontent 2 -->
         <p></p>
-        <div class="row">
+        <div class="row center-block">
           <div class="col-md-6">
             <row>
               <form class="form-horizontal">
@@ -415,7 +416,7 @@
         </div>   <!-- end kontent 2 -->
         <div>   <!-- start kontent 3 -->
           <p></p>
-          <div class="row">
+          <div class="row center-block">
             <div class="col-md-6">
               <form class="form-horizontal">
                 <div class="form-group">
@@ -503,8 +504,7 @@
           </div>
         </div>   <!-- end kontent 3 -->
       </div>     <!-- end  isi subtabs  -->
-
-
+  </div><!-- end navigasi tabs  -->
   </div>   <!--end registrasi container-fluid -->
 
   <?php

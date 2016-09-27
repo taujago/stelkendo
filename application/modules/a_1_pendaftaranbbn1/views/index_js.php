@@ -69,8 +69,9 @@ $('#idBtnPBB1Export').click(function(event) {
   }
 
   var buttonrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
-    return '<button id=\"\"  onClick=\"btnPBBAddTable(this,'+row+')\" class=\"btn btnPBBedit1 btn-primary\">EDIT 1</button><button id=\"btn2\" style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"btnPBBDelTable(this,'+row+')\">HAPUS</button>';
+    return '<button id=\"tes11\"  onClick=\"btnPBBAddTable(this,'+row+')\" class=\"btn btnPBBedit1 btn-primary\">EDIT 1</button><button id=\"btn2\" style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"btnPBBDelTable(this,'+row+')\">HAPUS</button>';
   };
+
 
   $("#idTabelPendaftarabBBN1").jqxGrid(
     {
@@ -97,7 +98,10 @@ $('#idBtnPBB1Export').click(function(event) {
         { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
       ],ready: function()
       {
+      function  btnPBBAddTable(e,row){
 
+         alert(row);
+       }
       },
     });
 

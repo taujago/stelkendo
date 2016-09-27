@@ -67,8 +67,6 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
               penambahan index menu sesuai abjad misal menu 1 dengan submenu Pendaftaran bbn 1 = a_pendaftaranbbn1) -->
               <!-- dekalrasi $menu dan subMenu dalam bentuk array  -->
               <?php
-
-
               for ($i = 0; $i < count($subMenu1); $i++) {
                 $tempLink  = '';
                 $j=$i+1;
@@ -97,9 +95,9 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
       <!-- Content Header (Page header) -->
       <!-- <section class="content-header">
         <h1>
-          <?php
+          < ?php
            echo $title; ?>
-          <small><?php echo $subtitle; ?></small>
+          <small>< ?php echo $subtitle; ? ></small>
         </h1>
       </section> -->
 

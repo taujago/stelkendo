@@ -24,7 +24,7 @@
 											</div>
 										</div>
 											<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
- 											<div class="help-block with-errors">Hey look, this one has feedback icons!</div>
+ 											<!-- <div class="help-block with-errors">Hey look, this one has feedback icons!</div> -->
 									</div>
 
 									<div style="margin-bottom: 5px;" class="form-group">

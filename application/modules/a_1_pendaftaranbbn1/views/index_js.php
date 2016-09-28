@@ -2,20 +2,11 @@
 
 <script type="text/javascript">
 $(document).ready(function () {
+  $(".ClassTanggalInputMask").inputmask("dd-mm-yyyy");
+    $(".ClassNoResiInputMask").inputmask("99-999-999");
 
-           // create jqxtabs.
-          //  $('#jqxtabs').jqxTabs({width: '90%' ,theme: 'bootstrap'});
-          //  $('#jqxtabs').bind('selected', function (event) {
-          //      var item = event.args.item;
-          //      var title = $('#jqxtabs').jqxTabs('getTitleAt', item);
-          //     // alert(title);
-          //  });
+  //  $("#idTanggalBBN1_modal_kb_pbb_add").inputmask("dd-mm-yyyy",{ "oncomplete": function(){ alert('inputmask complete'); } });
 
-
-  //Datemask dd/mm/yyyy
-  //  $("[data-mask]").inputmask();
-  // $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-  //Date picker
 
   /*start table proses*/
   var getAdapterPBB1 = function () { // dapatkan data dari url

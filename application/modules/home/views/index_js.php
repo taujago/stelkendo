@@ -51,7 +51,11 @@
 <script src="http://querybuilder.js.org/dist/sql-parser/browser/sql-parser.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/custom-query-builder.in.js"></script>
 <!--  -->
+<!--  -->
 
+  <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+  <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/extra/phone-codes/phone.js"></script>
+  <!--  -->
 
 <!-- start javascript -->
 <script>

@@ -19,7 +19,7 @@
 												<div class="input-group-addon">
 													<i class="fa fa-calendar"></i>
 												</div>
-												<input type="text" class="form-control pull-right" id="idTanggalBBN1_modal_kb_pbb_add">
+												<input type="text" class="form-control pull-right ClassTanggalInputMask" id="idTanggalBBN1_modal_kb_pbb_add">
 											</div>
 										</div>
 									</div>
@@ -87,7 +87,7 @@
 									<div style="margin-bottom: 5px;" class="form-group">
 										<label class="control-label       col-sm-3" for="">No. Resi Pembayaran :</label>
 										<div class="col-sm-6">
-											<input type="text" id="no_resi" name="no_resi" class="no_resi form-control col-md-7 col-xs-12 input-style" placeholder="No. Resi Pembayaran">
+											<input type="text" id="no_resi" name="no_resi" class="no_resi ClassNoResiInputMask form-control col-md-7 col-xs-12 input-style" placeholder="No. Resi Pembayaran">
 										</div>
 
 									</div>

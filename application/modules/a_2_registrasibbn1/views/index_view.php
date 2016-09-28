@@ -1,8 +1,6 @@
 <!-- registrasi container-fluid-->
 <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
   <div class="row">
-    <div class="col-md-12 col-xs-12 col-lg-12">
-      <div class="row">
         <div class="col-md-3" style="max-width:300px;padding-right:40px;">
           <label>Tanggal registrasi</label>
           <select class="form-control">
@@ -56,13 +54,11 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
   </div>
   <hr>
   <!-- navigasi tab -->
   <div class="row ">
-  <div id='idSubTabsRegistrasiBBN1'>
+  <div id='idSubTabsRegistrasiBBN1' style="height:auto;">
     <ul>
       <li>
       I. Identitas Kendaraan
@@ -79,7 +75,6 @@
         <p></p>
         <div class="row center-block" >
           <div class="col-md-6">
-            <row>
               <form class="form-horizontal">
                 <div class="form-group" style="margin-bottom: 5px">
                   <label for="" class="control-label col-sm-3" >No. BPKB</label>
@@ -190,7 +185,6 @@
                   </div>
                 </div>
               </form>
-            </row>
           </div>
           <div class="col-md-6">
             <row>

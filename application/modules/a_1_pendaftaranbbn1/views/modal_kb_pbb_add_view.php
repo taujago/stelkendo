@@ -12,6 +12,7 @@
 						<div class="row ">
 							<div class="col-md-12">
 								<form class="form-horizontal">
+
 									<div style="margin-bottom: 5px;" class="form-group">
 										<label class="control-label       col-sm-3" for="">Tanggal :</label>
 										<div class="col-sm-6">
@@ -22,7 +23,10 @@
 												<input type="text" class="form-control pull-right ClassTanggalInputMask" id="idTanggalBBN1_modal_kb_pbb_add">
 											</div>
 										</div>
+											<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+ 											<div class="help-block with-errors">Hey look, this one has feedback icons!</div>
 									</div>
+
 									<div style="margin-bottom: 5px;" class="form-group">
 										<label class="control-label       col-sm-3" for="">Jenis Pemohon :</label>
 										<div class="col-sm-6">

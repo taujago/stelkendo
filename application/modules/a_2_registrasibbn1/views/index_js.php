@@ -3,7 +3,7 @@
 <script type="text/javascript">
 $(document).ready(function () {
 $('#idSubTabsRegistrasiBBN1').jqxTabs({
-  width: '99%',  height: '99%'
+  width: 'auto',  height: 'auto'
 });
 // $('#idSubTabsRegistrasiBBN1').on('selected', function (event) {
 //       var selectedTab = event.args.item;

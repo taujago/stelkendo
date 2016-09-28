@@ -1,7 +1,35 @@
 <script src="<?php echo base_url('assets/js/dinamic_tab.js'); ?>"></script>
 
 <script type="text/javascript">
+
+  function hapus(id){
+    BootstrapDialog.show({
+      message : 'ANDA AKAN MENGHAPUS DATA DENGAN ID = '+id+'. ANDA YAKIN  ?  ',
+      title: 'KONFIRMASI HAPUS DATA',
+      draggable: true,
+      buttons : [
+          {
+            label : 'SAYA YAKIN',
+            cssClass : 'btn-primary',
+            hotkey : 13,
+            action: function(dialogItself){
+                    dialogItself.close(); 
+                    $('#myPleaseWait').modal('show');
+                }
+          },
+          {
+                label : 'TIDAK',
+                cssClass : 'btn-danger',
+                action: function(dialogItself){
+                    dialogItself.close();
+                }
+              }]
+    });
+}
+
 $(document).ready(function () {
+
+
 
            // create jqxtabs.
           //  $('#jqxtabs').jqxTabs({width: '90%' ,theme: 'bootstrap'});
@@ -69,7 +97,7 @@ $('#idBtnPBB1Export').click(function(event) {
   }
 
   var buttonrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
-    return '<button id=\"\"  onClick=\"btnPBBAddTable(this,'+row+')\" class=\"btn btnPBBedit1 btn-primary\">EDIT 1</button><button id=\"btn2\" style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"btnPBBDelTable(this,'+row+')\">HAPUS</button>';
+    return '<a href=\"#idModalPBB1Edit\" data-toggle=\"modal\" class=\"btn btn-primary\">EDIT </a><a style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"hapus('+row+')\">HAPUS</a>';
   };
 
   $("#idTabelPendaftarabBBN1").jqxGrid(
@@ -176,6 +204,8 @@ $('.main-header .sidebar-toggle').click(function(event) {
 
 
   }); //end documnet loaded
+
+
   </script>
 
 
@@ -275,4 +305,67 @@ $('#btn-get').on('click', function() {
   }
 });
   });
+
+
+
+
+
+function hapus(id){
+
+
+BootstrapDialog.show({
+            message : 'ANDA AKAN MENGHAPUS DATA INI. ANDA YAKIN  ?  ',
+            title: 'KONFIRMASI HAPUS DATA',
+            draggable: true,
+            buttons : [
+              {
+                label : 'YA',
+                cssClass : 'btn-primary',
+                hotkey: 13,
+                action : function(dialogItself){
+
+
+                  dialogItself.close();
+                  $('#myPleaseWait').modal('show'); 
+                  $.ajax({
+                    url : '<?php echo site_url("$this->controller/hapusdata") ?>',
+                    type : 'post',
+                    data : {id : id},
+                    dataType : 'json',
+                    success : function(obj) {
+                      $('#myPleaseWait').modal('hide'); 
+                      if(obj.error==false) {
+                          BootstrapDialog.alert({
+                              type: BootstrapDialog.TYPE_PRIMARY,
+                              title: 'Informasi',
+                              message: obj.message,
+                               
+                          });   
+
+                        $('#kecamatan').DataTable().ajax.reload();    
+                      }
+                      else {
+                        BootstrapDialog.alert({
+                            type: BootstrapDialog.TYPE_DANGER,
+                            title: 'Error',
+                            message: obj.message,
+                             
+                        }); 
+                      }
+                    }
+                  });
+
+                }
+              },
+              {
+                label : 'TIDAK',
+                cssClass : 'btn-danger',
+                action: function(dialogItself){
+                    dialogItself.close();
+                }
+              }
+            ]
+          });
+
+}
 </script>

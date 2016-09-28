@@ -1,5 +1,7 @@
 <script src="<?php echo base_url('assets/js/dinamic_tab.js'); ?>"></script>
 
+
+
 <script type="text/javascript">
 $(document).ready(function () {
 $('#idSubTabsRegistrasiBBN1').jqxTabs({
@@ -13,4 +15,6 @@ $('#idSubTabsRegistrasiBBN1').jqxTabs({
 
 
   }); //end documnet loaded
+
+
   </script>

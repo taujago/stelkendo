@@ -4,7 +4,7 @@
       <div class="modal-content" style="MIN-WIDTH:700PX;    overflow:auto;">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title">Tambahkan Data</h4>
+          <h4 class="modal-title">Edit Data</h4>
         </div><div class="container"></div>
         <div class="modal-body">
           <!--start modal add new   -->
@@ -17,7 +17,7 @@
               <div class="col-md-8">
                 <form class="form-horizontal">
                   <div class="form-group">
-                    <label class="control-label       col-sm-2" for="email">Email:</label>
+                    <label class="control-label col-sm-2" for="email">Email:</label>
                     <div class="col-sm-10">
                       <div class="input-group date">
                         <div class="input-group-addon">
@@ -28,7 +28,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="control-label       col-sm-2" for="pwd">Password:</label>
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
                     <div class="col-sm-10">
                       <label class="radio-inline">
                         <input type="radio" name="idJenisPemohonBBN1" value="PRIBADI">Pribadi
@@ -39,7 +39,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="control-label       col-sm-2" for="pwd">Password:</label>
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
                     <div class="col-sm-6">
                       <?php
                       echo form_dropdown("PEMOHON_ID", array(), '', 'class="form-control col-md-7 col-xs-12 input-style" id="PEMOHON_ID" style="min-width: 200px;"');

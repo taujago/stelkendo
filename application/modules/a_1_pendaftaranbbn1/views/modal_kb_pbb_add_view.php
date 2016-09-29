@@ -40,40 +40,7 @@
 											<?php
 											echo form_dropdown("PEMOHON_ID", array(), '', 'class="form-control col-md-7 col-xs-12 input-style" id="PEMOHON_ID" style="min-width: 200px;"');
 											?>
-											<!-- <select name="PEMOHON_ID" class="form-control col-md-7 col-xs-12 input-style" id="PEMOHON_ID" style="min-width: 200px;">
-											</select> -->
-											<!-- <select name="PEMOHON_ID" class="form-control col-md-7 col-xs-12 input-style" id="PEMOHON_ID">
-											<option value="5356">SALAWATI </option>
-											<option value="5371">RONNY HONDA MKW </option>
-											<option value="5351">YBS </option>
-											<option value="5357">TMI </option>
-											<option value="5358">TMI </option>
-											<option value="5360">HONDA JAS </option>
-											<option value="5362">SALAWATI MOTOR </option>
-											<option value="5363">YAMAHA HASJRAT </option>
-											<option value="5364">DAIHATSU JAS </option>
-											<option value="5352">ALFINO SILOOY </option>
-											<option value="5374">YAMAHA HASJRAT </option>
-											<option value="5375">MITSUBISHI BOSOWA </option>
-											<option value="5355">EDWIN MARAMIS </option>
-											<option value="5391">FRANS SUZUKI TMI </option>
-											<option value="5379">ISUZU FAISAL </option>
-											<option value="5384">TOYOTA HASJRAT ABADI </option>
-											<option value="5381">ANTON KAWASAKI MKW </option>
-											<option value="5378">BURSA HONDA </option>
-											<option value="5382">RUSLAN BOSOWA MKW </option>
-											<option value="5390">KAWASAKI </option>
-											<option value="5383">FRANSISKUS ASTRA </option>
-											<option value="5393">KAISAR MOTOR </option>
-											<option value="5394">DAIHATSU BIMEN </option>
-											<option value="5395">IZUZU BIMEN </option>
-											<option value="5396">PT. PEGADAIAN (PERSERO) CABANG SORONG </option>
-											<option value="5376">SUZUKI TMII </option>
-											<option value="5377">SUZUKI PMM </option>
-											<option value="5380">KAWASAKI ANIS JR </option>
-											<option value="5388">TRISAKTI MKW </option>
-											<option value="5389">HINO ANANG </option>
-										</select> -->
+											
 									</div>
 
 									<div class="col-md-3">

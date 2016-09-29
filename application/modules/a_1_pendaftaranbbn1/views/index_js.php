@@ -27,6 +27,15 @@
     });
 }
 
+function edit(id){
+
+  $('#no_bpkb').val(id);
+  $('#idModalPBB1Edit').modal({show: 'true'});
+}
+
+
+
+
 $(document).ready(function () {
 
 
@@ -97,7 +106,7 @@ $('#idBtnPBB1Export').click(function(event) {
   }
 
   var buttonrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
-    return '<a href=\"#idModalPBB1Edit\" data-toggle=\"modal\" class=\"btn btn-primary\">EDIT </a><a style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"hapus('+row+')\">HAPUS</a>';
+    return '<a  class=\"btn btn-primary\" onclick=\"edit('+row+')\">EDIT </a><a style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"hapus('+row+')\">HAPUS</a>';
   };
 
   $("#idTabelPendaftarabBBN1").jqxGrid(

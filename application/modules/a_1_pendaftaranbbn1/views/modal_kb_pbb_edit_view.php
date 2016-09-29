@@ -47,6 +47,7 @@
                     <a data-toggle="modal" href="#idModalPBBIndex">
                       <button type="button" class="btn btn-primary fa fa-plus" style="margin-left:-25px;max-width:125px"> Buat Pemohon
                       </button></a>
+
                     </div>
 
                   </div>
@@ -83,6 +84,7 @@
                 </button>
                 
               </div>
+
 
             </div>
             <!--end-->

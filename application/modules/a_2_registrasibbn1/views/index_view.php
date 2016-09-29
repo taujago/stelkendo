@@ -1,279 +1,276 @@
 <!-- registrasi container-fluid-->
-<div class="container-fluid" style="background-color: rgb(255, 255, 255);">
-  <div class="row">
-    <div class="col-md-12 col-xs-12 col-lg-12">
-      <div class="row">
-        <div class="col-md-3" style="max-width:300px;padding-right:40px;">
+<div class="row" style="height:'auto';">
+  <div class="col-md-12">
+
+  <div id='idTabsREgistrasi' style="height:'auto';">
+    <ul style=''>
+      <li>Entry Data BPKB</li>
+      <li>List Data</li>
+    </ul>
+    <!--  entry data bpkb -->
+    <div>
+        <br>
+      <div class="row" >
+        <!-- max-width:300px;padding-right:40px; -->
+        <div class="col-md-3" style="">
+          <br>
           <label>Tanggal registrasi</label>
-          <select class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right ClassTanggalInputMask" id="idTanggalBBN1_modal_kb_pbb_add">
+          </div>
         </div>
 
-        <div class="col-md-5 ">
+
+        <div class="col-md-7" style="margin-left:40px;">
           <div class="row ">
             <div class="left">
-              <div class="col-md-4 " style="max-width:95px;margin-left:10px;">
+              <div class="col-md-4 " style="">
                 <div class="radio">
                   <input type="radio" name="group" value="option1" checked="">No. BPKB
                 </div>
               </div>
-              <div class="col-md-8" style="min-width:250px;">
-                <input type="text" class="form-control" placeholder="Placeholder text">
+              <div class="col-md-8" style="min-width:250px; margin-left:-80px;">
+                <input type="text" class="form-control" placeholder="No. BPKB">
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4" style="max-width:95px;margin-left:10px;">
+            <div class="col-md-4" style="">
               <div class="radio">
                 <input type="radio" name="group" value="option1" checked="">No. Rek. BPKB
               </div>
             </div>
-            <div class="col-md-8" style="min-width:250px;">
+            <div class="col-md-8" style="min-width:250px;margin-left:-80px;">
               <input type="text" class="form-control" placeholder="No. Rek. BPKB">
             </div>
           </div>
           <div class="row">
-            <div class="col-md-5" style="max-width:95px;margin-left:10px;">
+            <div class="col-md-4" style="">
               <div class="radio">
                 <input type="radio" name="group" value="option1" checked="">Barkode Berkas
               </div>
             </div>
-            <div class="col-md-8" style="min-width:250px;">
+            <div class="col-md-8" style="min-width:250px;margin-left:-80px;">
               <input type="text" class="form-control" placeholder="Barkode Berkas">
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-2" style="margin-left:-40px;">
           <div class="row row-centered">
             <div class="col-md-12">
-              <button type="button" class="btn btn-primary btn-block" style="min-height:100px;margin-top:5px;">
+              <button type="button" class="btn btn-primary btn-block" style="min-height:100px;margin-top:5px;margin-left:-40px;">
                 <span class="glyphicon glyphicon-search"></span>Cari Data
               </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <hr>
-  <!-- navigasi tab -->
-  <div class="row ">
-  <div id='idSubTabsRegistrasiBBN1'>
-    <ul>
-      <li>
-      I. Identitas Kendaraan
-      </li>
-      <li>
-      II. Identitas Pemilik
-      </li>
-      <li >
-    III.Identitas Pabean/Asal Usul
-      </li>
-    </ul>
-    <!--start isi subtabs  -->
-      <div>   <!-- kontent 1 -->
-        <p></p>
-        <div class="row center-block" >
-          <div class="col-md-6">
-            <row>
-              <form class="form-horizontal">
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3" >No. BPKB</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="No. BPKB">
+      <hr>
+      <!-- navigasi tab -->
+      <div class="row" style="height:500px;">
+        <div id='idSubTabsRegistrasiBBN1' style="height:auto;">
+          <ul>
+            <li>
+              I. Identitas Kendaraan
+            </li>
+            <li>
+              II. Identitas Pemilik
+            </li>
+            <li >
+              III.Identitas Pabean/Asal Usul
+            </li>
+          </ul>
+          <!--start isi subtabs  -->
+          <div>   <!-- kontent 1 -->
+            <p></p>
+            <div class="row center-block">
+              <div class="col-md-6">
+                <form class="form-horizontal">
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label col-sm-3">No. BPKB</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="" placeholder="No. BPKB">
+                    </div>
                   </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label    col-sm-3" style="padding-left:0px;">Dikeluarkan di</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="wilayah">
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label    col-sm-3" style="padding-left:0px;">Dikeluarkan di</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="" placeholder="wilayah">
+                    </div>
                   </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label    col-sm-3">No. Rangka</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="xxxxx">
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label    col-sm-3">No. Rangka</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="" placeholder="No. Rangka">
+                    </div>
                   </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Merk</label>
-                  <div class="col-sm-7">
-                    <select id="xxxxx" class="form-control">
-                      <option>1</option>
-                    </select>
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label col-sm-3">Merk</label>
+                    <div class="col-sm-9">
+                      <select id="xxxxx" class="form-control">
+                        <option>1</option>
+                      </select>
+                    </div>
+
                   </div>
-                  <div class="col-sm-2" style="padding-top:5px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-refresh"></span>
-                    </button>
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label    col-sm-3">Tipe</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="" placeholder="Tipe">
+                    </div>
                   </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label    col-sm-3">Tipe</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="xxxxx">
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label col-sm-3">Model</label>
+                    <div class="col-sm-9" style="">
+                      <select id="xxxxx" class="form-control">
+                        <option>1</option>
+                      </select>
+                    </div>
+
                   </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Model</label>
-                  <div class="col-sm-5" style="padding-right:0px;">
-                    <select id="xxxxx" class="form-control">
-                      <option>1</option>
-                    </select>
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label col-sm-3">Tahun Buat</label>
+                    <div class="col-sm-9">
+                      <select id="xxxxx" class="form-control">
+                        <option>1</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="col-sm-2" style="margin-left:0px;padding-top:3px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-refresh"></span>
-                    </button>
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label    col-sm-3" style="">Jumlah Roda</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="" placeholder="Jumlah Roda">
+                    </div>
                   </div>
-                  <div class="col-sm-2" style="margin-left:0px;padding-top:3px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-plus"></span>
-                    </button>
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label col-sm-3">Bahan Bakar</label>
+                    <div class="col-sm-9">
+                      <select id="xxxxx" class="form-control">
+                        <option>1</option>
+                      </select>
+                    </div>
+
                   </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Tahun Buat</label>
-                  <div class="col-sm-7">
-                    <select id="xxxxx" class="form-control">
-                      <option>1</option>
-                    </select>
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label col-sm-3">Peruntukan</label>
+                    <div class="col-sm-9">
+                      <select id="xxxxx" class="form-control">
+                        <option>1</option>
+                      </select>
+                    </div>
+
                   </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label    col-sm-3" style="">Jumlah Roda</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="Jumlah Roda">
+                  <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label col-sm-3">Warna TNKB</label>
+                    <div class="col-sm-9">
+                      <select id="xxxxx" class="form-control">
+                        <option>Merah</option>
+                        <option>Kuning</option>
+                        <option>Hijau</option>
+                      </select>
+                    </div>
+
                   </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Bahan Bakar</label>
-                  <div class="col-sm-7">
-                    <select id="xxxxx" class="form-control">
-                      <option>1</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-2" style="padding-top:5px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-refresh"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Peruntukan</label>
-                  <div class="col-sm-7">
-                    <select id="xxxxx" class="form-control">
-                      <option>1</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-2" style="padding-top:5px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-refresh"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Warna TNKB</label>
-                  <div class="col-sm-7">
-                    <select id="xxxxx" class="form-control">
-                      <option>1</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-2" style="padding-top:5px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-refresh"></span>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </row>
-          </div>
-          <div class="col-md-6">
-            <row>
-              <form class="form-horizontal">
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="col-sm-3 control-label">No. Reg. BPKB</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="No. BPKB">
-                  </div>
-                </div>
-              </form>
-              <form class="form-horizontal">
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label         col-sm-3">Tanggal</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="Tanggal">
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label             col-sm-3">No. Mesin</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="No. Mesin">
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label             col-sm-3">Jenis</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="No. BPKB">
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label             col-sm-3">Tipe-tipe</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="Tipe-tipe">
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Silinder</label>
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" id="" placeholder="Silinder">
-                  </div>
-                  <label for="" class="control-label col-sm-1">CC</label>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Tahun Rakit</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="Tahun Rakit">
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Jumlah Sumbu</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="Jumlah Sumbu">
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">Warna</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="No. BPKB">
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">No. TPT</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="No. TPT">
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">No. SUT</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="No. SUT">
-                  </div>
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                  <label for="" class="control-label col-sm-3">No.POLISI</label>
-                  <div class="col-sm-9">
+                </form>
+              </div>
+              <div class="col-md-6">
+                <row>
+                  <form class="form-horizontal">
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="col-sm-3 control-label">No. Reg. BPKB</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="" placeholder="No. Reg BPKB">
+                      </div>
+                    </div>
+                  </form>
+                  <form class="form-horizontal">
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label         col-sm-3">Tanggal</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control ClassTanggalInputMask" id="" placeholder="Tanggal">
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label             col-sm-3">No. Mesin</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="" placeholder="No. Mesin">
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label             col-sm-3">Jenis</label>
+                      <div class="col-sm-9">
+                        <select id="xxxxx" class="form-control">
+                          <option>1</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label             col-sm-3">Tipe2</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="" placeholder="Tipe2">
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label col-sm-3">Silinder</label>
+                      <div class="col-sm-4">
+                        <input type="text" class="form-control" id="" placeholder="Silinder">
+                      </div>
+                      <label for="" class="control-label col-sm-1">CC</label>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label col-sm-3">Tahun Rakit</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="" placeholder="Tahun Rakit">
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label col-sm-3">Jumlah Sumbu</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="" placeholder="Jumlah Sumbu">
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label col-sm-3">Warna</label>
+                      <div class="col-sm-7">
+                        <select id="xxxxx" class="form-control">
+                          <option>Merah</option>
+                          <option>Kuning</option>
+                          <option>Hijau</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-1">
+                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#idTambahWarna" >
+                          +
+                        </button>
+                      </div>
+
+                    </div>
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label col-sm-3">No. TPT</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="" placeholder="No. TPT">
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 5px">
+                      <label for="" class="control-label col-sm-3">No. SUT</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="" placeholder="No. SUT">
+                      </div>
+                    </div>
+                    <!-- <div class="form-group" style="margin-bottom: 5px">
+                    <label for="" class="control-label col-sm-3">No.POLISI</label>
+                    <div class="col-sm-9">
                     <input type="text" class="form-control" id="" placeholder="No.POLISI">
                   </div>
-                </div>
+                </div> -->
               </form>
             </row>
           </div>
-        </div><br>
+        </div>
       </div>   <!--  end kontent 1 -->
       <div>   <!-- kontent 2 -->
         <p></p>
@@ -306,16 +303,12 @@
                       <option>1</option>
                     </select>
                   </div>
-                  <div class="col-sm-2" style="padding-top:5px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-refresh"></span>
-                    </button>
-                  </div>
+
                 </div>
                 <div class="form-group" style="margin-bottom: 5px">
                   <label for="" class="control-label    col-sm-3">No. Ponsel</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="" placeholder="xxxxx">
+                    <input type="text" class="form-control" id="" placeholder="No. Ponsel">
                   </div>
                 </div>
                 <div class="form-group" style="margin-bottom: 5px">
@@ -325,16 +318,7 @@
                       <option>1</option>
                     </select>
                   </div>
-                  <div class="col-sm-2" style="margin-left:0px;padding-top:3px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-refresh"></span>
-                    </button>
-                  </div>
-                  <div class="col-sm-2" style="margin-left:0px;padding-top:3px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-plus"></span>
-                    </button>
-                  </div>
+
                 </div>
                 <div class="form-group" style="margin-bottom: 5px">
                   <label for="" class="control-label col-sm-3">Wilayah</label>
@@ -343,73 +327,68 @@
                       <option>1</option>
                     </select>
                   </div>
-                  <div class="col-sm-2" style="margin-left:0px;padding-top:3px;">
-                    <button class="btn btn-primary btn-block" style="height:30px;min-width:35px;">
-                      <span class="glyphicon glyphicon-refresh"></span>
-                    </button>
-                  </div>
                 </div>
               </form>
             </row>
           </div>
           <div class="col-md-6">
 
-              <div class="row">
-                <div class="col-md-5"></div>
-                <div class="col-md-2">
-                  <div class="btn btn-primary" style="">
-                    Set Data Kelurahan</div>
-
-                  </div>
+            <div class="row">
+              <div class="col-md-5"></div>
+              <div class="col-md-2">
+                <div class="btn btn-primary" style="">
+                  Set Data Kelurahan</div>
 
                 </div>
 
-                <form class="form-horizontal" style="margin-top:5px;">
-                  <div class="form-group" style="margin-bottom: 5px">
-                    <label for="" class=" control-label col-sm-3">Provinsi</label>
-                    <div class="col-sm-8">
-                      <select class="form-control" id="">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
-                    </div>
+              </div>
+
+              <form class="form-horizontal" style="margin-top:5px;">
+                <div class="form-group" style="margin-bottom: 5px">
+                  <label for="" class=" control-label col-sm-3">Provinsi</label>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
                   </div>
-                  <div class="form-group" style="margin-bottom: 5px">
-                    <label for="" class=" control-label col-sm-3">Kabupaten</label>
-                    <div class="col-sm-8">
-                      <select class="form-control" id="">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
-                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 5px">
+                  <label for="" class=" control-label col-sm-3">Kabupaten</label>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
                   </div>
-                  <div class="form-group" style="margin-bottom: 5px">
-                    <label for="" class=" control-label col-sm-3">Kecamatan</label>
-                    <div class="col-sm-8">
-                      <select class="form-control" id="">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
-                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 5px">
+                  <label for="" class=" control-label col-sm-3">Kecamatan</label>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
                   </div>
-                  <div class="form-group" style="margin-bottom: 5px">
-                    <label for="" class=" control-label col-sm-3">Kelurahan</label>
-                    <div class="col-sm-8">
-                      <select class="form-control" id="">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
-                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 5px">
+                  <label for="" class=" control-label col-sm-3">Kelurahan</label>
+                  <div class="col-sm-8">
+                    <select class="form-control" id="">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
                   </div>
-                </form>
+                </div>
+              </form>
 
             </div>
           </div>
@@ -421,50 +400,50 @@
               <form class="form-horizontal">
                 <div class="form-group">
                   <div style="margin-bottom: 5px" class="form-group">
-                    <label for="" class="control-label col-sm-3">Jenis Daftaran</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" id="" placeholder="Jenis Daftran">
+                    <label for="" class="control-label col-sm-4">Jenis Daftaran</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" id="" placeholder="Jenis Daftaran">
                     </div>
                   </div>
                   <div style="margin-bottom: 5px" class="form-group">
-                    <label for="" class="control-label col-sm-3">No.Faktur</label>
-                    <div class="col-sm-8">
+                    <label for="" class="control-label col-sm-4">No.Faktur</label>
+                    <div class="col-sm-7">
                       <input type="text" class="form-control" id="" placeholder="No.Faktur">
                     </div>
                   </div>
                   <div style="margin-bottom: 5px" class="form-group">
-                    <label for="" class="control-label col-sm-3">No.Pabean</label>
-                    <div class="col-sm-8">
+                    <label for="" class="control-label col-sm-4">No.Pabean</label>
+                    <div class="col-sm-7">
                       <input type="text" class="form-control" id="" placeholder="No.Pabean">
                     </div>
                   </div>
                   <div style="margin-bottom: 5px" class="form-group">
-                    <label for="" class="control-label col-sm-3">Pelabuhan</label>
-                    <div class="col-sm-8">
+                    <label for="" class="control-label col-sm-4">Pelabuhan</label>
+                    <div class="col-sm-7">
                       <input type="text" class="form-control" id="" placeholder="Pelabuhan">
                     </div>
                   </div>
                   <div style="margin-bottom: 5px" class="form-group">
-                    <label for="" class="control-label    col-sm-3">No.PIB</label>
-                    <div class="col-sm-8">
+                    <label for="" class="control-label    col-sm-4">No.PIB</label>
+                    <div class="col-sm-7">
                       <input type="text" class="form-control" id="" placeholder="No.PIB">
                     </div>
                   </div>
                   <div style="margin-bottom: 5px" class="form-group">
-                    <label for="" class="control-label col-sm-3">Cara Impor</label>
-                    <div class="col-sm-8">
+                    <label for="" class="control-label col-sm-4">Cara Impor</label>
+                    <div class="col-sm-7">
                       <input type="text" class="form-control" id="" placeholder="Cara Impor">
                     </div>
                   </div>
                   <div style="margin-bottom: 5px" class="form-group">
-                    <label for="" class="control-label col-sm-3">Nama Importir/APM</label>
-                    <div class="col-sm-8">
+                    <label for="" class="control-label col-sm-4">Nama Importir/APM</label>
+                    <div class="col-sm-7">
                       <input type="text" class="form-control" id="" placeholder="Nama Importir/APM">
                     </div>
                   </div>
                   <div style="margin-bottom: 5px" class="form-group">
-                    <label for="" class="control-label col-sm-3">Ket.Lain-Lain</label>
-                    <div class="col-sm-8">
+                    <label for="" class="control-label col-sm-4">Ket.Lain-Lain</label>
+                    <div class="col-sm-7">
                       <textarea type="password" class="form-control input-style" id="inputPassword3" placeholder="Ket.Lain-Lain"></textarea>
                     </div>
                   </div>
@@ -504,9 +483,120 @@
           </div>
         </div>   <!-- end kontent 3 -->
       </div>     <!-- end  isi subtabs  -->
-  </div><!-- end navigasi tabs  -->
-  </div>   <!--end registrasi container-fluid -->
+    </div><!-- end navigasi tabs  -->
+    <!--start isi  footer tabs  -->
+    <div class="row">
+      <!--KOLOM KIRI  -->
+      <div class="col-md-6">
+        <form class="form-horizontal">
+          <div class="form-group" style="margin-bottom: 5px">
+            <label for="" class="control-label col-sm-3">NO. Resi Pembayaran</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="" placeholder="No. Resi Pembayaran">
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom: 5px">
+            <label for="" class="control-label col-sm-3">NO. Rekom</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="" placeholder="No. Rekom">
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom: 5px">
+            <label style="margin-top:-5px;" for="" class="control-label col-sm-4"><button type="button" class="control-label btn  btn-primary">Ambil No. Polisi</button></label>
 
-  <?php
+            <div class="col-sm-1">
+              <input type="text" class="form-control" id="" placeholder="">
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="" placeholder="">
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="" placeholder="">
+            </div>
+            <div class="col-sm-3 text-center" style="margin-top:5px;">
+              <label for="">Belum Terpakai</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="checkbox">
+            <label><input type="checkbox" value="">From STNK</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">  <button type="button" class="btn btn-block  btn-primary">Simpan</button></div>
+          <div class="col-md-6">      <button type="button" class="btn btn-block  btn-primary">Baru</button></div>
+
+
+        </div>
+      </div>
+    </div>
+    <!--end isi ke footer tabs  -->
+  </div><!-- end isi tab entry data -->
+
+
+  <div><!-- start tab list data -->
+    <div class="row">
+          <br>
+      <div class="col-md-5">
+        <form class="form-horizontal">
+          <div class="form-group" style="margin-bottom: 5px">
+            <label for="" class="control-label col-sm-5">Tanggal BPKB</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="" placeholder="Tanggal BPKB">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-3">
+          <button type="button" class="btn btn-large btn-block btn-primary">Get from server</button>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="" id="idTabelRBBN1ListData"  style="overlow:auto;padding-left: 15px; padding-right: 15px;">
+          <!-- table -->
+        </div>
+    </div>
+  </div><!-- end tab list data -->
+
+
+
+
+</div><!-- end tab  registrasi -->
+
+</div>   <!--end registrasi container-fluid -->
+
+</div>
+
+
+<!--modal color  -->
+
+<!-- Modal -->
+<div id="idTambahWarna" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Tambah Warna</h4>
+      </div>
+      <div class="modal-body">
+        <p>.............</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<?php
 $this->load->view('index_js.php');
-   ?>
+?>

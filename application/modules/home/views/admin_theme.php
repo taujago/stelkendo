@@ -54,12 +54,12 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
 
         <ul class="sidebar-menu" >
           <li class="header">Navigasi</li>
-          <li class="active"><a href="#"><span>Dashboard</span></a></li>
+          <!-- <li class="active"><a href="#"><span>Dashboard</span></a></li> -->
           <li class=" treeview">
             <a href="#">
-                     <i class="fa fa-edit"></i> <span></span>
+                     <i class="fa fa-edit"></i> <span></span>   <i class="fa fa-angle-left pull-right"></i>
                      <span class="pull-right-container"><?php echo $menu[0]; ?>
-                       <i class="fa fa-angle-left pull-right"></i>
+
                      </span>
                    </a>
                    <ul class="treeview-menu"  id ="id_child_menu">
@@ -67,8 +67,6 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
               penambahan index menu sesuai abjad misal menu 1 dengan submenu Pendaftaran bbn 1 = a_pendaftaranbbn1) -->
               <!-- dekalrasi $menu dan subMenu dalam bentuk array  -->
               <?php
-
-
               for ($i = 0; $i < count($subMenu1); $i++) {
                 $tempLink  = '';
                 $j=$i+1;
@@ -97,9 +95,9 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
       <!-- Content Header (Page header) -->
       <!-- <section class="content-header">
         <h1>
-          <?php
+          < ?php
            echo $title; ?>
-          <small><?php echo $subtitle; ?></small>
+          <small>< ?php echo $subtitle; ? ></small>
         </h1>
       </section> -->
 

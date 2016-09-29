@@ -37,22 +37,10 @@ function edit(id){
 
 
 $(document).ready(function () {
+    $(".ClassNoResiInputMask").inputmask("99-999-999");
 
 
 
-           // create jqxtabs.
-          //  $('#jqxtabs').jqxTabs({width: '90%' ,theme: 'bootstrap'});
-          //  $('#jqxtabs').bind('selected', function (event) {
-          //      var item = event.args.item;
-          //      var title = $('#jqxtabs').jqxTabs('getTitleAt', item);
-          //     // alert(title);
-          //  });
-
-
-  //Datemask dd/mm/yyyy
-  //  $("[data-mask]").inputmask();
-  // $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-  //Date picker
 
   /*start table proses*/
   var getAdapterPBB1 = function () { // dapatkan data dari url
@@ -106,8 +94,11 @@ $('#idBtnPBB1Export').click(function(event) {
   }
 
   var buttonrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+
     return '<a  class=\"btn btn-primary\" onclick=\"edit('+row+')\">EDIT </a><a style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"hapus('+row+')\">HAPUS</a>';
+
   };
+
 
   $("#idTabelPendaftarabBBN1").jqxGrid(
     {
@@ -134,7 +125,10 @@ $('#idBtnPBB1Export').click(function(event) {
         { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
       ],ready: function()
       {
+      function  btnPBBAddTable(e,row){
 
+         alert(row);
+       }
       },
     });
 

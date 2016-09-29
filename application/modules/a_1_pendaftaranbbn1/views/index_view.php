@@ -27,7 +27,7 @@
   <div class="container-fluid">
       <div class="row">
         <div class="btn-group btn-group-justified">
-        <a class="btn btn-primary"  data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-filter"></span>Filter Table</a>
+        <!-- <a class="btn btn-primary"  data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-filter"></span>Filter Table</a> -->
         <a class="btn btn-primary" href="#"><span class="glyphicon glyphicon-print"></span>Cetak</a>
         <a class="btn btn-primary" href="#"><span class="glyphicon glyphicon-export"></span>Export CSV</a>
         <ul class="btn btn-primary" data-toggle="modal" href="#myModal"><span class="glyphicon glyphicon-plus"></span> Buat Baru</ul>

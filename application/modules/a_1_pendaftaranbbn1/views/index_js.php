@@ -2,7 +2,6 @@
 
 <script type="text/javascript">
 $(document).ready(function () {
-  $(".ClassTanggalInputMask").inputmask("dd-mm-yyyy");
     $(".ClassNoResiInputMask").inputmask("99-999-999");
 
   //  $("#idTanggalBBN1_modal_kb_pbb_add").inputmask("dd-mm-yyyy",{ "oncomplete": function(){ alert('inputmask complete'); } });

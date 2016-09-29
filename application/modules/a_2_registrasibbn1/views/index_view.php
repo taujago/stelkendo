@@ -62,7 +62,7 @@
         <div class="col-md-2" style="margin-left:-40px;">
           <div class="row row-centered">
             <div class="col-md-12">
-              <button type="button" class="btn btn-primary btn-block" style="min-height:100px;margin-top:5px;">
+              <button type="button" class="btn btn-primary btn-block" style="min-height:100px;margin-top:5px;margin-left:-40px;">
                 <span class="glyphicon glyphicon-search"></span>Cari Data
               </button>
             </div>

@@ -555,8 +555,8 @@
       </div>
     </div>
     <br>
-    <div class="row">
-        <div class="" id="idTabelRBBN1ListData"  style="overlow:auto;padding-left: 15px; padding-right: 15px;">
+    <div class="row-fluid">
+        <div class="" id="idTabelRBBN1ListData"  style="width:100%">
           <!-- table -->
         </div>
     </div>

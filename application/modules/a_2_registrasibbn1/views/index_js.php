@@ -29,6 +29,20 @@ $('#idTabsREgistrasi').on('tabclick', function (event)
 
 
   /*start table proses*/
+  var cellsrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+    if (value < 20) {
+      return '<span style="margin: 6px; float: ' + columnproperties.cellsalign + '; color: #ff0000;">' + value + '</span>';
+    }
+    else {
+      return '<span style="margin: 6px; float: ' + columnproperties.cellsalign + '; color: #008000;">' + value + '</span>';
+    }
+  }
+
+  var buttonrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+
+    return '<a  class=\"btn btn-primary\" onclick=\"edit('+row+')\">EDIT </a><a style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"hapus('+row+')\">HAPUS</a>';
+
+  };
 
   var getAdapterPBB1 = function () { // dapatkan data dari url
     // prepare the data
@@ -52,7 +66,6 @@ $('#idTabsREgistrasi').on('tabclick', function (event)
         { name: 'nama_pemohon', type: 'string'},
         { name: 'operator', type: 'string'},
         { name: 'wilayah', type: 'string'}
-
 
       ],
       id: 'id',
@@ -98,7 +111,8 @@ $("#idTabelRBBN1ListData").jqxGrid(
       {text:'no_faktur ' , datafield: 'no_faktur'},
       {text:'nama_pemilik ' , datafield: 'nama_pemilik'},
             {text:'operator ' , datafield: 'operator'},
-      {text:'wilayah ' , datafield: 'wilayah'}
+      {text:'wilayah ' , datafield: 'wilayah'},
+      { text: 'Actions', cellsrenderer: buttonrenderer,width: 150}
 
       // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
     ],ready: function()
@@ -112,6 +126,53 @@ $("#idTabelRBBN1ListData").jqxGrid(
          });
     },
   });
+
+
+  // create context MenuKlikKanan
+           var contextMenuKlikKanan = $("#MenuKlikKanan").jqxMenu({ width: 200, height: 58, autoOpenPopup: false, mode: 'popup'});
+
+           $("#idTabelRBBN1ListData").on('contextMenuKlikKanan', function () {
+               return false;
+           });
+
+          // handle context MenuKlikKanan clicks.
+           $("#MenuKlikKanan").on('itemclick', function (event) {
+               var args = event.args;
+               var rowindex = $("#idTabelRBBN1ListData").jqxGrid('getselectedrowindex');
+               if ($.trim($(args).text()) == "Edit Selected Row") {
+                   editrow = rowindex;
+                   var offset = $("#idTabelRBBN1ListData").offset();
+                   $('#idTabsREgistrasi').jqxTabs('select', 0);
+                  //  $("#popupWindow").jqxWindow({ position: { x: parseInt(offset.left) + 60, y: parseInt(offset.top) + 60} });
+                   //
+                  //  // get the clicked row's data and initialize the input fields.
+                  //  var dataRecord = $("#jqxgrid").jqxGrid('getrowdata', editrow);
+                  //  $("#firstName").val(dataRecord.firstname);
+                  //  $("#lastName").val(dataRecord.lastname);
+                  //  $("#product").val(dataRecord.productname);
+                  //  $("#quantity").jqxNumberInput({ decimal: dataRecord.quantity });
+                  //  $("#price").jqxNumberInput({ decimal: dataRecord.price });
+                   //
+                  //  // show the popup window.
+                  //  $("#popupWindow").jqxWindow('show');
+               }
+               else {
+                   var rowid = $("#idTabelRBBN1ListData").jqxGrid('getrowid', rowindex);
+                   $("#idTabelRBBN1ListData").jqxGrid('deleterow', rowid);
+               }
+           });
+
+           $("#idTabelRBBN1ListData").on('rowclick', function (event) {
+               if (event.args.rightclick) {
+                 alert('klik kanan');
+                   $("#idTabelRBBN1ListData").jqxGrid('selectrow', event.args.rowindex);
+                   var scrollTop = $(window).scrollTop();
+                   var scrollLeft = $(window).scrollLeft();
+                   contextMenuKlikKanan.jqxMenu('open', parseInt(event.args.originalEvent.clientX) + 5 + scrollLeft, parseInt(event.args.originalEvent.clientY) + 5 + scrollTop);
+
+                   return false;
+               }
+           });
 
 
 

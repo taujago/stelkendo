@@ -595,6 +595,12 @@
   </div>
 </div>
 
+<div id='MenuKlikKanan'>
+   <ul>
+       <li>Edit Selected Row</li>
+       <li>Delete Selected Row</li>
+   </ul>
+  </div>
 
 
 <?php

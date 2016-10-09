@@ -19,7 +19,7 @@
                         <div class="input-group-addon">
                           <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" class="form-control pull-right" id="idTanggalBBN1_modal_kb_pbb_edit" id="idTanggalBBN1_modal_kb_pbb_edit">
+                        <input type="text" class="form-control pull-right" id="idTanggalBBN1_modal_kb_pbb_edit">
                       </div>
                     </div>
                   </div>
@@ -62,7 +62,7 @@
                   <div class="form-group">
                     <label class="control-label col-sm-3" for="pwd">No. Rangka</label>
                     <div class="col-sm-6">
-                      <input type="text" id="no-rangka" name="no-rangka" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rangka">
+                      <input type="text" id="no_rangka" name="no_rangka" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rangka">
                     </div>
                   </div>
                 </form>

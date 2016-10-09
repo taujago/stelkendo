@@ -75,12 +75,14 @@
 
 <div class="row">
 
-  <div class="" id="idTabelPendaftarabBBN1"  style="position: relative;">
+  <div class="" id="idTabelPendaftarabBBN1"  style="position: relative;" oncontextmenu="return false;">
     <!-- table -->
 
   </div>
   </div>
   </div>
+
+
 
 <?php
 $this->load->view("modal_kb_pbb_add_view");
@@ -89,3 +91,10 @@ $this->load->view("modal_pemohon_baru_index");
 $this->load->view("index_js");
 
 ?>
+
+  <div id='MenuKlikKananPendaftaran'>
+   <ul>
+       <li>Edit Selected Row</li>
+       <li>Delete Selected Row</li>
+   </ul>
+  </div>

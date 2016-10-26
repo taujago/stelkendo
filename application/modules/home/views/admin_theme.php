@@ -57,12 +57,12 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
           <!-- <li class="active"><a href="#"><span>Dashboard</span></a></li> -->
           <li class=" treeview">
             <a href="#">
-                     <i class="fa fa-edit"></i> <span></span>   <i class="fa fa-angle-left pull-right"></i>
-                     <span class="pull-right-container"><?php echo $menu[0]; ?>
+              <i class="fa fa-edit"></i> <span></span>   <i class="fa fa-angle-left pull-right"></i>
+              <span class="pull-right-container"><?php echo $menu[0]; ?>
 
-                     </span>
-                   </a>
-                   <ul class="treeview-menu"  id ="id_child_menu">
+              </span>
+            </a>
+            <ul class="treeview-menu"  id ="id_child_menu">
               <!-- script tampil side bar , nama href sesuai dengan nama menu di aplikasi desktop(huruf kecil semua dengan penambahan
               penambahan index menu sesuai abjad misal menu 1 dengan submenu Pendaftaran bbn 1 = a_pendaftaranbbn1) -->
               <!-- dekalrasi $menu dan subMenu dalam bentuk array  -->
@@ -82,7 +82,27 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
               ?>
 
             </ul>
+            <!-- tab2 -->
+            <li class=" treeview">
+              <a href="#">
+                <i class="fa fa-edit"></i> <span></span>   <i class="fa fa-angle-left pull-right"></i>
+                <span class="pull-right-container">Kendaraan Lama
+                </span>
+              </a>
+              <ul class="treeview-menu" id="id_child_menu">
+                <!-- script tampil side bar , nama href sesuai dengan nama menu di aplikasi desktop(huruf kecil semua dengan penambahan
+                penambahan index menu sesuai abjad misal menu 1 dengan submenu Pendaftaran bbn 1 = a_pendaftaranbbn1) -->
+                <!-- dekalrasi $menu dan subMenu dalam bentuk array  -->
+                <li id="http://localhost/LA/bpkbweb/stelkendofolder/stelkendo/index.php/b_1_pendaftaran">
+                <a href="http://localhost/LA/bpkbweb/stelkendofolder/stelkendo/index.php/b_1_pendaftaran">
+                Pendaftaran</a></li>
+                </ul>
+            </li>
+
+
           </li>
+          <!-- tab ke 2 -->
+
         </ul><!-- /.sidebar-menu -->
       </section>
       <!-- /.sidebar -->
@@ -94,21 +114,21 @@ $subMenu1 = array('Pendaftaran BBN 1', 'Registrasi BBN 1', 'Monitor Print Kartu 
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <!-- <section class="content-header">
-        <h1>
-          < ?php
-           echo $title; ?>
-          <small>< ?php echo $subtitle; ? ></small>
-        </h1>
-      </section> -->
+      <h1>
+      < ?php
+      echo $title; ?>
+      <small>< ?php echo $subtitle; ? ></small>
+    </h1>
+  </section> -->
 
-      <!-- Main content -->
-      <div class="content body">
-        <?php
-        echo $content;
-        ?>
-      </div><!-- /.content-wrapper -->
-    </div>
+  <!-- Main content -->
+  <div class="content body">
     <?php
-    $this->load->view('index_js');
+    echo $content;
     ?>
-  </body>
+  </div><!-- /.content-wrapper -->
+</div>
+<?php
+$this->load->view('index_js');
+?>
+</body>

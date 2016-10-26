@@ -1,5 +1,3 @@
-<script src="<?php echo base_url('assets/js/dinamic_tab.js'); ?>"></script>
-
 
 
 <script type="text/javascript">
@@ -111,8 +109,8 @@ $("#idTabelRBBN1ListData").jqxGrid(
       {text:'no_faktur ' , datafield: 'no_faktur'},
       {text:'nama_pemilik ' , datafield: 'nama_pemilik'},
             {text:'operator ' , datafield: 'operator'},
-      {text:'wilayah ' , datafield: 'wilayah'},
-      { text: 'Actions', cellsrenderer: buttonrenderer,width: 150}
+      {text:'wilayah ' , datafield: 'wilayah'}
+      // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150}
 
       // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
     ],ready: function()
@@ -134,6 +132,7 @@ $("#idTabelRBBN1ListData").jqxGrid(
            $("#idTabelRBBN1ListData").on('contextMenuKlikKanan', function () {
                return false;
            });
+var editrow = -1;
 
           // handle context MenuKlikKanan clicks.
            $("#MenuKlikKanan").on('itemclick', function (event) {
@@ -142,12 +141,29 @@ $("#idTabelRBBN1ListData").jqxGrid(
                if ($.trim($(args).text()) == "Edit Selected Row") {
                    editrow = rowindex;
                    var offset = $("#idTabelRBBN1ListData").offset();
-                   $('#idTabsREgistrasi').jqxTabs('select', 0);
                   //  $("#popupWindow").jqxWindow({ position: { x: parseInt(offset.left) + 60, y: parseInt(offset.top) + 60} });
                    //
-                  //  // get the clicked row's data and initialize the input fields.
-                  //  var dataRecord = $("#jqxgrid").jqxGrid('getrowdata', editrow);
-                  //  $("#firstName").val(dataRecord.firstname);
+                   //get the clicked row's data and initialize the input fields.
+                  var dataRecord = $("#idTabelRBBN1ListData").jqxGrid('getrowdata', editrow);
+                    // add value
+                    console.log(dataRecord);
+                    $("#IdKbRbb1TxtNoBpkb").val(dataRecord.no_bpkb);
+                    $("#IdKbRbb1TxtNoRekBPKB").val(dataRecord.no_rek_bpkb);
+                    $("#IdKbRbb1TanggalBpkb").val(dataRecord.tgl_bpkb);
+                    $("#IdKbRbb1TxtNoRangka").val(dataRecord.no_rangka);
+                    $("#IdKbRbb1TxtNoBpkb").val(dataRecord.no_mesin);
+                    $("#IdKbRbb1TxtNoBpkb").val(dataRecord.no_polisi);
+                    $("#IdKbRbb1SelectMerk").value=dataRecord.merk;
+                    $("#IdKbRbb1SelectModel").value=dataRecord.model;
+                    $("#IdKbRbb1SelectJenis").val(dataRecord.jenis);
+                    $("#IdKbRbb1TxtNoBpkb").val(dataRecord.jmlh_roda);
+                    $("#IdKbRbb1TxtNoBpkb").val(dataRecord.warna_tnkb);
+                    $("#IdKbRbb1TxtNoBpkb").val(dataRecord.nama_pemilik);
+                    $("#IdKbRbb1TxtWilayah").val(dataRecord.wilayah);
+                    $("#IdKbRbb1TxtNoBpkb").val(dataRecord.operator);
+
+                    //show tabs
+                   $('#idTabsREgistrasi').jqxTabs('select', 0);// pilih index tab pertama
                   //  $("#lastName").val(dataRecord.lastname);
                   //  $("#product").val(dataRecord.productname);
                   //  $("#quantity").jqxNumberInput({ decimal: dataRecord.quantity });
@@ -164,7 +180,7 @@ $("#idTabelRBBN1ListData").jqxGrid(
 
            $("#idTabelRBBN1ListData").on('rowclick', function (event) {
                if (event.args.rightclick) {
-                 alert('klik kanan');
+              //   alert('klik kanan');
                    $("#idTabelRBBN1ListData").jqxGrid('selectrow', event.args.rowindex);
                    var scrollTop = $(window).scrollTop();
                    var scrollLeft = $(window).scrollLeft();

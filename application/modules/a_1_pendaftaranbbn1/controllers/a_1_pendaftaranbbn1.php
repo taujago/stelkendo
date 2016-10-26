@@ -1,7 +1,18 @@
 <?php if (!defined('BASEPATH')) {
   exit('No direct script access allowed');
 }
-
+// Response :)
+// Array
+// (
+//     [data] => Array
+//         (
+//             [result] => true atau false
+//             [message] => ?
+//             [message_err] => ?
+//         )
+//
+//     [success] => 1
+// )
 class a_1_pendaftaranbbn1 extends BaruController
 {
 
@@ -77,10 +88,10 @@ function getListPerusahaan() {
 
   $data_json = json_encode($data);
 
-  //  echo $data_json; exit;
+  // echo $data_json; exit;
   $pemohon = $this->executeService("bpkb_list_perusahaan_web",$data_json);
-  // show_array($pemohon['data']);
-  // exit;
+  show_array($pemohon['data']);
+  exit;
 
   show_array($pemohon); exit;
 
@@ -142,4 +153,73 @@ show_array( $tempFeedbackService['data']);
 // echo $tempArray;
 // exit;
 }
+
+/** [bpkb_add_pemohon_web ] */
+public function bpkb_add_pemohon_web(){
+
+ // $form_data = $this->input->post();
+ // show_array($form_data);exit();
+  $data =  array(
+    "LoginInfo" => array (
+    "LoginName" => $this->user,
+    "Salt" =>  $this->salt,
+    "AuthHash" =>  md5( $this->user . "_".$this->salt. md5($this->pass) )
+  ),
+  "Param"=>array(
+      "v_pemohon_nama"   => $this->input->post('idPbb1PemohonNamaInput'),
+          "v_company_id"   => $this->input->post('idPbb1PemohonAlamatInput'),
+                "v_bank_id"   => $this->input->post('idPbb1PemohonNoTelpInput'),
+        "v_pemohon_rek"   => $this->input->post('idPbb1PemohonNoHpInput'),
+      "v_pemohon_telp"   => $this->input->post('idPbb1PemohonNamaBank'),
+          "v_pemohon_hp"   => $this->input->post('idPbb1PemohonNoRek'),
+      "v_pemohon_alamat"   => $this->input->post('idPbb1PemohonNamaPerusahaan'),
+      "v_pemohon_jenis"   => $this->input->post('idTanggalBBN1_modal_kb_pbb_add_pemohon'),
+      "v_id_petugas"   => $this->input->post('idPbb1PemohonNamaJenis')
+  )
+  );
+// show_array(  $data);exit();
+  $data_json = json_encode($data);
+  $tempFeedbackService = $this->executeService("bpkb_add_pemohon_web",$data_json);
+  echo json_encode($tempFeedbackService);
+exit();
+}
+
+public function bpkb_pendaftaran_add(){
+
+  $form_data = $this->input->post();
+  show_array($form_data);//exit();
+  // [idTanggalBBN1_modal_kb_pbb_add] => 34434
+  // [idJenisPemohonBBN1] => BIROJASA
+  // [PEMOHON_ID] => 5356
+  // [no_resi] => 23-424-233
+
+		$data =  array(
+				"LoginInfo" => array (
+						"LoginName" => $this->user,
+						"Salt" =>  $this->salt,
+						"AuthHash" =>  md5( $this->user . "_".$this->salt. md5($this->pass) )   // algo   md5(user+md5(pass))
+				),
+				"Param" => array(
+
+						"vNoRangka"	=> $this->input->post('idPbb1PemohonNamaInput'),
+						"vTglDaftar"   => $this->input->post('idTanggalBBN1_modal_kb_pbb_add'),
+						"vNoBPKB"   => $this->input->post('11'),
+						"vPemohonID"   => $this->input->post('11'),
+						"vPetugasID"   => $this->input->post('11'),
+						"vBarcodeBank"   => $this->input->post('no_resi'),
+						"vLoketNo"   => $this->input->post('11'),
+						"vEnrollmentType"   => $this->input->post('11'),
+						"vTypeDaftaran"   => $this->input->post('idJenisPemohonBBN1'),
+						"vMerkID"   => "1"
+				));
+
+		$data_json = json_encode($data);
+		// echo $data_json;
+		// echo "sebelum dikirim " . $data_json;
+  $tempFeedbackService = $this->executeService("bpkb_pendaftaran_add",$data_json);
+		// echo "<hr />";
+		// header('Content-type: text/xml');
+	 show_array( $tempFeedbackService);
+	}
+
 }

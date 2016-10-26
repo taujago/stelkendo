@@ -1,4 +1,3 @@
-<script src="<?php echo base_url('assets/js/dinamic_tab.js'); ?>"></script>
 
 <script type="text/javascript">
 
@@ -13,7 +12,7 @@
             cssClass : 'btn-primary',
             hotkey : 13,
             action: function(dialogItself){
-                    dialogItself.close(); 
+                    dialogItself.close();
                     $('#myPleaseWait').modal('show');
                 }
           },
@@ -122,7 +121,7 @@ $('#idBtnPBB1Export').click(function(event) {
         { text: 'Barkode', datafield: 'barkode'},
         { text: 'Pemohon', datafield: 'pemohon'},
         { text: 'Diplomat', datafield: 'diplomat'},
-        { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
+        // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
       ],ready: function()
       {
       function  btnPBBAddTable(e,row){
@@ -132,8 +131,6 @@ $('#idBtnPBB1Export').click(function(event) {
       },
     });
 
-    $("#idTabelPendaftarabBBN1").on("bindingcomplete", function (event) {
-    });
     /* end table proses*/
 
     /* end table proses*/
@@ -174,34 +171,6 @@ $('.main-header .sidebar-toggle').click(function(event) {
   /* Act on the event */
   event.preventDefault();
 //  alert('reload');
-  $("#idTabelPendaftarabBBN1").jqxGrid(
-    {
-      width: "99%",
-      height: "95%",
-      //  source: dataAdapter,
-      source: getAdapterPBB1() ,
-      sortable: true,
-      filtermode: 'excel',
-      filterable: true,
-      sortable: true,
-      groupable: true,
-      showfilterrow: true,
-      autoshowfiltericon: true,
-      pageable: true,
-
-      columns: [
-        { text: 'No BPKB', datafield: 'no_bpkb' },
-        { text: 'No Rangka', datafield: 'no_rangka' },
-        { text: 'No Faktor', datafield: 'no_faktur'},
-        { text: 'Barkode', datafield: 'barkode'},
-        { text: 'Pemohon', datafield: 'pemohon'},
-        { text: 'Diplomat', datafield: 'diplomat'},
-        { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
-      ],ready: function()
-      {
-
-      },
-    });
 });
 
 
@@ -310,9 +279,6 @@ $('#btn-get').on('click', function() {
   });
 
 
-
-
-
 function hapus(id){
 
 
@@ -329,31 +295,31 @@ BootstrapDialog.show({
 
 
                   dialogItself.close();
-                  $('#myPleaseWait').modal('show'); 
+                  $('#myPleaseWait').modal('show');
                   $.ajax({
-                    url : '<?php echo site_url("$this->controller/hapusdata") ?>',
+                    // url : '<?php //echo site_url("$this->controller/hapusdata") ?>',
                     type : 'post',
                     data : {id : id},
                     dataType : 'json',
                     success : function(obj) {
-                      $('#myPleaseWait').modal('hide'); 
+                      $('#myPleaseWait').modal('hide');
                       if(obj.error==false) {
                           BootstrapDialog.alert({
                               type: BootstrapDialog.TYPE_PRIMARY,
                               title: 'Informasi',
                               message: obj.message,
-                               
-                          });   
 
-                        $('#kecamatan').DataTable().ajax.reload();    
+                          });
+
+                        $('#kecamatan').DataTable().ajax.reload();
                       }
                       else {
                         BootstrapDialog.alert({
                             type: BootstrapDialog.TYPE_DANGER,
                             title: 'Error',
                             message: obj.message,
-                             
-                        }); 
+
+                        });
                       }
                     }
                   });
@@ -370,5 +336,113 @@ BootstrapDialog.show({
             ]
           });
 
+}
+</script>
+
+
+<script type="text/javascript">
+// Start Right Click
+var contextMenuKlikKanan = $("#MenuKlikKananPendaftaran").jqxMenu({ width: 200, height: 58, autoOpenPopup: false, mode: 'popup'});
+
+           $("#idTabelPendaftarabBBN1").on('contextMenuKlikKananPendaftaran', function () {
+               return false;
+           });
+          // handle context MenuKlikKanan clicks.
+           $("#MenuKlikKananPendaftaran").on('itemclick', function (event) {
+               var args = event.args;
+               var rowindex = $("#idTabelPendaftarabBBN1").jqxGrid('getselectedrowindex');
+               if ($.trim($(args).text()) == "Edit Selected Row") {
+                   // editrow = rowindex;
+                   var dataRecord = $("#idTabelPendaftarabBBN1").jqxGrid('getrowdata', rowindex);
+                   $('#no_bpkb').val(dataRecord.no_bpkb);
+                   $('#no_rangka').val(dataRecord.no_rangka);
+                   $('#idModalPBB1Edit').modal({show: 'true'});
+               }
+               else {
+                   var rowid = $("#idTabelPendaftarabBBN1").jqxGrid('getrowid', rowindex);
+
+
+          BootstrapDialog.show({
+            message : 'ANDA AKAN MENGHAPUS DATA DENGAN ID = '+rowid+'. ANDA YAKIN  ?  ',
+            title: 'KONFIRMASI HAPUS DATA',
+            draggable: true,
+            buttons : [
+              {
+                label : 'YA',
+                cssClass : 'btn-primary',
+                hotkey: 13,
+                action : function(dialogItself){
+
+                  dialogItself.close();
+                  $('#myPleaseWait').modal('show');
+                  $("#idTabelPendaftarabBBN1").jqxGrid('deleterow', rowid);
+                  $('#myPleaseWait').modal('hide');
+
+                }
+              },
+              {
+                label : 'TIDAK',
+                cssClass : 'btn-danger',
+                action: function(dialogItself){
+                    dialogItself.close();
+                }
+              }
+            ]
+          });
+
+               }
+           });
+
+           $("#idTabelPendaftarabBBN1").on('rowclick', function (event) {
+
+               if (event.args.rightclick) {
+
+                //  alert('klik kanan');
+                   $("#idTabelPendaftarabBBN1").jqxGrid('selectrow', event.args.rowindex);
+                   var scrollTop = $(window).scrollTop();
+                   var scrollLeft = $(window).scrollLeft();
+                   contextMenuKlikKanan.jqxMenu('open', parseInt(event.args.originalEvent.clientX) + 5 + scrollLeft, parseInt(event.args.originalEvent.clientY) + 5 + scrollTop);
+                   if (document.addEventListener) {
+                           document.addEventListener('contextmenu', function(e) {
+                               e.preventDefault();
+                           }, false);
+                       } else {
+                           document.attachEvent('oncontextmenu', function() {
+                              // alert("You've tried to open context menu");
+                               window.event.returnValue = false;
+                           });
+                       }
+                   return false;
+               }
+           });
+          //  end right click
+</script>
+
+<!--memindahkan onfocus pada saat tekan enter  -->
+<script type="text/javascript">
+$(document).ready(function() {
+
+document.onkeydown = chkEvent
+function chkEvent(e) {
+var keycode;
+if (window.event) keycode = window.event.keyCode; //*** for IE ***//
+else if (e) keycode = e.which; //*** for Firefox ***//
+// alert("keycode: " + keycode);
+//cek elemnt yang fokus
+if(keycode==13){
+ var jsAarray =['NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbAdd','NNamaPemohon_ModalkbPbbAdd','NNoresiPembayaran_ModalkbPbbAdd','NNoRangka_ModalkbPbbAdd'];
+var ElementHtml = $("*:focus");
+var temp=jsAarray[3];
+if(ElementHtml.attr("id")==temp){
+  temp=jsAarray[4];
+  console.log (temp);
+		$("#NNoRangka_ModalkbPbbAdd").jqxNumberInput('focus');}
+temp=jsAarray[4];
+}
+
+};
+}); //end document ready
+function isEmpty(str) {
+    return (!str || 0 === str.length);
 }
 </script>

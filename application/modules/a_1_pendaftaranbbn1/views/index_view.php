@@ -1,28 +1,3 @@
-<div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
-    role="dialog" aria-hidden="true" data-backdrop="static">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">
-                    <span class="glyphicon glyphicon-time">
-                    </span> Sedang memproses. Harap Tunggu...
-                 </h4>
-            </div>
-            <div class="modal-body">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-info
-                    progress-bar-striped active"
-                    style="width: 100%">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap/bootstrap-dialog.min.css">
-<script src="<?php echo base_url(); ?>assets/js/bootstrap/bootstrap-dialog.min.js"></script>
 
   <div class="container-fluid">
       <div class="row">
@@ -31,7 +6,7 @@
         <a class="btn btn-primary" href="#"><span class="glyphicon glyphicon-print"></span>Cetak</a>
         <a class="btn btn-primary" href="#"><span class="glyphicon glyphicon-export"></span>Export CSV</a>
         <ul class="btn btn-primary" data-toggle="modal" href="#myModal"><span class="glyphicon glyphicon-plus"></span> Buat Baru</ul>
-</div>
+        </div>
       </div>
   <div class="row">
 
@@ -65,8 +40,6 @@
 
 <!--  -->
        </div>
-
-
      </div>
    </div>
  </div> <!-- end collapse filter -->
@@ -75,17 +48,44 @@
 
 <div class="row">
 
-  <div class="" id="idTabelPendaftarabBBN1"  style="position: relative;">
+  <!-- <div  id="idTabelPendaftarabBBN1"  style="position: relative;"> -->
+  <div  id="idTabelPendaftarabBBN1">
     <!-- table -->
 
   </div>
   </div>
   </div>
 
+  <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
+      role="dialog" aria-hidden="true" data-backdrop="static">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title">
+                      <span class="glyphicon glyphicon-time">
+                      </span> Sedang memproses. Harap Tunggu...
+                   </h4>
+              </div>
+              <div class="modal-body">
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-info
+                      progress-bar-striped active"
+                      style="width: 100%">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 <?php
 $this->load->view("modal_kb_pbb_add_view");
 $this->load->view("modal_kb_pbb_edit_view");
 $this->load->view("modal_pemohon_baru_index");
 $this->load->view("index_js");
-
 ?>
+<div id='MenuKlikKananPendaftaran'>
+ <ul>
+     <li>Edit Selected Row</li>
+     <li>Delete Selected Row</li>
+ </ul>
+</div>

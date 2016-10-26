@@ -40,7 +40,7 @@
                       <?php
                       echo form_dropdown("PEMOHON_ID", array(), '', 'class="form-control col-md-7 col-xs-12 input-style" id="PEMOHON_ID" style="min-width: 200px;"');
                       ?>
-                     
+
                   </div>
 
                   <div class="col-md-3">
@@ -82,14 +82,14 @@
                 <button type="button"  class="btn btn-primary" data-dismiss="modal" style="min-width:80px;">
                   <i class="fa fa-danger"> </i> Batal
                 </button>
-                
+
               </div>
 
 
             </div>
             <!--end-->
         </div>
-      
+
     </div>
   </div>
 </div>
@@ -103,4 +103,3 @@ $('#idTanggalBBN1_modal_kb_pbb_edit').datepicker({
 
 
 </script>
-

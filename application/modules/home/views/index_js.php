@@ -1,26 +1,28 @@
 <!-- jQuery 2.1.4 -->
-<script src="assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- <script src="assets/plugins/jQuery/jQuery-2.1.4.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
 <!-- Bootstrap 3.3.5 -->
-<script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
+<script src="<?php echo base_url("assets/bootstrap/js/bootstrap.min.js"); ?>"></script>
 <!-- mask -->
 <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <!-- SlimScroll -->
-<script src="<?php echo base_url('assets/plugins/slimScroll/jquery.slimscroll.min.js'); ?>"></script>
+<script src="<?php echo base_url("assets/plugins/slimScroll/jquery.slimscroll.min.js"); ?>"></script>
 <!-- FastClick -->
-<script src="<?php echo base_url('assets/plugins/fastclick/fastclick.min.js'); ?>"></script>
+<script src="<?php echo base_url("assets/plugins/fastclick/fastclick.min.js"); ?>"></script>
 <!-- AdminLTE App -->
-<script src="<?php echo base_url('assets/dist/js/app.min.js'); ?>"></script>
+<script src="<?php echo base_url("assets/dist/js/app.min.js"); ?>"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url('assets/dist/js/demo.js'); ?>"></script>
+<script src="<?php echo base_url("assets/dist/js/demo.js"); ?>"></script>
 <script src="<?php echo base_url(); ?>assets/js/bootstrapValidator.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/bootstrap-dialog.min.js"></script>
 <!-- bootstrap datepicker -->
 <script src="<?php echo base_url(); ?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+<!--  jqx widgets liblary-->
 <script type="text/javascript" src="assets/vendor/jqwidgets/jqwidgets/jqxcore.js"></script>
 <script type="text/javascript" src="assets/vendor/jqwidgets/jqwidgets/jqxdata.js"></script>
-
 <script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxbuttons.js"></script>
 <script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
 <script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxmenu.js"></script>
@@ -36,8 +38,16 @@
 <script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxgrid.filter.js"></script>
 <script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxdata.export.js"></script>
 <script src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxtabs.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxdatetimeinput.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxcalendar.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxtooltip.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/globalization/globalize.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxnumberinput.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/vendor/jqwidgets/jqwidgets/jqxinput.js"></script>
 
 
+
+<!-- our loading -->
 <script src="<?php echo base_url(); ?>assets/js/modal-loading.js"></script>
 
 <!-- querybuilder -->
@@ -53,9 +63,18 @@
 <!--  -->
 <!--  -->
 
-  <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
-  <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/extra/phone-codes/phone.js"></script>
-  <!--  -->
+<!-- <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/extra/phone-codes/phone.js"></script> -->
+
+<!--  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/vee-validate/2.0.0-beta.13/vee-validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-validator/2.1.7/vue-validator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js" charset="utf-8"></script> -->
+<script src="<?php echo base_url(); ?>assets/js/jquery.form.js"></script>
+
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-dialog.min.css">
+<script src="<?php echo base_url(); ?>assets/js/bootstrap-dialog.min.js"></script>
 
 <!-- start javascript -->
 <script>
@@ -65,123 +84,109 @@
 */
 //this will hold currently focused tab
 var currentTab;
-//initilize tabs
+// //initilize tabs
 $(function () {
-  //alert('ready');
-  //when ever any tab is clicked this method will be call
-  $("#idTabKendaraanBaru").on("click", "a", function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-    $currentTab = $(this);
-  });
-
-
+  //   //alert("ready");
+  //   //when ever any tab is clicked this method will be call
+  //   $("#idTabKendaraanBaru").on("click", "a", function (e) {
+  //     e.preventDefault();
+  //     $(this).tab("show");
+  //     $currentTab = $(this);
+  //   });
+  //
+  //
   function getEventTarget(e) {
     e = e || window.event;
     return e.target || e.srcElement;
   }
 
-  var ul = document.getElementById('id_child_menu');
+
+  $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+  $("#IdTabMenuDashboard").jqxTabs({
+    width: "100%",
+    height: "100%",
+    theme: "energyblue",
+     reorder: true,
+     scrollPosition: 'both',
+    showCloseButtons: true,
+    autoHeight: true
+  });
+  var ul = document.getElementById("id_child_menu");
   ul.onclick = function(event) {
     event.preventDefault();
     var target = getEventTarget(event);
     alert(target.href);
     tabId=target.innerHTML.replace(/ /g,"_"); // ganti spasi menjadi underscore
     if($("#" + tabId).length == 0) {
-      //it doesn't exist
-      registerComposeButtonEvent(target);
-      registerCloseEvent();
+      //it doesn"t exist
+      // registerComposeButtonEvent(target);
+      // registerCloseEvent();
+      // $("#IdTabMenuDashboard").jqxTabs("addLast", "judul ke " + hitung, "konten ke " + hitung);
+      $("#IdTabMenuDashboard").jqxTabs("addLast", "<div style='width: '100%';height: '100%';'>"+target.innerHTML+"</div>", "<div class=\""+tabId+"\" style='width: '100%';height: '100%';' id=\""+tabId+"\">isi tab</div>");
+      url=target.href;
+      // $.get(url, function (data) { $("#" + tabId).html(data);});
+      var jqxhr = $.ajax({
+      url: url,
+      beforeSend: function( jqXHR ) {
+   jqXHR.overrideMimeType( "text/plain; charset=tiga pilar mandiri" );
+    showPleaseWait();
+      }
+      })
+      .done(function(data, textStatus, jqXHR ) {
+        // alert( "success" );
+         $("#" + tabId).html(data);
+          hidePleaseWait() ;
+          // console.log(data);
+      })
+      .fail(function(e) {
+        alert( "error" );
+      })
+      .always(function() {
+        // alert( "complete" );
+      });
+
+      // Perform other work here ...
+
+      // Set another completion function for the request above
+      // jqxhr.always(function() {
+      //   alert( "second complete" );
+      // });
+
+      // var xhttp = new XMLHttpRequest();
+      //  xhttp.onreadystatechange = function() {
+      //    if (this.readyState == 4 && this.status == 200) {
+      //     //  document.getElementById("demo").innerHTML =
+      //     //  this.responseText;
+      //       $("#" + tabId).html(this.responseText);
+      //    }
+      //  };
+      //  xhttp.open("GET", url, true);
+      //  xhttp.send();
     }else{
-      //alert('id exist');
-        showTab(tabId);
+      //alert("id exist");
+      // showTab(tabId);
     }
-
-  };
-
-
-  //this method will demonstrate how to add tab dynamically
-
-  function registerComposeButtonEvent(target) {
-    var tabId= target.innerHTML;
-    tabId=tabId.replace(/ /g,"_"); // ganti spasi menjadi underscore
-
-    // tambah dynamic tab dan konten tab .append(html kode);
-    $('.nav-pills').append('<li class="" ><a href="#' + tabId + '"><button class="close closeTab btn-danger btn-round" type="button">x</button></button>'+target.innerHTML+'</a></li>');
-    $('.tab-content').append('<div class="tab-pane" style="background-color: rgb(255, 255, 255);" id="' + tabId + '"></div>');
-    //send
-    var status=craeteNewTabAndLoadUrl("", target.href, "#" + tabId);
-
-    $(this).tab('show');
-    showTab(tabId);
-    registerCloseEvent();
-
-
   }
-
-  //this method will register event on close icon on the tab..
-  function registerCloseEvent() {
-
-    $(".closeTab").click(function () {
-      //there are multiple elements which has .closeTab icon so close the tab whose close icon is clicked
-      var tabContentId = $(this).parent().attr("href");
-      $(this).parent().parent().remove(); //remove li of tab
-      $('#idTabKendaraanBaru a:last').tab('show'); // Select first tab
-      $(tabContentId).remove(); //remove respective tab content
-
-    });
-
-  }
-
-  //shows the tab with passed content div id..paramter tabid indicates the div where the content resides
-  function showTab(tabId) {
-    $('#idTabKendaraanBaru a[href="#' + tabId + '"]').tab('show');
-
-  }
-  //return current active tab
-  function getCurrentTab() {
-    return currentTab;
-  }
-
-  //This function will create a new tab here and it will load the url content in tab content div.
-  function craeteNewTabAndLoadUrl(parms, url, loadDivSelector) {
-    var msg="";
-    $("" + loadDivSelector).load(url, function (response, status, xhr) {
-      //alert(msg);
-      if(status == "success"){
-        msg="ok";
-      }
-      else if (status == "error" || status == "error") {
-        msg = "Error :";
-        $("" + loadDivSelector).html(msg + xhr.status + " " + xhr.statusText);
-        $("" + loadDivSelector).html("Load Ajax Content Here...");
-      }
-
-    });
-
-    return msg; // return value untuk action open new tab
-
-  }
-
-  //this will return element from current tab
-  //example : if there are two tabs having  textarea with same id or same class name then when $("#someId") whill return both the text area from both tabs
-  //to take care this situation we need get the element from current tab.
-  function getElement(selector) {
-    var tabContentId = $currentTab.attr("href");
-    return $("" + tabContentId).find("" + selector);
-
-  }
-
-
-  function removeCurrentTab() {
-    var tabContentId = $currentTab.attr("href");
-    $currentTab.parent().remove(); //remove li of tab
-    $('#idTabKendaraanBaru a:last').tab('show'); // Select first tab
-    $(tabContentId).remove(); //remove respective tab content
-  }
-
-  $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-
-
 }); // end jquery on_load
 
 </script>
+
+<!--add disable enter  -->
+<script type="text/javascript">
+$(document).on("keypress", "input", function (e) {
+  var code = e.keyCode || e.which;
+  if (code == 13) {
+      e.preventDefault();
+
+      return false;
+  }
+});
+</script>
+<style media="screen">
+.jqx-tabs-content{
+  float: inherit  !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+</style>

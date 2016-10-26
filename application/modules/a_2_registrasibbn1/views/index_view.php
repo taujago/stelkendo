@@ -1,8 +1,8 @@
 <!-- registrasi container-fluid-->
-<<<<<<< HEAD
+
 <div class="row" style="padding-left:0px;margin-left:0px;padding-right:0px;" >
 
-=======
+
 
 <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
     role="dialog" aria-hidden="true" data-backdrop="static">
@@ -27,7 +27,7 @@
 </div>
 
 <div class="row" style="height:'auto';">
->>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
+
   <div class="col-md-12">
 
   <div id="idTabsREgistrasi" style="padding-left:0px;margin-left:0px;">
@@ -119,11 +119,11 @@
                   <div class="form-group" style="margin-bottom: 5px">
                     <label for="" class="control-label col-sm-3">No. BPKB</label>
                     <div class="col-sm-9">
-<<<<<<< HEAD
+
                       <input type="text" class="form-control" id="IdKbRbb1TxtNoBpkb" placeholder="No. BPKB">
-=======
+
                       <input type="text" class="form-control" id="no_bpkb" placeholder="No. BPKB">
->>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
+
                     </div>
                   </div>
                   <div class="form-group" style="margin-bottom: 5px">
@@ -135,11 +135,11 @@
                   <div class="form-group" style="margin-bottom: 5px">
                     <label for="" class="control-label col-sm-3" >No. Rangka</label>
                     <div class="col-sm-9">
-<<<<<<< HEAD
+
                       <input type="text" class="form-control" id="IdKbRbb1TxtNoRangka" placeholder="No. Rangka">
-=======
+
                       <input type="text" class="form-control" id="no_rangka" placeholder="No. Rangka">
->>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
+
                     </div>
                   </div>
                   <div class="form-group" style="margin-bottom: 5px">
@@ -589,17 +589,17 @@
       </div>
     </div>
     <br>
-<<<<<<< HEAD
+
     <div class="row-no-padding-fluid">
         <div class="" id="idTabelRBBN1ListData"  style="width:100%">
-=======
+
     <div class="row-fluid">
         <div class="" id="idTabelRBBN1ListData"  style="width:100%" oncontextmenu="return false;">
->>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
+
           <!-- table -->
         </div>
     </div>
-   
+
 
 
   </div><!-- end tab list data -->

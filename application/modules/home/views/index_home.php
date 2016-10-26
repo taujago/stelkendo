@@ -1,7 +1,16 @@
 <div class="container-fluid" >
   <div id='IdTabMenuDashboard' style="width:100%;height:'100%';overlow:visible ;">
-    <ul><!-- konten mulai disihih-->
-      <!-- isi konten ? -->
-    </div><!-- end ISI KONTEN -->
+  <ul style=''>
+    <li>judul ke 1</li>
 
-  </div>
+  </ul>
+  <div></div><!-- ISI KONTEN -->
+</div><!-- end ISI KONTEN -->
+  <!-- <div class="nav-tabs-custom">
+      <ul class="nav nav-pills" id="idTabKendaraanBaru">
+      </ul>
+
+      <div class="tab-content" >
+      </div>
+  </div> -->
+</div>

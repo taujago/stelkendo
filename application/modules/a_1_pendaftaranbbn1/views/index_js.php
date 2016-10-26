@@ -3,7 +3,7 @@
 
   function hapus(id){
     BootstrapDialog.show({
-      message : 'ANDA AKAN MENGHAPUS DATA DENGAN ID = '+id+'. ANDA YAKIN  ?  ',
+      message : 'ANDA AKAN MENGHAPUS DATA DENGAN ID = '+(id+1)+'. ANDA YAKIN  ?  ',
       title: 'KONFIRMASI HAPUS DATA',
       draggable: true,
       buttons : [
@@ -14,6 +14,8 @@
             action: function(dialogItself){
                     dialogItself.close();
                     $('#myPleaseWait').modal('show');
+                    $("#idTabelPendaftarabBBN1").jqxGrid('deleterow', id+1);
+                    $('#myPleaseWait').modal('hide');
                 }
           },
           {
@@ -92,11 +94,12 @@ $('#idBtnPBB1Export').click(function(event) {
     }
   }
 
-  var buttonrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+  // var buttonrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+  //   var rowindex = $("#idTabelPendaftarabBBN1").jqxGrid('getselectedrowindex');
 
-    return '<a  class=\"btn btn-primary\" onclick=\"edit('+row+')\">EDIT </a><a style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"hapus('+row+')\">HAPUS</a>';
+  //   return '<a  class=\"btn btn-primary\" onclick=\"edit('+row+')\">EDIT </a><a style=\"margin-left:10px;\"  class=\"btn btn-primary\" onclick=\"hapus('+row+')\">HAPUS</a>';
 
-  };
+  // };
 
 
   $("#idTabelPendaftarabBBN1").jqxGrid(
@@ -172,6 +175,101 @@ $('.main-header .sidebar-toggle').click(function(event) {
   event.preventDefault();
 //  alert('reload');
 });
+
+
+// Start Right Click
+var contextMenuKlikKanan = $("#MenuKlikKananPendaftaran").jqxMenu({ width: 200, height: 58, autoOpenPopup: false, mode: 'popup'});
+
+           $("#idTabelPendaftarabBBN1").on('contextMenuKlikKananPendaftaran', function () {
+               return false;
+           });
+
+          // handle context MenuKlikKanan clicks.
+           $("#MenuKlikKananPendaftaran").on('itemclick', function (event) {
+               var args = event.args;
+               var rowindex = $("#idTabelPendaftarabBBN1").jqxGrid('getselectedrowindex');
+               if ($.trim($(args).text()) == "Edit Selected Row") {
+                   // editrow = rowindex;
+                   var dataRecord = $("#idTabelPendaftarabBBN1").jqxGrid('getrowdata', rowindex);
+
+                   $('#no_bpkb').val(dataRecord.no_bpkb);
+                   $('#no_rangka').val(dataRecord.no_rangka);
+
+                   $('#idModalPBB1Edit').modal({show: 'true'});
+                    
+                   // $("#no_bpkb").val(dataRecord.no_bpkb);
+                   // $("#no_rek_bpkb").val(dataRecord.no_rek_bpkb);
+                   // $("#tgl_bpkb").val(dataRecord.tgl_bpkb);
+                   // $("#no_rangka").val(dataRecord.no_rangka);
+                   // $("#no_mesin").val(dataRecord.no_mesin);
+                   // $("#no_polisi").val(dataRecord.no_polisi);
+
+                   // var offset = $("#idTabelPendaftarabBBN1").offset();
+                   // $('#idTabsREgistrasi').jqxTabs('select', 0);
+
+
+
+
+                  //  $("#popupWindow").jqxWindow({ position: { x: parseInt(offset.left) + 60, y: parseInt(offset.top) + 60} });
+                   //
+                  //  // get the clicked row's data and initialize the input fields.
+                   
+                   //     
+                   
+                  //  $("#lastName").val(dataRecord.lastname);
+                  //  $("#product").val(dataRecord.productname);
+                  //  $("#quantity").jqxNumberInput({ decimal: dataRecord.quantity });
+                  //  $("#price").jqxNumberInput({ decimal: dataRecord.price });
+                   //
+                  //  // show the popup window.
+                  //  $("#popupWindow").jqxWindow('show');
+               }
+               else {
+                   var rowid = $("#idTabelPendaftarabBBN1").jqxGrid('getrowid', rowindex);
+                   
+
+          BootstrapDialog.show({
+            message : 'ANDA AKAN MENGHAPUS DATA DENGAN ID = '+rowid+'. ANDA YAKIN  ?  ',
+            title: 'KONFIRMASI HAPUS DATA',
+            draggable: true,
+            buttons : [
+              {
+                label : 'YA',
+                cssClass : 'btn-primary',
+                hotkey: 13,
+                action : function(dialogItself){
+
+                  dialogItself.close();
+                  $('#myPleaseWait').modal('show');
+                  $("#idTabelPendaftarabBBN1").jqxGrid('deleterow', rowid);
+                  $('#myPleaseWait').modal('hide');
+
+                }
+              },
+              {
+                label : 'TIDAK',
+                cssClass : 'btn-danger',
+                action: function(dialogItself){
+                    dialogItself.close();
+                }
+              }
+            ]
+          });
+
+               }
+           });
+
+           $("#idTabelPendaftarabBBN1").on('rowclick', function (event) {
+               if (event.args.rightclick) {
+                 // alert('klik kanan');
+                   $("#idTabelPendaftarabBBN1").jqxGrid('selectrow', event.args.rowindex);
+                   var scrollTop = $(window).scrollTop();
+                   var scrollLeft = $(window).scrollLeft();
+                   contextMenuKlikKanan.jqxMenu('open', parseInt(event.args.originalEvent.clientX) + 5 + scrollLeft, parseInt(event.args.originalEvent.clientY) + 5 + scrollTop);
+
+                   return false;
+               }
+           });
 
 
 

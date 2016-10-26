@@ -96,6 +96,7 @@ $("#idTabelRBBN1ListData").jqxGrid(
      columnsresize: true,
     columns: [
       {text: 'No BPKB', datafield: 'no_bpkb'},
+<<<<<<< HEAD
       {text:'no_rek_bpkb' ,datafield: 'no_rek_bpkb'},
       {text:'tgl_bpkb' , datafield: 'tgl_bpkb'},
       {text:'no_rangka ' , datafield :'no_rangka'},
@@ -111,6 +112,23 @@ $("#idTabelRBBN1ListData").jqxGrid(
             {text:'operator ' , datafield: 'operator'},
       {text:'wilayah ' , datafield: 'wilayah'}
       // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150}
+=======
+      {text:'No. Reg. BPKB' ,datafield: 'no_rek_bpkb'},
+      {text:'Tgl. BPKB' , datafield: 'tgl_bpkb'},
+      {text:'No. Rangka ' , datafield :'no_rangka'},
+      {text:'No. Mesin' , datafield: 'no_mesin'},
+      {text:'No. Polisi ' , datafield: 'no_polisi'},
+      {text:'Merk ' , datafield: 'merk'},
+      {text:'Model ' , datafield: 'model'},
+      {text:'Jenis ' , datafield: 'jenis'},
+      {text:'Jumlah Roda ' , datafield: 'jmlh_roda'},
+      {text:'Warna TNKB ' , datafield: 'warna_tnkb'},
+      {text:'No. Faktur ' , datafield: 'no_faktur'},
+      {text:'Nama Pemilik ' , datafield: 'nama_pemilik'},
+            {text:'Operator ' , datafield: 'operator'},
+      {text:'Wilayah ' , datafield: 'wilayah'},
+      { text: 'Action', cellsrenderer: buttonrenderer,width: 150}
+>>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
 
       // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
     ],ready: function()
@@ -139,8 +157,18 @@ var editrow = -1;
                var args = event.args;
                var rowindex = $("#idTabelRBBN1ListData").jqxGrid('getselectedrowindex');
                if ($.trim($(args).text()) == "Edit Selected Row") {
-                   editrow = rowindex;
+                   // editrow = rowindex;
+                   var dataRecord = $("#idTabelRBBN1ListData").jqxGrid('getrowdata', rowindex);
+                    
+                   $("#no_bpkb").val(dataRecord.no_bpkb);
+                   $("#no_rek_bpkb").val(dataRecord.no_rek_bpkb);
+                   $("#tgl_bpkb").val(dataRecord.tgl_bpkb);
+                   $("#no_rangka").val(dataRecord.no_rangka);
+                   $("#no_mesin").val(dataRecord.no_mesin);
+                   $("#no_polisi").val(dataRecord.no_polisi);
+
                    var offset = $("#idTabelRBBN1ListData").offset();
+<<<<<<< HEAD
                   //  $("#popupWindow").jqxWindow({ position: { x: parseInt(offset.left) + 60, y: parseInt(offset.top) + 60} });
                    //
                    //get the clicked row's data and initialize the input fields.
@@ -164,6 +192,19 @@ var editrow = -1;
 
                     //show tabs
                    $('#idTabsREgistrasi').jqxTabs('select', 0);// pilih index tab pertama
+=======
+                   $('#idTabsREgistrasi').jqxTabs('select', 0);
+
+
+
+
+                  //  $("#popupWindow").jqxWindow({ position: { x: parseInt(offset.left) + 60, y: parseInt(offset.top) + 60} });
+                   //
+                  //  // get the clicked row's data and initialize the input fields.
+                   
+                   //     
+                   
+>>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
                   //  $("#lastName").val(dataRecord.lastname);
                   //  $("#product").val(dataRecord.productname);
                   //  $("#quantity").jqxNumberInput({ decimal: dataRecord.quantity });
@@ -174,13 +215,46 @@ var editrow = -1;
                }
                else {
                    var rowid = $("#idTabelRBBN1ListData").jqxGrid('getrowid', rowindex);
-                   $("#idTabelRBBN1ListData").jqxGrid('deleterow', rowid);
+                   
+
+          BootstrapDialog.show({
+            message : 'ANDA AKAN MENGHAPUS DATA DENGAN ID = '+rowid+'. ANDA YAKIN  ?  ',
+            title: 'KONFIRMASI HAPUS DATA',
+            draggable: true,
+            buttons : [
+              {
+                label : 'YA',
+                cssClass : 'btn-primary',
+                hotkey: 13,
+                action : function(dialogItself){
+
+                  dialogItself.close();
+                  $('#myPleaseWait').modal('show');
+                  $("#idTabelRBBN1ListData").jqxGrid('deleterow', rowid);
+                  $('#myPleaseWait').modal('hide');
+
+                }
+              },
+              {
+                label : 'TIDAK',
+                cssClass : 'btn-danger',
+                action: function(dialogItself){
+                    dialogItself.close();
+                }
+              }
+            ]
+          });
+
                }
            });
 
            $("#idTabelRBBN1ListData").on('rowclick', function (event) {
                if (event.args.rightclick) {
+<<<<<<< HEAD
               //   alert('klik kanan');
+=======
+                 // alert('klik kanan');
+>>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
                    $("#idTabelRBBN1ListData").jqxGrid('selectrow', event.args.rowindex);
                    var scrollTop = $(window).scrollTop();
                    var scrollLeft = $(window).scrollLeft();

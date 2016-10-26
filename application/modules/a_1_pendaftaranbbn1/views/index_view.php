@@ -48,14 +48,19 @@
 
 <div class="row">
 
+<<<<<<< HEAD
   <!-- <div  id="idTabelPendaftarabBBN1"  style="position: relative;"> -->
   <div  id="idTabelPendaftarabBBN1">
+=======
+  <div class="" id="idTabelPendaftarabBBN1"  style="position: relative;" oncontextmenu="return false;">
+>>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
     <!-- table -->
 
   </div>
   </div>
   </div>
 
+<<<<<<< HEAD
   <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
       role="dialog" aria-hidden="true" data-backdrop="static">
       <div class="modal-dialog modal-sm">
@@ -77,15 +82,29 @@
           </div>
       </div>
   </div>
+=======
+
+
+>>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
 <?php
 $this->load->view("modal_kb_pbb_add_view");
 $this->load->view("modal_kb_pbb_edit_view");
 $this->load->view("modal_pemohon_baru_index");
 $this->load->view("index_js");
 ?>
+<<<<<<< HEAD
 <div id='MenuKlikKananPendaftaran'>
  <ul>
      <li>Edit Selected Row</li>
      <li>Delete Selected Row</li>
  </ul>
 </div>
+=======
+
+  <div id='MenuKlikKananPendaftaran'>
+   <ul>
+       <li>Edit Selected Row</li>
+       <li>Delete Selected Row</li>
+   </ul>
+  </div>
+>>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a

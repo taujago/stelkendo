@@ -96,7 +96,6 @@ $("#idTabelRBBN1ListData").jqxGrid(
      columnsresize: true,
     columns: [
       {text: 'No BPKB', datafield: 'no_bpkb'},
-<<<<<<< HEAD
       {text:'no_rek_bpkb' ,datafield: 'no_rek_bpkb'},
       {text:'tgl_bpkb' , datafield: 'tgl_bpkb'},
       {text:'no_rangka ' , datafield :'no_rangka'},
@@ -110,9 +109,9 @@ $("#idTabelRBBN1ListData").jqxGrid(
       {text:'no_faktur ' , datafield: 'no_faktur'},
       {text:'nama_pemilik ' , datafield: 'nama_pemilik'},
             {text:'operator ' , datafield: 'operator'},
-      {text:'wilayah ' , datafield: 'wilayah'}
+      {text:'wilayah ' , datafield: 'wilayah'},
       // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150}
-=======
+
       {text:'No. Reg. BPKB' ,datafield: 'no_rek_bpkb'},
       {text:'Tgl. BPKB' , datafield: 'tgl_bpkb'},
       {text:'No. Rangka ' , datafield :'no_rangka'},
@@ -128,7 +127,6 @@ $("#idTabelRBBN1ListData").jqxGrid(
             {text:'Operator ' , datafield: 'operator'},
       {text:'Wilayah ' , datafield: 'wilayah'},
       { text: 'Action', cellsrenderer: buttonrenderer,width: 150}
->>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
 
       // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
     ],ready: function()
@@ -159,7 +157,7 @@ var editrow = -1;
                if ($.trim($(args).text()) == "Edit Selected Row") {
                    // editrow = rowindex;
                    var dataRecord = $("#idTabelRBBN1ListData").jqxGrid('getrowdata', rowindex);
-                    
+
                    $("#no_bpkb").val(dataRecord.no_bpkb);
                    $("#no_rek_bpkb").val(dataRecord.no_rek_bpkb);
                    $("#tgl_bpkb").val(dataRecord.tgl_bpkb);
@@ -168,7 +166,7 @@ var editrow = -1;
                    $("#no_polisi").val(dataRecord.no_polisi);
 
                    var offset = $("#idTabelRBBN1ListData").offset();
-<<<<<<< HEAD
+
                   //  $("#popupWindow").jqxWindow({ position: { x: parseInt(offset.left) + 60, y: parseInt(offset.top) + 60} });
                    //
                    //get the clicked row's data and initialize the input fields.
@@ -192,7 +190,7 @@ var editrow = -1;
 
                     //show tabs
                    $('#idTabsREgistrasi').jqxTabs('select', 0);// pilih index tab pertama
-=======
+
                    $('#idTabsREgistrasi').jqxTabs('select', 0);
 
 
@@ -201,10 +199,7 @@ var editrow = -1;
                   //  $("#popupWindow").jqxWindow({ position: { x: parseInt(offset.left) + 60, y: parseInt(offset.top) + 60} });
                    //
                   //  // get the clicked row's data and initialize the input fields.
-                   
-                   //     
-                   
->>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
+
                   //  $("#lastName").val(dataRecord.lastname);
                   //  $("#product").val(dataRecord.productname);
                   //  $("#quantity").jqxNumberInput({ decimal: dataRecord.quantity });
@@ -215,7 +210,7 @@ var editrow = -1;
                }
                else {
                    var rowid = $("#idTabelRBBN1ListData").jqxGrid('getrowid', rowindex);
-                   
+
 
           BootstrapDialog.show({
             message : 'ANDA AKAN MENGHAPUS DATA DENGAN ID = '+rowid+'. ANDA YAKIN  ?  ',
@@ -250,11 +245,7 @@ var editrow = -1;
 
            $("#idTabelRBBN1ListData").on('rowclick', function (event) {
                if (event.args.rightclick) {
-<<<<<<< HEAD
-              //   alert('klik kanan');
-=======
-                 // alert('klik kanan');
->>>>>>> 332f90ecaadf2d2ae7788797ce0bb2b9edf9491a
+
                    $("#idTabelRBBN1ListData").jqxGrid('selectrow', event.args.rowindex);
                    var scrollTop = $(window).scrollTop();
                    var scrollLeft = $(window).scrollLeft();

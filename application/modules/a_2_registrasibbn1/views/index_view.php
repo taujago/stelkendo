@@ -1,8 +1,15 @@
 <!-- registrasi container-fluid-->
-
-<div class="row" style="padding-left:0px;margin-left:0px;padding-right:0px;" >
-
-
+<!--style untuk row  -->
+<style media="screen">
+.row-no-padding-no-padding {
+margin-left: 0;
+margin-right: 0;
+[class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+}
+</style>
 
 <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
     role="dialog" aria-hidden="true" data-backdrop="static">
@@ -27,18 +34,17 @@
 </div>
 
 <div class="row" style="height:'auto';">
-
   <div class="col-md-12">
 
-  <div id="idTabsREgistrasi" style="padding-left:0px;margin-left:0px;">
-    <ul style="">
+  <div id='idTabsREgistrasi' style="height:'auto';">
+    <ul style=''>
       <li>Entry Data BPKB</li>
       <li>List Data</li>
     </ul>
     <!--  entry data bpkb -->
     <div>
         <br>
-      <div class="row-no-padding" >
+      <div class="row" >
         <!-- max-width:300px;padding-right:40px; -->
         <div class="col-md-3" style="">
           <br>
@@ -47,46 +53,48 @@
             <div class="input-group-addon">
               <i class="fa fa-calendar"></i>
             </div>
-            <input type="text" class="form-control pull-right ClassTanggalInputMask" id="IdKbRbb1TanggalBpkb">
+            <input type="text" class="form-control pull-right ClassTanggalInputMask" id="idTanggalBBN1_modal_kb_pbb_add">
           </div>
         </div>
-        <!--  -->
+
+
         <div class="col-md-7" style="margin-left:40px;">
-          <div class="row-no-padding ">
+          <div class="row ">
             <div class="left">
               <div class="col-md-4 " style="">
                 <div class="radio">
-                  <input type="radio" name="group"  checked="">No. BPKB</div>
+                  <input type="radio" name="group" value="option1" checked="">No. BPKB
+                </div>
               </div>
               <div class="col-md-8" style="min-width:250px; margin-left:-80px;">
-                <input type="text" class="form-control" placeholder="No. BPKB" id="IdKbRbb1TxtNoBpkb">
+                <input type="text" class="form-control" placeholder="No. BPKB">
               </div>
             </div>
           </div>
-          <div class="row-no-padding">
+          <div class="row">
             <div class="col-md-4" style="">
               <div class="radio">
                 <input type="radio" name="group" value="option1" checked="">No. Rek. BPKB
               </div>
             </div>
             <div class="col-md-8" style="min-width:250px;margin-left:-80px;">
-              <input type="text" class="form-control" placeholder="No. Rek. BPKB" id="IdKbRbb1TxtNoRekBPKB">
+              <input type="text" class="form-control" placeholder="No. Rek. BPKB">
             </div>
           </div>
-          <div class="row-no-padding">
+          <div class="row">
             <div class="col-md-4" style="">
               <div class="radio">
                 <input type="radio" name="group" value="option1" checked="">Barkode Berkas
               </div>
             </div>
             <div class="col-md-8" style="min-width:250px;margin-left:-80px;">
-              <input type="text" class="form-control" placeholder="Barkode Berkas"  id="IdKbRbb1TxtBarkodeBerkas">
+              <input type="text" class="form-control" placeholder="Barkode Berkas">
             </div>
           </div>
         </div>
-        <!--  -->
+
         <div class="col-md-2" style="margin-left:-40px;">
-          <div class="row-no-padding row-no-padding-centered">
+          <div class="row row-centered">
             <div class="col-md-12">
               <button type="button" class="btn btn-primary btn-block" style="min-height:100px;margin-top:5px;margin-left:-40px;">
                 <span class="glyphicon glyphicon-search"></span>Cari Data
@@ -97,8 +105,8 @@
       </div>
       <hr>
       <!-- navigasi tab -->
-      <div class="row-no-padding" style="width:80%;">
-        <div id="idSubTabsRegistrasiBBN1" >
+      <div class="row" style="height:500px;">
+        <div id='idSubTabsRegistrasiBBN1' style="height:auto;">
           <ul>
             <li>
               I. Identitas Kendaraan
@@ -113,39 +121,31 @@
           <!--start isi subtabs  -->
           <div>   <!-- kontent 1 -->
             <p></p>
-            <div class="row-no-padding center-block">
+            <div class="row center-block">
               <div class="col-md-6">
                 <form class="form-horizontal">
                   <div class="form-group" style="margin-bottom: 5px">
                     <label for="" class="control-label col-sm-3">No. BPKB</label>
                     <div class="col-sm-9">
-
-                      <input type="text" class="form-control" id="IdKbRbb1TxtNoBpkb" placeholder="No. BPKB">
-
                       <input type="text" class="form-control" id="no_bpkb" placeholder="No. BPKB">
-
                     </div>
                   </div>
                   <div class="form-group" style="margin-bottom: 5px">
                     <label for="" class="control-label    col-sm-3" style="padding-left:0px;">Dikeluarkan di</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="IdKbRbb1TxtWilayah" placeholder="wilayah">
+                      <input type="text" class="form-control" id="" placeholder="wilayah">
                     </div>
                   </div>
                   <div class="form-group" style="margin-bottom: 5px">
                     <label for="" class="control-label col-sm-3" >No. Rangka</label>
                     <div class="col-sm-9">
-
-                      <input type="text" class="form-control" id="IdKbRbb1TxtNoRangka" placeholder="No. Rangka">
-
                       <input type="text" class="form-control" id="no_rangka" placeholder="No. Rangka">
-
                     </div>
                   </div>
                   <div class="form-group" style="margin-bottom: 5px">
                     <label for="" class="control-label col-sm-3">Merk</label>
                     <div class="col-sm-9">
-                      <select id="IdKbRbb1SelectMerk" class="form-control">
+                      <select id="xxxxx" class="form-control">
                         <option>1</option>
                       </select>
                     </div>
@@ -160,7 +160,7 @@
                   <div class="form-group" style="margin-bottom: 5px">
                     <label for="" class="control-label col-sm-3">Model</label>
                     <div class="col-sm-9" style="">
-                      <select id="IdKbRbb1SelectModel" class="form-control">
+                      <select id="xxxxx" class="form-control">
                         <option>1</option>
                       </select>
                     </div>
@@ -212,7 +212,7 @@
                 </form>
               </div>
               <div class="col-md-6">
-                <row-no-padding>
+                <row>
                   <form class="form-horizontal">
                     <div class="form-group" style="margin-bottom: 5px">
                       <label for="" class="col-sm-3 control-label">No. Reg. BPKB</label>
@@ -237,7 +237,7 @@
                     <div class="form-group" style="margin-bottom: 5px">
                       <label for="" class="control-label             col-sm-3">Jenis</label>
                       <div class="col-sm-9">
-                        <select id="IdKbRbb1SelectJenis" class="form-control">
+                        <select id="xxxxx" class="form-control">
                           <option>1</option>
                         </select>
                       </div>
@@ -302,15 +302,15 @@
                   </div>
                 </div> -->
               </form>
-            </row-no-padding>
+            </row>
           </div>
         </div>
       </div>   <!--  end kontent 1 -->
       <div>   <!-- kontent 2 -->
         <p></p>
-        <div class="row-no-padding center-block">
+        <div class="row center-block">
           <div class="col-md-6">
-            <row-no-padding>
+            <row>
               <form class="form-horizontal">
                 <div style="margin-bottom: 5px" class="form-group">
                   <label for="" class="control-label    col-sm-3">No. Identitas</label>
@@ -363,11 +363,11 @@
                   </div>
                 </div>
               </form>
-            </row-no-padding>
+            </row>
           </div>
           <div class="col-md-6">
 
-            <div class="row-no-padding">
+            <div class="row">
               <div class="col-md-5"></div>
               <div class="col-md-2">
                 <div class="btn btn-primary" style="">
@@ -429,7 +429,7 @@
         </div>   <!-- end kontent 2 -->
         <div>   <!-- start kontent 3 -->
           <p></p>
-          <div class="row-no-padding center-block">
+          <div class="row center-block">
             <div class="col-md-6">
               <form class="form-horizontal">
                 <div class="form-group">
@@ -519,7 +519,7 @@
       </div>     <!-- end  isi subtabs  -->
     </div><!-- end navigasi tabs  -->
     <!--start isi  footer tabs  -->
-    <div class="row-no-padding">
+    <div class="row">
       <!--KOLOM KIRI  -->
       <div class="col-md-6">
         <form class="form-horizontal">
@@ -554,12 +554,12 @@
         </form>
       </div>
       <div class="col-md-6">
-        <div class="row-no-padding">
+        <div class="row">
           <div class="checkbox">
             <label><input type="checkbox" value="">From STNK</label>
           </div>
         </div>
-        <div class="row-no-padding">
+        <div class="row">
           <div class="col-md-6">  <button type="button" class="btn btn-block  btn-primary">Simpan</button></div>
           <div class="col-md-6">      <button type="button" class="btn btn-block  btn-primary">Baru</button></div>
 
@@ -572,7 +572,7 @@
 
 
   <div><!-- start tab list data -->
-    <div class="row-no-padding">
+    <div class="row">
           <br>
       <div class="col-md-5">
         <form class="form-horizontal">
@@ -589,13 +589,8 @@
       </div>
     </div>
     <br>
-
-    <div class="row-no-padding-fluid">
-        <div class="" id="idTabelRBBN1ListData"  style="width:100%">
-
     <div class="row-fluid">
         <div class="" id="idTabelRBBN1ListData"  style="width:100%" oncontextmenu="return false;">
-
           <!-- table -->
         </div>
     </div>
@@ -637,23 +632,14 @@
   </div>
 </div>
 
-<div id="MenuKlikKanan">
+<div id='MenuKlikKanan'>
    <ul>
-       <li>Edit Selected row</li>
-       <li>Delete Selected row</li>
+       <li>Edit Selected Row</li>
+       <li>Delete Selected Row</li>
    </ul>
   </div>
 
-<style media="screen">
-.row-no-padding-no-padding {
-margin-left: 0;
-margin-right: 0;
-[class*="col-"] {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-}
-</style>
+
 <?php
-$this->load->view("index_js.php");
+$this->load->view('index_js.php');
 ?>

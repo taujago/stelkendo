@@ -8,6 +8,12 @@
 <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.phone.extensions.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/extra/phone-codes/phone.js"></script>
+
+
 <!-- SlimScroll -->
 <script src="<?php echo base_url("assets/plugins/slimScroll/jquery.slimscroll.min.js"); ?>"></script>
 <!-- FastClick -->
@@ -19,7 +25,11 @@
 <script src="<?php echo base_url(); ?>assets/js/bootstrapValidator.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/bootstrap-dialog.min.js"></script>
 <!-- bootstrap datepicker -->
+<script src="http://querybuilder.js.org/dist/moment/min/moment.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/id.js"></script>
+<script src="http://querybuilder.js.org/dist/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
 <!--  jqx widgets liblary-->
 <script type="text/javascript" src="assets/vendor/jqwidgets/jqwidgets/jqxcore.js"></script>
 <script type="text/javascript" src="assets/vendor/jqwidgets/jqwidgets/jqxdata.js"></script>
@@ -51,8 +61,8 @@
 <script src="<?php echo base_url(); ?>assets/js/modal-loading.js"></script>
 
 <!-- querybuilder -->
-<script src="http://querybuilder.js.org/dist/moment/min/moment.min.js"></script>
-<script src="http://querybuilder.js.org/dist/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
+
 <script src="http://querybuilder.js.org/dist/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
 <script src="http://querybuilder.js.org/dist/selectize/dist/js/standalone/selectize.min.js"></script>
 <script src="http://querybuilder.js.org/dist/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
@@ -60,11 +70,6 @@
 <script src="http://querybuilder.js.org/dist/sql-parser/browser/sql-parser.js"></script>
 <script src="http://querybuilder.js.org/dist/sql-parser/browser/sql-parser.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/custom-query-builder.in.js"></script>
-<!--  -->
-<!--  -->
-
-<!-- <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
-<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/extra/phone-codes/phone.js"></script> -->
 
 <!--  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js"></script>
@@ -75,26 +80,12 @@
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-dialog.min.css">
 <script src="<?php echo base_url(); ?>assets/js/bootstrap-dialog.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/customjs_3pilarmajumandiri.js"></script>
 
 <!-- start javascript -->
 <script>
-/**
-* This javascript contains fuctions
-* @Vikram
-*/
-//this will hold currently focused tab
 var currentTab;
-// //initilize tabs
 $(function () {
-  //   //alert("ready");
-  //   //when ever any tab is clicked this method will be call
-  //   $("#idTabKendaraanBaru").on("click", "a", function (e) {
-  //     e.preventDefault();
-  //     $(this).tab("show");
-  //     $currentTab = $(this);
-  //   });
-  //
-  //
   function getEventTarget(e) {
     e = e || window.event;
     return e.target || e.srcElement;
@@ -144,24 +135,6 @@ $(function () {
       .always(function() {
         // alert( "complete" );
       });
-
-      // Perform other work here ...
-
-      // Set another completion function for the request above
-      // jqxhr.always(function() {
-      //   alert( "second complete" );
-      // });
-
-      // var xhttp = new XMLHttpRequest();
-      //  xhttp.onreadystatechange = function() {
-      //    if (this.readyState == 4 && this.status == 200) {
-      //     //  document.getElementById("demo").innerHTML =
-      //     //  this.responseText;
-      //       $("#" + tabId).html(this.responseText);
-      //    }
-      //  };
-      //  xhttp.open("GET", url, true);
-      //  xhttp.send();
     }else{
       //alert("id exist");
       // showTab(tabId);
@@ -177,10 +150,13 @@ $(document).on("keypress", "input", function (e) {
   var code = e.keyCode || e.which;
   if (code == 13) {
       e.preventDefault();
-
       return false;
   }
 });
+</script>
+
+<script type="text/javascript">
+
 </script>
 <style media="screen">
 .jqx-tabs-content{

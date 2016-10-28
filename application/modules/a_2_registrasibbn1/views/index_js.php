@@ -6,10 +6,10 @@ $(document).ready(function () {
 
 
 $('#idSubTabsRegistrasiBBN1').jqxTabs({
-  width: 'auto',  height: 'auto',animationType:'fade'
+  width: 'auto', animationType:'fade' //, height: 'auto',
 });
 $('#idTabsREgistrasi').jqxTabs({
-  width: 'auto',  height: 'auto',animationType:'fade'
+  width: 'auto',  animationType:'fade'//height: 'auto',
 });
 $('#idTabsREgistrasi').on('tabclick', function (event)
 {
@@ -64,7 +64,6 @@ $('#idTabsREgistrasi').on('tabclick', function (event)
         { name: 'nama_pemohon', type: 'string'},
         { name: 'operator', type: 'string'},
         { name: 'wilayah', type: 'string'}
-
       ],
       id: 'id',
       url:'assets/registrasi_list_data.json',
@@ -94,7 +93,7 @@ $("#idTabelRBBN1ListData").jqxGrid(
   pageable: true,
   theme: 'bootstrap',
      columnsresize: true,
-    columns: [
+   columns: [
       {text: 'No BPKB', datafield: 'no_bpkb'},
       {text:'no_rek_bpkb' ,datafield: 'no_rek_bpkb'},
       {text:'tgl_bpkb' , datafield: 'tgl_bpkb'},
@@ -110,26 +109,23 @@ $("#idTabelRBBN1ListData").jqxGrid(
       {text:'nama_pemilik ' , datafield: 'nama_pemilik'},
             {text:'operator ' , datafield: 'operator'},
       {text:'wilayah ' , datafield: 'wilayah'},
-      // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150}
 
-      {text:'No. Reg. BPKB' ,datafield: 'no_rek_bpkb'},
-      {text:'Tgl. BPKB' , datafield: 'tgl_bpkb'},
-      {text:'No. Rangka ' , datafield :'no_rangka'},
-      {text:'No. Mesin' , datafield: 'no_mesin'},
-      {text:'No. Polisi ' , datafield: 'no_polisi'},
-      {text:'Merk ' , datafield: 'merk'},
-      {text:'Model ' , datafield: 'model'},
-      {text:'Jenis ' , datafield: 'jenis'},
-      {text:'Jumlah Roda ' , datafield: 'jmlh_roda'},
-      {text:'Warna TNKB ' , datafield: 'warna_tnkb'},
-      {text:'No. Faktur ' , datafield: 'no_faktur'},
-      {text:'Nama Pemilik ' , datafield: 'nama_pemilik'},
-            {text:'Operator ' , datafield: 'operator'},
-      {text:'Wilayah ' , datafield: 'wilayah'},
-      { text: 'Action', cellsrenderer: buttonrenderer,width: 150}
-
-      // { text: 'Actions', cellsrenderer: buttonrenderer,width: 150},
-    ],ready: function()
+    //   {text:'No. Reg. BPKB' ,datafield: 'no_rek_bpkb'},
+    //   {text:'Tgl. BPKB' , datafield: 'tgl_bpkb'},
+    //   {text:'No. Rangka ' , datafield :'no_rangka'},
+    //   {text:'No. Mesin' , datafield: 'no_mesin'},
+    //   {text:'No. Polisi ' , datafield: 'no_polisi'},
+    //   {text:'Merk ' , datafield: 'merk'},
+    //   {text:'Model ' , datafield: 'model'},
+    //   {text:'Jenis ' , datafield: 'jenis'},
+    //   {text:'Jumlah Roda ' , datafield: 'jmlh_roda'},
+    //   {text:'Warna TNKB ' , datafield: 'warna_tnkb'},
+    //   {text:'No. Faktur ' , datafield: 'no_faktur'},
+    //   {text:'Nama Pemilik ' , datafield: 'nama_pemilik'},
+    //         {text:'Operator ' , datafield: 'operator'},
+    //   {text:'Wilayah ' , datafield: 'wilayah'}
+  ],
+    ready: function()
     {
     //  alert('TABLE READY');
 

@@ -16,22 +16,10 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 							<div class="col-md-10" style="min-width:750px;">
 								<form  id="idFormAddAddBBN1" class="form-horizontal" action="<?php echo base_url().'index.php/a_1_pendaftaranbbn1/bpkb_pendaftaran_add';?>" method="POST" data-toggle="validator" role="form">
 								<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-									<!-- <div style="margin-bottom: 5px;" class="form-group"> -->
-										<!-- <label class="control-label       col-sm-3" for="">Tanggal :</label> -->
-										<!-- <div class="col-sm-6"> -->
-											<!-- <div class="input-group date"> -->
-												<!-- <div class="input-group-addon">
-													<i class="fa fa-calendar"></i>
-												</div> -->
-												<!-- <input type="text" class="form-control pull-right ClassTanggalInputMask" name="<?php echo $NameModalkbPbbAddView[0];?>" id="<?php echo $NameModalkbPbbAddView[0];?>"> -->
-											<!-- </div> -->
-										<!-- </div> -->
-											<!-- <span class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
- 											<!-- <div class="help-block with-errors">Hey look, this one has feedback icons!</div> -->
-									<!-- </div> -->
 									<div style="margin-bottom: 0px;" class="form-group">
 										<label class="control-label       col-sm-3" for="<?php echo $NameModalkbPbbAddView[0];?>">Tanggal :</label>
 										<div class="col-sm-6">
+
 													<input type="text" name="<?php echo $NameModalkbPbbAddView[0];?>" id="<?php echo $NameModalkbPbbAddView[0];?>" >
 										</div>
 									</div>
@@ -73,8 +61,7 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 									<div style="margin-bottom: 5px;" class="form-group">
 										<label class="control-label       col-sm-3" for="pwd">No. Rangka</label>
 										<div class="col-sm-6">
-											<!-- <input type="text" id="no-rangka" name="<?php echo $NameModalkbPbbAddView[4];?>" id="<?php echo $NameModalkbPbbAddView[4];?>" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rangka"> -->
-											<input placeholder="No. Rangka" type="text" name="<?php echo $NameModalkbPbbAddView[4];?>" id="<?php echo $NameModalkbPbbAddView[4];?>" >
+											<input type="text"  name="<?php echo $NameModalkbPbbAddView[4];?>" id="<?php echo $NameModalkbPbbAddView[4];?>" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rangka">
 
 										</div>
 									</div>
@@ -84,7 +71,7 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 							</div>
 							<!--  -->
 							<div class="col-md-1" style="margin-left:-200px">
-							  <button type="button" class="btn btn-primary btn-lg" style="min-width:80px;min-height:100px;">
+							  <button type="button" class="btn btn-primary btn-lg" id="IdBtnPendaftaranBaru" style="min-width:80px;min-height:100px;">
 																<i class="fa fa-plus"> </i> Baru
 															</button>
 							  <div></div></div>
@@ -116,25 +103,31 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
 
+
+</script>
 
 <script type="text/javascript">
-$("#NNoRangka_ModalkbPbbAdd").jqxInput({
-		// width: '250px',
-		// height: '25px',
-		theme: 'bootstrap',
-		// spinButtons: false,
-		// inputMode: 'advanced',
-		// decimalDigits: 0,
-		//  textAlign: 'left',
-		//  placeHolder:"Nomor Rangka",
-		 maxLength: 10
+$(document).ready(function() {
+	 // Stuff to do as soon as the DOM is ready
+	 //event button klik breadcrumb
+	 $('#IdBtnPendaftaranBaru').click(function(event) {
+	 	/* Act on the event */
+	$('#NNoresiPembayaran_ModalkbPbbAdd').val('xxxxxxx');
+	$('#NNoRangka_ModalkbPbbAdd').val('');
+		setKursor("NNoRangka_ModalkbPbbAdd");
+	 });
+	 //set kursor
+	 $('#myModal').on('shown.bs.modal', function () {
+				setKursor("NTanggal_ModalkbPbbAdd");
+	 });
 
 });
 
-$("#NTanggal_ModalkbPbbAdd").jqxDateTimeInput({ width: '250px', height: '25px',theme: 'bootstrap'});
+$("#NTanggal_ModalkbPbbAdd").jqxDateTimeInput({ width: '250px', height: '34px',theme: 'bootstrap'});
 						// Focus the jqxDateTimeInput
-						$("#NTanggal_ModalkbPbbAdd").jqxDateTimeInput('focus');
+					$("#NTanggal_ModalkbPbbAdd").jqxDateTimeInput('focus');
 
 
 

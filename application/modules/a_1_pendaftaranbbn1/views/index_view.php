@@ -95,11 +95,3 @@ $this->load->view("index_js");
      <li>Delete Selected Row</li>
  </ul>
 </div>
-
-
-  <div id='MenuKlikKananPendaftaran'>
-   <ul>
-       <li>Edit Selected Row</li>
-       <li>Delete Selected Row</li>
-   </ul>
-  </div>

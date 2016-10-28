@@ -29,7 +29,7 @@ folder instead of downloading all of them to reduce the load. -->
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datepicker/datepicker3.css">
 <link rel="stylesheet" href="assets/vendor/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-<link rel="stylesheet" href="assets/vendor/jqwidgets/jqwidgets/styles/jqx.bootstrap.custom3pilar.css" media="screen" title="no title">
+<!-- <link rel="stylesheet" href="assets/vendor/jqwidgets/jqwidgets/styles/jqx.bootstrap.custom3pilar.css" media="screen" title="no title"> -->
 <!--  querybuilder-->
 <!-- <link href="http://querybuilder.js.org/dist/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 <link href="http://querybuilder.js.org/dist/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css" rel="stylesheet">
@@ -248,4 +248,10 @@ border-top-left-radius: 5px !important;
 }
 
 
+</style>
+<style media="screen">
+.datepicker {
+  z-index: 100000 !important;
+  display: block;
+}
 </style>

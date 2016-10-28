@@ -1,12 +1,10 @@
-<?php
 
-?>
 
-<div class="modal in" id="idModalPBBIndex" data-backdrop="static"  >
-  <div class="modal-dialog" style="min-width:610px;display: block;">
+<div class="modal in" id="idModalPBBIndex" data-backdrop="static" style="z-index: 1050;" >
+  <div class="modal-dialog" style="min-width:700px;display: block;">
     <div class="modal-content" style="    overflow:none;">
       <div class="modal-header modal-header-primary"  >
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
         <h3 class="modal-title">Pemohon Baru</h3>
       </div>
       <!--start modal add new   -->
@@ -22,7 +20,6 @@
                 <div class="col-sm-8">
               </div>
             </div> -->
-
             <div style="margin-bottom: 5px;" class="form-group has-feedback">
               <label class="control-label text-left col-sm-3" for="">Nama</label>
               <div class="col-sm-8">
@@ -30,7 +27,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-user fa-lg"></i>
                   </div>
-                  <input maxlength="37" type="text" class="form-control" name="idPbb1PemohonNamaInput" placeholder="Nama" required>
+                  <input maxlength="37" type="text" class="form-control" name="idPbb1PemohonNamaInput" id="idPbb1PemohonNamaInput" placeholder="Nama" required>
                   <!-- <input type="text" class="form-control" name="idPbb1PemohonNamaInput" placeholder="Nama" required> -->
 
                 </div>
@@ -45,7 +42,7 @@
                     <i class="fa fa-home"></i>
                   </div>
                   <!-- maxlengt=111 = 37x3 -->
-                  <textarea class="form-control" rows="3" maxlength="111"name="idPbb1PemohonAlamatInput" placeholder="Alamat"></textarea>
+                  <textarea class="form-control" rows="3" maxlength="111"name="idPbb1PemohonAlamatInput" id="idPbb1PemohonAlamatInput" placeholder="Alamat" required></textarea>
                 </div>
               </div>
             </div>
@@ -57,7 +54,7 @@
                   <div class="input-group-addon">
                     <i class="glyphicon glyphicon-earphone"></i>
                   </div>
-                  <input maxlength="37" type="number" class="form-control" name="idPbb1PemohonNoTelpInput" placeholder="Nomor Telpon">
+                  <input maxlength="37" type="text" class="form-control" name="idPbb1PemohonNoTelpInput" id="idPbb1PemohonNoTelpInput" placeholder="Nomor Telpon" required data-inputmask='"mask": "(+99) 999-9999"' data-mask>
                 </div>
               </div>
             </div>
@@ -69,7 +66,7 @@
                   <div class="input-group-addon">
                     <i class="glyphicon glyphicon-phone"></i>
                   </div>
-                  <input maxlength="37"  type="number" class="form-control" name="idPbb1PemohonNoHpInput" placeholder="Nomor Handphone">
+                  <input maxlength="37"  type="text" class="form-control" name="idPbb1PemohonNoHpInput" id="idPbb1PemohonNoHpInput" placeholder="Nomor Handphone" required>
                 </div>
               </div>
             </div>
@@ -81,7 +78,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-bank"></i>
                   </div>
-                  <input maxlength="37" type="text" class="form-control" name="idPbb1PemohonNamaBank" placeholder="Nama Bank">
+                  <input maxlength="37" type="text" class="form-control" name="idPbb1PemohonNamaBank" placeholder="Nama Bank" required>
                 </div>
               </div>
             </div>
@@ -93,7 +90,7 @@
                   <div class="input-group-addon">
                     <i class="	fa fa-credit-card"></i>
                   </div>
-                  <input maxlength="37"  type="number" class="form-control" name="idPbb1PemohonNoRek" placeholder="No. Rekening">
+                  <input maxlength="37"  type="text" class="form-control" name="idPbb1PemohonNoRek" placeholder="No. Rekening" required>
                 </div>
               </div>
             </div>
@@ -105,7 +102,7 @@
                   <div class="input-group-addon">
                     <i class="	fa fa-home"></i>
                   </div>
-                  <input maxlength="37"  type="text" class="form-control" name="idPbb1PemohonNamaPerusahaan" placeholder="Perusahaan">
+                  <input maxlength="37"  type="text" class="form-control" name="idPbb1PemohonNamaPerusahaan" placeholder="Perusahaan" required>
                 </div>
               </div>
             </div>
@@ -115,11 +112,12 @@
                 Tanggal
               </label>
               <div class="col-sm-8">
-                <div class="input-group">
+                <!-- <input type="text" maxlength="10" class="form-control pull-right tanggal" name="idTanggalBBN1_modal_kb_pbb_add_pemohon" id="idTanggalBBN1_modal_kb_pbb_add_pemohon" placeholder="dd-mm-yyyy" required> -->
+                <div class="input-group date">
                   <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
+                    <i class="fa fa-calendar kalenderTanggal"></i>
                   </div>
-                  <input type="text" maxlength="10" class="form-control pull-right tanggal" name="idTanggalBBN1_modal_kb_pbb_add_pemohon" placeholder="dd-mm-yyyy">
+                  <input type="text" class="form-control pull-right tanggal" name="idTanggalBBN1_modal_kb_pbb_add_pemohon" id="idTanggalBBN1_modal_kb_pbb_add_pemohon" placeholder="dd-mm-yyyy" required>
                 </div>
               </div>
             </div>
@@ -150,9 +148,6 @@
                     Simpan Pemohon Baru</button>
                   </div>
                 </div>
-
-
-                <!-- <button type="submit" class="btn btn-primary btn-block" >Submit</button> -->
               </div>
             </form>
           </div>
@@ -181,34 +176,30 @@
 </div>
 
 </div>
-
 <script type="text/javascript">
+$(document).ready(function() {
+  $('#idModalPBBIndex').on('shown.bs.modal', function () {
+    //setKursor
+    setKursor("idPbb1PemohonNamaInput");
+    //date
+    $('#idTanggalBBN1_modal_kb_pbb_add_pemohon').datepicker({
+      format:"dd-mm-yyyy",
+      locale: 'id',
+      autoclose: true
 
-
-// $(document).ready(function() {
-  $('#idTanggalBBN1_modal_kb_pbb_add_pemohon').datepicker({
-    autoclose: true
+    });
+    //date open glyphicon-date
+    $(".kalenderTanggal").click(function(event) {
+      /* Act on the event */
+      event.preventDefault();
+      $('#idTanggalBBN1_modal_kb_pbb_add_pemohon').click();
+    });
+    //
+    //phone
+    $('#idPbb1PemohonNoTelpInput').inputmask('(+99) 99[9]-9999');
+      $('#idPbb1PemohonNoHpInput').inputmask('(+99) 999[9]-9999999');
+    //
   });
-  // wait for the DOM to be loaded
-       $(document).ready(function() {
-           var options = {
-            // target:     '#divToUpdate',
-            // url:        'comment.php',
-            success:    function(responseText, statusText, xhr, $form) {
-                hidePleaseWait();
-              responseText=responseText.toLowerCase();
-              var hasilBoolean = responseText.indexOf("berhasil") != -1;
-              if(hasilBoolean){alert('data berhasil di simpan'); $('#idFormAddPemohonBaru').resetForm();}
-              else{alert('data gagal di simpan Error Code:xxxx');}
+});
 
-            },beforeSubmit:    function() {
-            showPleaseWait();
-          },error :function(e){
-              hidePleaseWait();
-          }
-        };
-           // bind 'myForm' and provide a simple callback function
-           $('#idFormAddPemohonBaru').ajaxForm(options);
-       });
-// });
 </script>

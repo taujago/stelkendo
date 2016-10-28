@@ -589,7 +589,7 @@ margin-right: 0;
       </div>
     </div>
     <br>
-    <div class="row-fluid">
+    <div class="row">
         <div class="" id="idTabelRBBN1ListData"  style="width:100%" oncontextmenu="return false;">
           <!-- table -->
         </div>
@@ -643,3 +643,13 @@ margin-right: 0;
 <?php
 $this->load->view('index_js.php');
 ?>
+<script type="text/javascript">
+$(document).ready(function() {
+
+$('#idTanggalBBN1_modal_kb_pbb_add').datepicker({
+  autoclose: true,
+  zIndexOffset: 500
+});
+
+});
+</script>

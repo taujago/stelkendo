@@ -90,7 +90,7 @@ $(function () {
     e = e || window.event;
     return e.target || e.srcElement;
   }
-
+alert('last modified @ 28/10/2016 10:00');
 
   $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
   $("#IdTabMenuDashboard").jqxTabs({

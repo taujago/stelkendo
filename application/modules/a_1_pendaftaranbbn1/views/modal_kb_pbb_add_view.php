@@ -6,7 +6,6 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 		<div class="modal-content" style="MIN-WIDTH:700PX;    overflow:hidden;">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-	<!-- <a href="#" data-dismiss="modal" class="btn btn btn-default"></a> -->
 				<h4 class="modal-title">Tambahkan Data</h4>
 			</div><div class="container"></div>
 			<div class="modal-body">
@@ -40,9 +39,7 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 											<?php
 											echo form_dropdown("PEMOHON_ID", array(), '', 'class="form-control col-md-7 col-xs-12 input-style" id="PEMOHON_ID" style="min-width: 200px;"');
 											?>
-
 									</div>
-
 									<div class="col-md-3" style="margin-left:-30px;">
 										<a data-toggle="modal" href="#idModalPBBIndex">
 											<button type="button" class="btn btn-primary fa fa-plus btn-lg " style="margin-left:10px;max-width:120px">	Buat Pemohon
@@ -51,17 +48,16 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 									</div>
 									<hr>
 									<div style="margin-bottom: 5px;" class="form-group">
-										<label class="control-label       col-sm-3" for="">No. Resi Pembayaran :</label>
+										<label class="control-label       col-sm-3" for="" style="min-width:190px;" >No Resi Pembayaran :</label>
 										<div class="col-sm-6">
-											<input type="text" maxlenght="10" name="<?php echo $NameModalkbPbbAddView[3];?>"  id="<?php echo $NameModalkbPbbAddView[3];?>" class="  form-control col-md-7 col-xs-12 input-style" placeholder="No. Resi Pembayaran">
-
+											<input style="margin-left:-3px;" type="text" maxlength="10" name="<?php echo $NameModalkbPbbAddView[3];?>"  id="<?php echo $NameModalkbPbbAddView[3];?>" class="  form-control col-md-7 col-xs-12 input-style" placeholder="No. Resi Pembayaran" required>
 										</div>
 
 									</div>
 									<div style="margin-bottom: 5px;" class="form-group">
 										<label class="control-label       col-sm-3" for="pwd">No. Rangka</label>
 										<div class="col-sm-6">
-											<input type="text"  name="<?php echo $NameModalkbPbbAddView[4];?>" id="<?php echo $NameModalkbPbbAddView[4];?>" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rangka">
+											<input type="text" maxlength="10" name="<?php echo $NameModalkbPbbAddView[4];?>" id="<?php echo $NameModalkbPbbAddView[4];?>" class="form-control col-md-7 col-xs-12 input-style" placeholder="No. Rangka" required>
 
 										</div>
 									</div>
@@ -71,7 +67,7 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 							</div>
 							<!--  -->
 							<div class="col-md-1" style="margin-left:-200px">
-							  <button type="button" class="btn btn-primary btn-lg" id="IdBtnPendaftaranBaru" style="min-width:80px;min-height:100px;">
+							  <button type="button" class="btn btn-primary btn-block" id="IdBtnPendaftaranBaru" style="min-width:80px;min-height:100px;">
 																<i class="fa fa-plus"> </i> Baru
 															</button>
 							  <div></div></div>
@@ -81,25 +77,15 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 							<div class="col-md-4">
 							</div>
 
-							<div class="col-md-6">
-								<!-- <button type="button" class="btn btn-primary" style="min-width:80px;">
-									<i class="fa fa-plus"> </i> Baru
-								</button> -->
-								<button type="button" class="btn btn-primary btn-lg btn-block" id="idPbb1BtnAdd" style="min-width:80px;">
+							<div class="col-md-12">
+								<button type="button" class="btn btn-primary btn-block" id="idPbb1BtnAdd" style="min-width:80px;">
 									<i class="fa fa-file"> </i> Simpan
 								</button>
-								<!-- <button type="button" class="btn btn-default " style="min-width:80px;">
-									<i class="fa fa-print"> </i> Export PDF
-								</button> -->
 							</div>
 
 						</div>
 						<!--end-->
 				</div>
-			<!-- <div class="modal-footer">
-				<a href="#" data-dismiss="modal" class="btn btn btn-default">Close</a>
-				<a href="#" class="btn btn-primary">Save changes</a>
-			</div> -->
 		</div>
 	</div>
 </div>
@@ -111,7 +97,12 @@ $NameModalkbPbbAddView=array('NTanggal_ModalkbPbbAdd','NJenisPemohon_ModalkbPbbA
 <script type="text/javascript">
 $(document).ready(function() {
 	 // Stuff to do as soon as the DOM is ready
-	 //event button klik breadcrumb
+	 //set max lenght untuk kalimat
+	 //
+
+	document.getElementById("NNoresiPembayaran_ModalkbPbbAdd").maxLength = "20";
+	 document.getElementById("NNoRangka_ModalkbPbbAdd").maxLength = "17";
+	 //event button klik
 	 $('#IdBtnPendaftaranBaru').click(function(event) {
 	 	/* Act on the event */
 	$('#NNoresiPembayaran_ModalkbPbbAdd').val('xxxxxxx');
